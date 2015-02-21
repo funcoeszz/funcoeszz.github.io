@@ -1,0 +1,25 @@
+# https://help.github.com/articles/using-jekyll-with-pages/
+# https://help.github.com/articles/repository-metadata-on-github-pages/
+# https://pages.github.com/versions/
+
+### GitHub default config - READ ONLY
+#
+# safe: true
+# lsi: false
+# source: your top-level directory
+
+### GitHub default config - You may redefine
+#
+# highlighter: pygments
+# github: [Repository metadata]
+
+markdown: redcarpet
+redcarpet:
+  extensions: ["tables", "autolink", "strikethrough", "space_after_headers", "with_toc_data", "fenced_code_blocks"]
+
+defaults:
+  -
+    scope:
+      path: "" # an empty string here means all files in the project
+    values:
+      layout: "default"
