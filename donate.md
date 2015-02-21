@@ -38,12 +38,12 @@ Quer nos ajudar também? Basta clicar no dinheiro:
     <td><img src="img/paypal.png"/></td>
 </tr>
 <tr>
-    <td><a href="https://pagseguro.uol.com.br/security/webpagamentos/webpagto.aspx?email_cobranca=verde@aurelio.net&amp;tipo=CP&amp;moeda=BRL&amp;item_id_1=1&amp;item_descr_1=donate+ao+projeto+Funcoess+ZZ&amp;item_quant_1=1&amp;item_frete_1=000&amp;item_valor_1=5,00"><img src="img/5-reais.jpg"/></a></td>
-    <td><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&amp;business=verde%40aurelio%2enet&amp;item_name=donate%20ao%20projeto%20Funcoes%20ZZ&amp;no_shipping=1&amp;cn=&amp;currency_code=USD&amp;lc=BR&amp;bn=PP%2dBuyNowBF&amp;charset=UTF%2d8&amp;amount=5"><img src="img/5-dolares.jpg"/></a></td>
+    <td><a href="https://pagseguro.uol.com.br/security/webpagamentos/webpagto.aspx?email_cobranca=verde@aurelio.net&amp;tipo=CP&amp;moeda=BRL&amp;item_id_1=1&amp;item_descr_1=donate+ao+projeto+Funcoess+ZZ&amp;item_quant_1=1&amp;item_frete_1=000&amp;item_valor_1=5,00"><img src="img/5-reais.jpg" title="Doe R$ 5,00"/></a></td>
+    <td><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&amp;business=verde%40aurelio%2enet&amp;item_name=donate%20ao%20projeto%20Funcoes%20ZZ&amp;no_shipping=1&amp;cn=&amp;currency_code=USD&amp;lc=BR&amp;bn=PP%2dBuyNowBF&amp;charset=UTF%2d8&amp;amount=5"><img src="img/5-dolares.jpg" title="Doe US$ 5,00"/></a></td>
 </tr>
 <tr>
-    <td><a href="https://pagseguro.uol.com.br/security/webpagamentos/webpagto.aspx?email_cobranca=verde@aurelio.net&amp;tipo=CP&amp;moeda=BRL&amp;item_id_1=1&amp;item_descr_1=donate+ao+projeto+Funcoess+ZZ&amp;item_quant_1=1&amp;item_frete_1=000&amp;item_valor_1=10,00"><img src="img/10-reais.jpg"/></a></td>
-    <td><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&amp;business=verde%40aurelio%2enet&amp;item_name=donate%20ao%20projeto%20Funcoes%20ZZ&amp;no_shipping=1&amp;cn=&amp;currency_code=USD&amp;lc=BR&amp;bn=PP%2dBuyNowBF&amp;charset=UTF%2d8&amp;amount=10"><img src="img/10-dolares.jpg"/></a></td>
+    <td><a href="https://pagseguro.uol.com.br/security/webpagamentos/webpagto.aspx?email_cobranca=verde@aurelio.net&amp;tipo=CP&amp;moeda=BRL&amp;item_id_1=1&amp;item_descr_1=donate+ao+projeto+Funcoess+ZZ&amp;item_quant_1=1&amp;item_frete_1=000&amp;item_valor_1=10,00"><img src="img/10-reais.jpg" title="Doe R$ 10,00"/></a></td>
+    <td><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&amp;business=verde%40aurelio%2enet&amp;item_name=donate%20ao%20projeto%20Funcoes%20ZZ&amp;no_shipping=1&amp;cn=&amp;currency_code=USD&amp;lc=BR&amp;bn=PP%2dBuyNowBF&amp;charset=UTF%2d8&amp;amount=10"><img src="img/10-dolares.jpg" title="Doe US$ 10,00"/></a></td>
 </tr>
 </table>
 
