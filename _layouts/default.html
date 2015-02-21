@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8">
+    <title>{{ page.title | escape }}</title>
+    <meta name="author" content="Aurelio Jargas">
+    <link rel="shortcut icon" href="/img/favicon.png">
+
+    <link rel="stylesheet" href="http://aurelio.net/include/clean-2012/base.css"/>
+    <link rel="stylesheet" href="http://aurelio.net/include/clean-2012/article.css"/>
+    <link rel="stylesheet" href="site.css"/>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+</head>
+
+<body>
+
+<div id="header">
+    <h1>{{ page.title }}</h1>
+</div>
+
+<div id="main">
+
+<div class="menu">
+    <p><a href="/">$HOME</a></p>
+
+    <ol>
+    <li>/run
+        <ul>
+        <li><a href="/online/">online</a></li>
+        <li><a href="download.html">download</a></li>
+        </ul>
+    </li>
+    <li>/doc
+        <ul>
+        <li><a href="list.html">zz*</a></li>
+        <li><a href="man.html">man</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="changelog.html">changelog</a></li>
+        <li><a href="hist.html">13 anos!</a></li>
+        </ul>
+    </li>
+    <li>/dev
+        <ul>
+        <li><a href="https://github.com/funcoeszz/funcoeszz">GitHub</a></li>
+        <li><a href="my.html">sua ZZ</a></li>
+        <li><a href="logo.html">logo</a></li>
+        <li><a href="donate.html">doações</a></li>
+        <li><a href="thanks.html">valeu!</a></li>
+        </ul>
+    </li>
+    <li>/chat
+        <ul>
+        <li><a href="https://github.com/funcoeszz/funcoeszz/issues">bugs</a></li>
+        <li><a href="https://github.com/funcoeszz/funcoeszz/issues/new">ideias</a></li>
+        <li><a href="http://br.groups.yahoo.com/group/zztabtab/">fórum</a></li>
+        <li><a href="http://twitter.com/oreio">@oreio</a></li>
+        </ul>
+    </li>
+    </ol>
+</div>
+
+
+<div id="content">
+{{ content}}
+</div>
+
+
+<div id="footer">
+    <a href="https://github.com/funcoeszz/website/blob/master/{{ page.path }}">Edite esta página no GitHub</a>
+</div>
+
+<a class="cabecao" href="http://aurelio.net" title="AURELIO.NET — Organizações Verde Inc.™" alt="AURELIO.NET — Organizações Verde Inc.™"><img src="http://aurelio.net/include/10anos/aureliolga.jpg"></a>
+
+</body>
+</html>
