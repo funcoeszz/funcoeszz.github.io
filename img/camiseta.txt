@@ -1,0 +1,7 @@
+# *-arte-frente: selecionar trecho no PDF e exportar PNG
+# *-arte-costas: exportar página inteira para PNG
+
+convert -resize 70% /mesa/camiseta-zz/camiseta-molde.png foo
+convert -crop 284x233+284+0 foo camiseta-zz-costas.png
+convert -crop 284x233+0+0 foo camiseta-zz-frente.png
+rm foo
