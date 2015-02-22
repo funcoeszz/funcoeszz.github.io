@@ -90,7 +90,7 @@ A primeira versão contava com cerca de 10 funções, algumas de uso interno com
 
 ## 2000 — O lançamento público
 
-Os funcionários da empresa gostaram, e nos meses seguintes foram sugerindo melhorias e funções novas. Após sete meses de evolução neste período encubatório, a biblioteca cresceu para 22 funções e decidi fazer o [primeiro anúncio público do projeto](http://br.groups.yahoo.com/group/shell-script/message/430), em 15/09/2000.
+Os funcionários da empresa gostaram, e nos meses seguintes foram sugerindo melhorias e funções novas. Após sete meses de evolução neste período encubatório, a biblioteca cresceu para 22 funções e decidi fazer o [primeiro anúncio público do projeto](https://br.groups.yahoo.com/neo/groups/shell-script/conversations/topics/430), em 15/09/2000.
 
 <!-- O pacote cresceu para pouco mais de 20 funções de uso geral, como trocar palavras, trocar extensão de arquivo e cálculos. -->
 <!-- Também criei o esquema de ajuda nos cabeçalhos (--help) e saída colorida. -->
