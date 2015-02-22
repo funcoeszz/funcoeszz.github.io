@@ -1,0 +1,558 @@
+---
+title: ZZ Ao Vivo — Os bastidores do desenvolvimento das Funções ZZ
+---
+
+<style>
+    .a { font-family:monospace; color:green; }
+    .t { font-family:monospace; color:blue; }
+</style>
+
+
+<p>Aqui estão os trechos da conversa que os desenvolvedores das Funções ZZ tiveram <strong>enquanto</strong> programavam a versão nova, numa solitária noite de 2006.</p>
+
+<p>Distantes centenas de quilômetros e comunicando-se pela Internet, dois desenvolvedores trabalharam no mesmo código ao mesmo tempo, durante horas. Os segredos dos bastidores do desenvolvimento de um software livre feito a quatro mãos, pela primeira vez desvendados :)</p>
+
+<ul>
+<li>13 de Novembro de 2006, segunda-feira.</li>
+<li><a href="http://aurelio.net">Aurelio</a> em Matinhos (PR), <a href="http://thobias.org">Thobias</a> em Porto Alegre (RS).</li>
+<li>Das 18h30 às 02h10, quase oito horas de programação intensa.</li>
+<li>Console aberto em terminais de fundo preto, janela do Skype ao lado.</li>
+<li>Codifica no Vim, testa na linha de comando, escreve no Skype.</li>
+<li>Sintonia e sincronia.</li>
+</ul>
+
+<p>As funções já estavam há mais de um ano sem atualizações, então havia muito a arrumar. Sites que mudaram de endereço, páginas que mudaram de formato e problemas encontrados pelos usuários. Mais de 20 funções quebradas.</p>
+
+<p>Além do tempo a ser investido, é preciso estar inspirado para encarar uma faxina dessa magnitude. A segunda-feira dia 13 tinha algo de especial, deu certo de estarmos com tempo e vontade.</p>
+
+<blockquote>
+    Em meu blog publiquei a "<a href="http://blog.aurelio.net/2006/11/14/zz-ao-vivo-um-concerto-de-1010-dedos/">versão poética</a>" desta história.
+</blockquote>
+
+<div class="toc">
+    <ul>
+    <li><a href="#toc1">O início</a></li>
+    <li><a href="#toc2">A situação atual</a></li>
+    <li><a href="#toc3">A longa lista de problemas a arrumar</a></li>
+    <li><a href="#toc4">Os trabalhos começam</a></li>
+    <li><a href="#toc5">Definindo prioridades</a></li>
+    <li><a href="#toc6">Primeiro aplicamos as correções mandadas pelos usuários</a></li>
+    <li><a href="#toc7">Pings e ACKs para evitar trabalho duplicado</a></li>
+    <li><a href="#toc8">Páginas somem, infelizmente</a></li>
+    <li><a href="#toc9">A decisão de fazer uma cópia dos dados para não perder novamente</a></li>
+    <li><a href="#toc10">A luta com a zzloteria começou às 19h30</a></li>
+    <li><a href="#toc11">A decisão de aposentar uma função</a></li>
+    <li><a href="#toc12">Agora é a vez da luta com a zzletrademusica</a></li>
+    <li><a href="#toc13">As mudanças são passadas ao vivo e já aplicadas nos fontes</a></li>
+    <li><a href="#toc14">A decisão de deixar como está: quebrada</a></li>
+    <li><a href="#toc15">Além dos problemas normais, o Skype também nos deu trabalho</a></li>
+    <li><a href="#toc16">Uma parcial do que foi feito até agora em cinco horas de trabalho</a></li>
+    <li><a href="#toc17">Páginas mudam, padrões mudam, as ZZ mudam</a></li>
+    <li><a href="#toc18">Mas padrões novos também podem facilitar nossa vida</a></li>
+    <li><a href="#toc19">E virou a meia-noite...</a></li>
+    <li><a href="#toc20">RSS zipado? Putz, mais um problema para a coleção...</a></li>
+    <li><a href="#toc21">Mais um exemplo de patches "ao vivo"</a></li>
+    <li><a href="#toc22">Acha que o ritmo já está forte? Veja agora então:</a></li>
+    <li><a href="#toc23">Ops, única trombada da noite, mas que acabou bem</a></li>
+    <li><a href="#toc24">Compatibilidade é importante (e difícil, e chato, e …)</a></li>
+    <li><a href="#toc25">Google é legal, mas o HTML deles…</a></li>
+    <li><a href="#toc26">Já que chegamos até aqui, uma função nova seria legal</a></li>
+    <li><a href="#toc27">A escolha do nome é muito importante</a></li>
+    <li><a href="#toc28">Ufa! Anotou a placa daquele trem?</a></li>
+    <li><a href="#toc29">Análise do problema e das possíveis soluções</a></li>
+    <li><a href="#toc30">A tomada de decisão e implementação</a></li>
+    <li><a href="#toc31">Quase oito horas depois… finalmente terminou</a></li>
+    <li><a href="#toc32">Minutos depois…</a></li>
+    </ul>
+</div>
+
+<h2 id="toc1">O início</h2>
+
+<ul>
+<li><span class="a">18:28 Aurelio:</span> zz?</li>
+<li><span class="t">18:28 Thobias:</span> vamos? por mim ok. vou ficar por casa hoje mesmo...</li>
+</ul>
+
+<h2 id="toc2">A situação atual</h2>
+
+<ul>
+<li><span class="a">18:41 Aurelio:</span> então vamo, tou rodando o testador</li>
+<li><span class="t">18:42 Thobias:</span> blz, vou começar a testar algumas. vamos fazer uma lista do que está quebrado...</li>
+<li><span class="a">18:42 Aurelio:</span> tem algumas que o pessoal já arrumou, lá na lista</li>
+<li><span class="a">18:45 Aurelio:</span> caralho, quebradeira total</li>
+<li><span class="t">18:45 Thobias:</span> aham</li>
+<li><span class="a">18:47 Aurelio:</span> 11 e a contagem continua...</li>
+<li><span class="a">18:47 Aurelio:</span> vamos fazer um troço light, não precisa arrumar tudo :)</li>
+<li><span class="t">18:48 Thobias:</span> é, vai dar muito trabalho arrumar tudo hehe</li>
+<li><span class="a">18:51 Aurelio:</span> 19 zzs quebradas tá bom pra você? :)</li>
+<li><span class="t">18:52 Thobias:</span> peguei mais algumas quebradas aqui</li>
+<li><span class="a">18:52 Aurelio:</span> ultima versão de set-2005. até que não quebrou taaaaanto assim pra mais de um ano</li>
+</ul>
+
+<h2 id="toc3">A longa lista de problemas a arrumar</h2>
+
+<ul>
+<li><span class="a">19:00 Aurelio:</span> listagem atualizada:
+    <br>dicabl (404)
+    <br>dicportugues (null)
+    <br>sigla (filtro)
+    <br>dolar (filtro)
+    <br>dicasl (URL)
+    <br>dominiopais (tirar //I)
+    <br>detranpr (null)
+    <br>chavepgp (URL)
+    <br>zzcep (null)
+    <br>noticiaslinux (viva o linux(null), info exame(null), underlinux(null), noticias linux(BSD?))
+    <br>noticiassec (linux security)
+    <br>linuxnews (slashdot(filtro), os news(null))
+    <br>pronuncia (ver alternativa ao comando play no mac)
+    <br>google (filtro)
+    <br>howto (null)
+    <br>zztv (null)
+    <br>letrasdemusica (null)
+    <br>whoisbr (Alert!: This client does not contain support for HTTPS URLs.)
+    <br>locale (null - BSD?)
+    <br>security (cl9(filtro), cl10(filtro), mandriva(null), gentoo(filtro)
+    <br>ipinternet (null)
+    <br>loteria (filtro)</li>
+</ul>
+
+<h2 id="toc4">Os trabalhos começam</h2>
+
+<ul>
+<li><span class="a">19:00 Aurelio:</span> ah, deixa ver a portugues aqui</li>
+<li><span class="a">19:01 Aurelio:</span> aqui nao funciona mesmo, deve ser BSDzisse</li>
+<li><span class="a">19:01 Aurelio:</span> ah, achei, o sed tem OU \|</li>
+</ul>
+
+<h2 id="toc5">Definindo prioridades</h2>
+
+<ul>
+<li><span class="a">19:08 Aurelio:</span> vi o mail da nomefoto</li>
+<li><span class="a">19:09 Aurelio:</span> tem que investigar e corrigir. deixar pra mais tarde essa :)</li>
+<li><span class="t">19:10 Thobias:</span> blz</li>
+<li><span class="a">19:11 Aurelio:</span> ou se quiser pegar essa agora, eu vejo as da lista</li>
+<li><span class="t">19:14 Thobias:</span> tem muita coisa quebrada... vamos focar nas simpes primeiro... diminuir esse número...</li>
+</ul>
+
+<h2 id="toc6">Primeiro aplicamos as correções mandadas pelos usuários</h2>
+
+<ul>
+<li><span class="a">19:14 Aurelio:</span> tou na abl</li>
+<li><span class="t">19:15 Thobias:</span> ok, dessas quais tem patch na lista?</li>
+<li><span class="a">19:15 Aurelio:</span> tem que ver, a 1a que vi foi a abl e fui pra ela</li>
+<li><span class="a">19:16 Aurelio:</span> voce nao tem as msgs da lista ai?</li>
+<li><span class="t">19:16 Thobias:</span> blz, vou começar de baixo</li>
+<li><span class="t">19:16 Thobias:</span> tenho</li>
+<li><span class="a">19:16 Aurelio:</span> ok, avisa qual voce pegar</li>
+<li><span class="a">19:17 Aurelio:</span> ah, lembra de anotar o nome completo do cara pra por nos agradecimentos</li>
+</ul>
+
+<h2 id="toc7">Pings e ACKs para evitar trabalho duplicado</h2>
+
+<ul>
+<li><span class="a">19:26 Aurelio:</span> dicabl OK, vou pra loteria</li>
+<li><span class="t">19:32 Thobias:</span> blz, peguei a ipinternet</li>
+<li><span class="t">19:34 Thobias:</span> ipinternet OK. vou para security</li>
+<li><span class="a">19:39 Aurelio:</span> massa</li>
+<li><span class="t">19:53 Thobias:</span> security ok. vou para locale</li>
+<li><span class="a">19:53 Aurelio:</span> loteria dando um baile</li>
+</ul>
+
+<h2 id="toc8">Páginas somem, infelizmente</h2>
+
+<ul>
+<li><span class="t">20:00 Thobias:</span> a locale não existe mais aquela página..</li>
+<li><span class="a">20:00 Aurelio:</span> putz, deu trabalho pra achar</li>
+<li><span class="t">20:01 Thobias:</span> pois é. tinhamos que ter pegado o html e colocado no site das zz consultado de la...</li>
+<li><span class="a">20:01 Aurelio:</span> cache do google?</li>
+</ul>
+
+<h2 id="toc9">A decisão de fazer uma cópia dos dados para não perder novamente</h2>
+
+<ul>
+<li><span class="t">20:44 Thobias:</span> to procurando um site com locales. achei esse aqui <a href="http://docs.hp.com/en/5990-8560/apa.html">http://docs.hp.com/en/5990-8560/apa.html</a></li>
+<li><span class="a">20:45 Aurelio:</span> opa, hp.com é quente</li>
+<li><span class="t">20:46 Thobias:</span> mas o html é muito xunxo e o dump nao fica direito. fazer o filtro direto vai ser bem chato</li>
+<li><span class="t">20:46 Thobias:</span> tava pensando em pegar isso e criar um arquivo para zz e colocar no site</li>
+<li><span class="t">20:46 Thobias:</span> ?!</li>
+<li><span class="a">20:47 Aurelio:</span> por mim beleza</li>
+<li><span class="t">20:47 Thobias:</span> ok</li>
+<li><span class="a">20:47 Aurelio:</span> isso não sofre atualizações, né?</li>
+<li><span class="t">20:48 Thobias:</span> nao sei. mas deve sofrer poucas eu acho</li>
+<li><span class="t">20:48 Thobias:</span> e aquela nossa outra fonte era um site pessoal de um cara, enfim....</li>
+<li><span class="a">20:48 Aurelio:</span> fazemos o nosso e foda-se</li>
+<li><span class="t">20:48 Thobias:</span> ok</li>
+<li><span class="t">20:50 Thobias:</span> tu te lembra como era a saida do zzlocale antes?</li>
+<li><span class="a">20:51 Aurelio:</span> não tenho :/</li>
+<li><span class="a">20:51 Aurelio:</span> pior que pode ter gente que confia nos formatos antigos</li>
+<li><span class="a">20:51 Aurelio:</span> bem, mas já taav quebrado mesmo...</li>
+</ul>
+
+<h2 id="toc10">A luta com a zzloteria começou às 19h30</h2>
+
+<ul>
+<li><span class="a">21:05 Aurelio:</span> eu tou roubando na loteria ;)</li>
+<li><span class="t">21:06 Thobias:</span> hahaha</li>
+<li><span class="a">21:06 Aurelio:</span> entrego os pontos. não vai rolar o sedão mágico</li>
+<li><span class="a">21:12 Aurelio:</span> tive que guardar o dump e pescar cada dado de uma vez, pois cada tipo de loteira o HTML é diferente</li>
+<li><span class="a">21:12 Aurelio:</span> pelo menos é mais fail-proof</li>
+<li><span class="t">21:13 Thobias:</span> bah, que bosta essa loteria hehe</li>
+<li><span class="t">21:13 Thobias:</span> os caras da caixa querem complicar hehe</li>
+<li><span class="a">21:14 Aurelio:</span> nem tanto, os dados tão tudo separadinho por | num tripona, mas cada loteria traz eles numa ordem diferente: <a href="http://www1.caixa.gov.br/loterias/loterias/quina/quina_pesquisa.asp">http://www1.caixa.gov.br/loterias/loterias/quina/quina_pesquisa.asp</a>  (veja o source, facinho)</li>
+<li><span class="t">21:16 Thobias:</span> saquei. foda é ter um filtro para cada tipo de loteria</li>
+</ul>
+
+<h2 id="toc11">A decisão de aposentar uma função</h2>
+
+<ul>
+<li><span class="t">21:41 Thobias:</span> tem um rolo na whoisbr</li>
+<li><span class="t">21:41 Thobias:</span> nao sei como vai funcionar ai</li>
+<li><span class="a">21:41 Aurelio:</span> manda que eu testo</li>
+<li><span class="t">21:42 Thobias:</span> na verdade só mudou o método. de GET para post e o negocio agora é https. ai ta dando esse rolo no lynx</li>
+<li><span class="t">21:43 Thobias:</span> para resolver tive que adicionar a seguinte linha no /etc/lynx.cfg</li>
+<li><span class="t">21:43 Thobias:</span> FORCE_SSL_PROMPT:yes</li>
+<li><span class="t">21:43 Thobias:</span> ei funciona</li>
+<li><span class="t">21:43 Thobias:</span> s/ei/ai/</li>
+<li><span class="a">21:43 Aurelio:</span> ssl sux, nao é em todo lugar que funciona</li>
+<li><span class="t">21:44 Thobias:</span> bom, se souber de algum site que pega global...</li>
+<li><span class="a">21:45 Aurelio:</span> eu lembro de ter lido uma noticia que os dados do .br foram replicados pros whois normais</li>
+<li><span class="t">21:48 Thobias:</span> é verdade. ta funcionando em whois normais o br</li>
+<li><span class="t">21:49 Thobias:</span> blz, vou alterar a função então... zzwhois</li>
+<li><span class="a">22:02 Aurelio:</span> aqui tem o comando whois, no linux tb tem?</li>
+<li><span class="t">22:04 Thobias:</span> tem, mas acho que é um pacote separado...</li>
+<li><span class="a">22:05 Aurelio:</span> que eu nunca tinha feito zzwhois pq já tinha o comando, e fiz a whoisbr pq não tinha br no comando. agora tem...</li>
+<li><span class="a">22:06 Aurelio:</span> de repente era mais jogo aposentá-la (caso você ainda não tenha feito, é claro) :)</li>
+<li><span class="t">22:16 Thobias:</span> não fiz a funcao, tava procurando um site ainda. achei esse aqui, parece que eh legal <a href="http://www.domaintools.com">http://www.domaintools.com</a></li>
+<li><span class="a">22:17 Aurelio:</span> se não fez vamos aposentar então, ou deixar no fim da fila</li>
+<li><span class="t">22:20 Thobias:</span> ok</li>
+</ul>
+
+<h2 id="toc12">Agora é a vez da luta com a zzletrademusica</h2>
+
+<ul>
+<li><span class="t">22:23 Thobias:</span> a letrademusica tem um patch na lista</li>
+<li><span class="a">22:23 Aurelio:</span> opa</li>
+<li><span class="t">22:23 Thobias:</span> do elias junior</li>
+<li><span class="t">22:24 Thobias:</span> vou testar, o patch é de fevereiro hehe</li>
+<li><span class="a">22:24 Aurelio:</span> vix hehe</li>
+<li><span class="a">22:56 Aurelio:</span> caralho, finalmente terminei essa zzloteria mala</li>
+<li><span class="t">23:24 Thobias:</span> pow, to tomando um pau para a letrademusica</li>
+<li><span class="a">23:25 Aurelio:</span> hehe, a gente tá ficando enferrujado :)</li>
+<li><span class="t">23:25 Thobias:</span> pois é. não consigo fazer a pesquisa via lynx no site hehe</li>
+<li><span class="a">23:26 Aurelio:</span> nem via post? deve ter trava ou ser js</li>
+<li><span class="t">23:26 Thobias:</span> sei lá. é um formulário bem simples (eu acho jehe)</li>
+<li><span class="a">23:26 Aurelio:</span> passa o link</li>
+<li><span class="t">23:27 Thobias:</span> echo "?a=search_quick&amp;l=song&amp;s=kkk+took" | $ZZWWWDUMP '<a href="http://search.letssingit.com/cgi-exe/am.cgi#p">http://search.letssingit.com/cgi-exe/am.cgi#p</a>'</li>
+<li><span class="t">23:27 Thobias:</span> o endereco da página é <a href="http://search.letssingit.com/quick_form">http://search.letssingit.com/quick_form</a></li>
+</ul>
+
+<h2 id="toc13">As mudanças são passadas ao vivo e já aplicadas nos fontes</h2>
+
+<ul>
+<li><span class="t">23:30 Thobias:</span> ipinternet mudar o filtro para sed -n 's/^ *\([0-9]\{1,3\}\.[^ ]*\) */IP: \1/p'</li>
+<li><span class="t">23:31 Thobias:</span> security mandriva muda a url para <a href="http://www.mandriva.com/en/rss/feed/security">http://www.mandriva.com/en/rss/feed/security</a></li>
+<li><span class="t">23:32 Thobias:</span> security conectiva nos sed do cl9 e cl10 adicionar esse comando ;s/   */ - /'</li>
+<li><span class="t">23:32 Thobias:</span> fica assim: $ZZWWWDUMP "$URL$CNC9" | sed '/^ *200[0-9]-[0-1][0-9]-[0-3][0-9]/!d;s/^ *//;s/   */ - /' | $limite</li>
+</ul>
+
+<h2 id="toc14">A decisão de deixar como está: quebrada</h2>
+
+<ul>
+<li><span class="a">23:33 Aurelio:</span> esse site das letras deve tar checando o referrer pra evitar robôs tipo a zz de usar</li>
+<li><span class="t">23:34 Thobias:</span> bom. vamos deixar quebrada por enquanto...</li>
+<li><span class="a">23:34 Aurelio:</span> sábia decisão :)</li>
+<li><span class="t">23:34 Thobias:</span> hehehe</li>
+</ul>
+
+<h2 id="toc15">Além dos problemas normais, o Skype também nos deu trabalho</h2>
+
+<ul>
+<li><span class="a">23:39 Aurelio:</span> o skype cortou, mas tem varios espaços depois do nome do pacote</li>
+<li><span class="t">23:40 Thobias:</span> entre o nome do pacote e a descrição?</li>
+<li><span class="a">23:40 Aurelio:</span> isso</li>
+<li><span class="t">23:40 Thobias:</span> ue, aquele sed que eu falei era para justamete casar ali e trocar por um  -</li>
+<li><span class="t">23:41 Thobias:</span> ;s/   */ - /'</li>
+<li><span class="a">23:41 Aurelio:</span> o skype cortou o espaço extra da ER</li>
+<li><span class="t">23:41 Thobias:</span> no final do filtro</li>
+<li><span class="a">23:41 Aurelio:</span> aqui apareceu somente   s/&lt;espaco&gt;&lt;asterisco&gt;/ - /</li>
+<li><span class="a">23:42 Aurelio:</span> agora botei 3 espaços e foi</li>
+<li><span class="t">23:42 Thobias:</span> ah. ok s/&lt;espaco&gt;&lt;espaco&gt;&lt;espaco&gt;*/ - /</li>
+</ul>
+
+<h2 id="toc16">Uma parcial do que foi feito até agora em cinco horas de trabalho</h2>
+
+<ul>
+<li><span class="a">23:45 Aurelio:</span> so far, so good</li>
+<li><span class="a">23:45 Aurelio:</span>
+    <br># 20061113 &lt;&gt; dicabl: URL e filtro atualizados (valeu sartini)
+    <br>#          &lt;&gt; loteria: URL e filtro atualizados (valeu casali)
+    <br>#          &lt;&gt; ipinternet: filtro atualizado
+    <br>#          &lt;&gt; locale: URL e filtros atualizados
+    <br>#          &lt;&gt; security: URL e filtro atualizados para conectiva e mandriva</li>
+<li><span class="t">23:48 Thobias:</span> cool</li>
+</ul>
+
+<h2 id="toc17">Páginas mudam, padrões mudam, as ZZ mudam</h2>
+
+<ul>
+<li><span class="t">23:48 Thobias:</span> zzhowto</li>
+<li><span class="t">23:49 Thobias:</span> no filtro</li>
+<li><span class="t">23:49 Thobias:</span> $ZZWWWHTML "$URL" | sed -n '/alt="\[TXT\]"/{ s/^.*href="\([^"]*\).*/\1/;p;}' &gt; $arq ; echo ' feito!' ; }</li>
+<li><span class="t">23:49 Thobias:</span> o original tá pegando ALT e HREF, os caras trocaram para minusculas...</li>
+<li><span class="t">23:50 Thobias:</span> dá para deixar um [aA][lL][tT] e [hH][rR][eE][fF] ...</li>
+<li><span class="a">23:51 Aurelio:</span> okie</li>
+<li><span class="a">23:53 Aurelio:</span> deixei minusculas mesmo, que é o padrao do xhtml. tags em maiusculas é passado</li>
+<li><span class="t">23:53 Thobias:</span> blz, nao sabia</li>
+</ul>
+
+<h2 id="toc18">Mas padrões novos também podem facilitar nossa vida</h2>
+
+<ul>
+<li><span class="a">23:54 Aurelio:</span> zznoticiaslinux i    arrumado</li>
+<li><span class="t">23:54 Thobias:</span> vou pegar a linuxnews</li>
+<li><span class="t">23:55 Thobias:</span> nessas agora de noticas vamos tentar trocar aqueles filtros loucos para RSS da vida</li>
+<li><span class="t">23:55 Thobias:</span> ai no maximo precisaremos no futuro trocar a url</li>
+<li><span class="t">23:55 Thobias:</span> como o caso do mandriva hoje</li>
+<li><span class="a">23:56 Aurelio:</span> pode crer</li>
+</ul>
+
+<h2 id="toc19">E virou a meia-noite...</h2>
+
+<h2 id="toc20">RSS zipado? Putz, mais um problema para a coleção...</h2>
+
+<ul>
+<li><span class="a">00:08 Aurelio:</span> noticiaslinux u OK</li>
+<li><span class="t">00:09 Thobias:</span> foda que os caras estao publicando o arquivo rss zipado :(</li>
+<li><span class="a">00:09 Aurelio:</span> aqui o lynx se garantiu</li>
+<li><span class="t">00:09 Thobias:</span> tenta um $ZZWWWHTML</li>
+<li><span class="t">00:09 Thobias:</span> $ZZWWWHTML <a href="http://osnews.com/files/recent.xml">http://osnews.com/files/recent.xml</a></li>
+<li><span class="a">00:10 Aurelio:</span> aqui rolou</li>
+<li><span class="t">00:11 Thobias:</span>
+    <br>$ $ZZWWWDUMP <a href="http://osnews.com/files/recent.xml">http://osnews.com/files/recent.xml</a> &gt; /tmp/X
+    <br>$ file /tmp/X
+    <br>/tmp/X: gzip compressed data, from Unix</li>
+<li><span class="a">00:11 Aurelio:</span> linux sux :P</li>
+<li><span class="t">00:12 Thobias:</span> hehe</li>
+<li><span class="t">00:12 Thobias:</span> pode ser a versao do lynx de repente</li>
+<li><span class="t">00:12 Thobias:</span>
+    <br>lynx --version
+    <br>Lynx Version 2.8.5rel.1 (04 Feb 2004)
+    <br>libwww-FM 2.14, SSL-MM 1.4.1, GNUTLS 1.0.16
+    <br>Built on linux-gnu May 13 2006 08:12:44</li>
+<li><span class="a">00:12 Aurelio:</span>
+    <br>$ $ZZWWWDUMP <a href="http://osnews.com/files/recent.xml">http://osnews.com/files/recent.xml</a> &gt; /tmp/X
+    <br>$ file /tmp/X
+    <br>/tmp/X: XML document text
+    <br>$ lynx --version
+    <br>Lynx Version 2.8.5rel.1 (04 Feb 2004)
+    <br>Built on darwin7.9.0 Sep 29 2005 21:49:53</li>
+<li><span class="a">00:12 Aurelio:</span> nope</li>
+</ul>
+
+<h2 id="toc21">Mais um exemplo de patches "ao vivo"</h2>
+
+<ul>
+<li><span class="t">00:17 Thobias:</span> zzlinuxnews ok</li>
+<li><span class="t">00:17 Thobias:</span> slashdot filtro:</li>
+<li><span class="t">00:17 Thobias:</span> sed -n '/&lt;div class="title"&gt;/,/&lt;\/div&gt;/{/slashdot/{ s/&lt;[^&gt;]*&gt;//g;s/^[[:blank:]]*//;p;};}' | $limite;}</li>
+<li><span class="t">00:18 Thobias:</span> osnews filtro e o tipo de dump: agora é ZZWWWDUMP e o filtro é:</li>
+<li><span class="t">00:18 Thobias:</span> sed -n '/By/{g;s/^ *//;p;};h' | $limite; }</li>
+<li><span class="t">00:19 Thobias:</span> ops. filtro melhor para o osnews</li>
+<li><span class="t">00:19 Thobias:</span> sed -n '/^ *By /{g;s/^ *//;p;};h' | $limite; }</li>
+<li><span class="t">00:21 Thobias:</span> sem agradecimentos tb</li>
+<li><span class="a">00:22 Aurelio:</span> ok. ok.</li>
+</ul>
+
+<h2 id="toc22">Acha que o ritmo já está forte? Veja agora então:</h2>
+
+<ul>
+<li><span class="t">00:27 Thobias:</span> zzsigla fix filtro tb</li>
+<li><span class="t">00:27 Thobias:</span> sed -n 's/^ *//;s/^.*\* *//;s/ *search Amazon.*//p'</li>
+<li><span class="a">00:28 Aurelio:</span> tou na dominiopais</li>
+<li><span class="t">00:29 Thobias:</span> ok. filtro para zzsigla, tinha um lixo no final das primeiras linhas</li>
+<li><span class="t">00:30 Thobias:</span> sed -n 's/^ *//;s/^.*\* *//;s/more info from .*//;s/ *search Amazon.*//p'</li>
+<li><span class="t">00:30 Thobias:</span> vou para noticiaslinux</li>
+<li><span class="a">00:36 Aurelio:</span> dominiopais e sigla OK</li>
+<li><span class="a">00:37 Aurelio:</span> vou pra dicasl</li>
+<li><span class="a">00:41 Aurelio:</span> dicasl OK</li>
+<li><span class="t">00:41 Thobias:</span> zznoticiaslinux ok</li>
+<li><span class="t">00:42 Thobias:</span> viva o linux mudou o filtro</li>
+<li><span class="t">00:42 Thobias:</span> e o método</li>
+<li><span class="t">00:42 Thobias:</span>
+    <br>echo ; echozz "* Viva o Linux ($URL):"; $ZZWWWHTML $URL/index.rdf |
+    <br>sed -n '1,/&lt;item&gt;/d;s@.*&lt;title&gt;\(.*\)&lt;/title&gt;@\1@p' | $limite ; }</li>
+</ul>
+
+<h2 id="toc23">Ops, única trombada da noite, mas que acabou bem</h2>
+
+<ul>
+<li><span class="t">00:42 Thobias:</span> under Linux, mudou o site e o filtro</li>
+<li><span class="t">00:42 Thobias:</span>
+    <br>[ "$s" != "${s#*u}" ] &amp;&amp; { URL='<a href="http://under-linux.org/">http://under-linux.org/</a>'
+    <br>echo ; echozz "* UnderLinux ($URL):"; $ZZWWWHTML "$URL" |
+    <br>sed -n '/class="entry-title/{s/&lt;[^&gt;]*&gt;//g;s/^[[:blank:]]*//;p;}'|$limite;}</li>
+<li><span class="t">00:42 Thobias:</span> acho que mudou o método também...</li>
+<li><span class="a">00:43 Aurelio:</span> esse eu já tinha feito :)</li>
+<li><span class="a">00:43 Aurelio:</span>
+    <br>[ "$s" != "${s#*u}" ] &amp;&amp; { URL='<a href="http://under-linux.org/feed/atom/">http://under-linux.org/feed/atom/</a>'
+    <br>echo ; echozz "* UnderLinux ($URL):"; $ZZWWWHTML "$URL" |
+    <br>sed -n 's,.*&lt;title .*\[\(.*\)]]&gt;&lt;/title&gt;.*,\1,p' | $limite; }</li>
+<li><span class="t">00:43 Thobias:</span> achei que tu tinha feito o da info?</li>
+<li><span class="t">00:44 Thobias:</span> ah, o atom vem zipado para mim....</li>
+<li><span class="t">00:44 Thobias:</span> vai dar rolo com alguns usuarios...</li>
+<li><span class="a">00:44 Aurelio:</span> então vou usar o teu</li>
+<li><span class="a">00:44 Aurelio:</span> viu, não foi perdido :)</li>
+<li><span class="t">00:44 Thobias:</span> :)</li>
+</ul>
+
+<h2 id="toc24">Compatibilidade é importante (e difícil, e chato, e …)</h2>
+
+<ul>
+<li><span class="a">00:47 Aurelio:</span> o noticias linux funciona aí? (aqui nao)</li>
+<li><span class="t">00:47 Thobias:</span> funciona</li>
+<li><span class="a">00:48 Aurelio:</span> sed: 1: "/&lt;[hH]3&gt;/{s/&lt;[^&gt;]*&gt;//g; ...": extra characters at the end of p command</li>
+<li><span class="a">00:48 Aurelio:</span> BSDzisses</li>
+<li><span class="t">00:48 Thobias:</span> da pera pegar daqui entao <a href="http://www.noticiaslinux.com.br/rss.php">http://www.noticiaslinux.com.br/rss.php</a></li>
+<li><span class="a">00:48 Aurelio:</span> nem esquenta, é o sed, vou arrumar</li>
+<li><span class="a">00:49 Aurelio:</span> ah, só faltou o ; antes do }</li>
+<li><span class="t">00:50 Thobias:</span> é mesmo hehe</li>
+<li><span class="a">00:55 Aurelio:</span> noticiaslinux n OK</li>
+<li><span class="a">00:55 Aurelio:</span> no BSD não rola [\t]  tb</li>
+<li><span class="t">00:56 Thobias:</span> tem o [[:blank:]] ?</li>
+<li><span class="a">00:56 Aurelio:</span> tem. bem lembrado</li>
+</ul>
+
+<h2 id="toc25">Google é legal, mas o HTML deles…</h2>
+
+<ul>
+<li><span class="a">01:12 Aurelio:</span> putz, essa zzgoogle não tou afim de fazer. se você não fizer, lanço o release sem ela mesmo :)</li>
+<li><span class="t">01:12 Thobias:</span> ta quase</li>
+<li><span class="t">01:13 Thobias:</span> bah, que zona aquele html</li>
+<li><span class="a">01:17 Aurelio:</span> total, eu lembro que foi foda fazer a original</li>
+<li><span class="t">01:19 Thobias:</span> acho que deu</li>
+<li><span class="t">01:20 Thobias:</span> não ficou muito bonito, mas....</li>
+<li><span class="t">01:20 Thobias:</span> só mudou o filtro
+    <br>sed '/&lt;p class=g&gt;/!d;s/class=l/&amp;\
+    <br>/g' | sed -n 's/&lt;\/a&gt;.*//;/&lt;\/script&gt;/d;s/.*href="\([^"]*\)"&gt;\(.*\)/\2\
+    <br>\1\
+    <br>/p' | sed 's/&lt;[^&gt;]*&gt;//g'</li>
+<li><span class="a">01:23 Aurelio:</span> massa, fechou</li>
+</ul>
+
+<h2 id="toc26">Já que chegamos até aqui, uma função nova seria legal</h2>
+
+<ul>
+<li><span class="a">01:24 Aurelio:</span> que tal botar uma funcao nova? aquela que o carinha mandou
+    <br># --------------------------------------------------------------------------
+    <br># Conversão de telefones contendo palavras para apenas números
+    <br># Uso: zzfonenum [telefone]
+    <br>#
+    <br># Ex.: zzfonenum 3937-LINUX
+    <br># Saída: 3937-54689
+    <br># --------------------------------------------------------------------------</li>
+<li><span class="a">01:24 Aurelio:</span> essa nao tem o que dar errado :)</li>
+<li><span class="t">01:25 Thobias:</span> massa, pode ser</li>
+<li><span class="t">01:28 Thobias:</span> e o exemplo, acho que seria melhor colocar o echo 3937-LINUX | zzfonenum</li>
+<li><span class="a">01:28 Aurelio:</span> vou melhorar o codigo pra ela funcionar dos dois jeitos</li>
+<li><span class="a">01:32 Aurelio:</span>
+    <br>$ ./dev zzfonenum 234-acde
+    <br>234-2233
+    <br>$ echo 234-acde | ./dev zzfonenum
+    <br>234-2233</li>
+<li><span class="t">01:33 Thobias:</span> cool</li>
+</ul>
+
+<h2 id="toc27">A escolha do nome é muito importante</h2>
+
+<ul>
+<li><span class="a">01:35 Aurelio:</span> falta um nome melhor...</li>
+<li><span class="a">01:36 Aurelio:</span> zzfoneletra   zzletrafone</li>
+<li><span class="t">01:36 Thobias:</span> mmm</li>
+<li><span class="t">01:36 Thobias:</span> acho que zzfoneletra</li>
+<li><span class="a">01:37 Aurelio:</span> agree</li>
+<li><span class="t">01:37 Thobias:</span> o fone vindo primeiro lembra o telefone, o outro pode ficar meio estranho</li>
+</ul>
+
+<h2 id="toc28">Ufa! Anotou a placa daquele trem?</h2>
+
+<ul>
+<li><span class="a">01:39 Aurelio:</span> cara, por mim fechou o release entao</li>
+<li><span class="t">01:39 Thobias:</span> como ficou o changelog?</li>
+<li><span class="a">01:40 Aurelio:</span> ah, tem o bug da nomefoto</li>
+<li><span class="a">01:40 Aurelio:</span>
+    <br># 20061114 &lt;&gt; dicabl: URL e filtro atualizados (valeu sartini)
+    <br>#          &lt;&gt; loteria: URL e filtro atualizados (valeu casali)
+    <br>#          &lt;&gt; ipinternet: filtro atualizado
+    <br>#          &lt;&gt; locale: URL e filtros atualizados
+    <br>#          &lt;&gt; howto: filtro atualizado
+    <br>#          &lt;&gt; security: URL e filtro atualizados para conectiva e mandriva
+    <br>#          &lt;&gt; noticiaslinux: I) URL atualizada (valeu aires)
+    <br>#          &lt;&gt; noticiaslinux: U) URL e filtro atualizados
+    <br>#          &lt;&gt; noticiaslinux: V) filtro atualizado
+    <br>#          &lt;&gt; noticiaslinux: N) filtro atualizado
+    <br>#          &lt;&gt; linuxnews: S) filtro atualizado, O) filtro atualizado
+    <br>#          &lt;&gt; dominiopais: URL e filtro atualizados
+    <br>#          &lt;&gt; sigla: filtro atualizado
+    <br>#          &lt;&gt; dicasl: URL e filtro atualizados
+    <br>#          &lt;&gt; dolar: filtro atualizado
+    <br>#          &lt;&gt; dicportugues: filtro atualizado
+    <br>#          &lt;&gt; pronuncia: agora usa o comando 'say' no mac
+    <br>#          &lt;&gt; google: filtro atualizado
+    <br>#          ++ zzfoneletra (valeu rodolfo)</li>
+<li><span class="a">01:40 Aurelio:</span> meu caralho</li>
+<li><span class="t">01:40 Thobias:</span> esse ai é sério. pode fazer os caras perderem arquivos :(</li>
+<li><span class="t">01:40 Thobias:</span> bah, que animal!! hehe</li>
+<li><span class="a">01:40 Aurelio:</span> tb, tamos aqui desde as 19h</li>
+<li><span class="a">01:40 Aurelio:</span> 18h30</li>
+<li><span class="a">01:41 Aurelio:</span> 7h de zz já, acredita?</li>
+<li><span class="t">01:41 Thobias:</span> foi legal! passou rápido essas 7h</li>
+<li><span class="a">01:41 Aurelio:</span> meu, essa session foi animal!</li>
+<li><span class="a">01:41 Aurelio:</span> muito no gás mesmo</li>
+<li><span class="t">01:42 Thobias:</span> foi bom "relembrar" hehehe</li>
+<li><span class="a">01:42 Aurelio:</span> vou postar algo no blog sobre isso que foi histórico :)</li>
+<li><span class="t">01:43 Thobias:</span> 7h de programação insana de puro shell heheh</li>
+</ul>
+
+<h2 id="toc29">Análise do problema e das possíveis soluções</h2>
+
+<ul>
+<li><span class="a">01:47 Aurelio:</span> mas o que fazer qdo existir o arquivo</li>
+<li><span class="a">01:47 Aurelio:</span> abortar ou adicionar uma extensão numerica pra diferenciar?</li>
+<li><span class="t">01:47 Thobias:</span> acho que não faz nada e manda uma mesg na tela</li>
+<li><span class="a">01:48 Aurelio:</span> o foda é que daí ele vai ter trocado o nome de metade da galera já</li>
+<li><span class="a">01:48 Aurelio:</span> bem, mas é o melhor. dar uma passada só pra checar vai ser sux</li>
+</ul>
+
+<h2 id="toc30">A tomada de decisão e implementação</h2>
+
+<ul>
+<li><span class="t">01:54 Thobias:</span> mas na boa, acho que o melhor mesmo é não mover, imprime dizendo que o arquivo destino ja existe e pronto</li>
+<li><span class="a">01:54 Aurelio:</span> pode crer, aborta no meio do caminho e o cara decide o que fazer</li>
+<li><span class="t">01:55 Thobias:</span> e podemos deixar a dica neste caso do cara rodar 2x para contornar o "problema"</li>
+<li><span class="a">02:00 Aurelio:</span>
+    <br>$ ../dev zznomefoto -p videos- *.wmv
+    <br>a.wmv -&gt; videos-001.wmv
+    <br>Arquivo videos-001.wmv já existe. Abortando.
+    <br>$</li>
+<li><span class="t">02:01 Thobias:</span> blz, é isso aí. evita do cara perder os arquivos e deixa a decisão do que fazer como ele</li>
+</ul>
+
+<h2 id="toc31">Quase oito horas depois… finalmente terminou</h2>
+
+<ul>
+<li><span class="a">02:05 Aurelio:</span> blz, então agora é oficial, FECHOU</li>
+<li><span class="a">02:05 Aurelio:</span> amanhã eu lanço, faço um post no blog e vou até anunciar no br-linux</li>
+<li><span class="t">02:05 Thobias:</span> blz</li>
+<li><span class="t">02:06 Thobias:</span> "que pegada" :)</li>
+<li><span class="a">02:06 Aurelio:</span> pode crer. agora só em 2007 ;)</li>
+<li><span class="t">02:07 Thobias:</span> :)</li>
+</ul>
+
+<h2 id="toc32">Minutos depois…</h2>
+
+<ul>
+<li><span class="t">02:32 Thobias:</span> pow, que putaria ta dando na globo</li>
+<li><span class="a">02:32 Aurelio:</span> opa</li>
+<li><span class="a">02:33 Aurelio:</span> droga, perdi</li>
+</ul>
