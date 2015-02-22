@@ -92,25 +92,6 @@ pre, code, .menu {
     font-size: 85%;
 }
 
-
-#hist td {
-    border-width: 0;
-}
-
-
-#logo #content td img {
-    width: 128px;
-    height: 128px;
-}
-#logo #content td {
-    text-align: center;
-    vertical-align: bottom;
-    width: 128px;
-    border-width: 0;
-    color: #888;
-}
-
-
 #man h2 span {
     float: right;
     font-size: 50%;
@@ -128,7 +109,6 @@ pre, code, .menu {
     background-color: #eee;
     color: black;
 }
-
 
 #changelog h2 {
     font-weight: bold;
