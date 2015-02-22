@@ -63,6 +63,10 @@
 
 .highlight .language-console,      /* Console, command line */
 .highlight .language-console .nb,  /* Overwrite shell builtins */
+.highlight .language-console .s1,  /* Overwrite 'string' */
+.highlight .language-console .s2,  /* Overwrite "string" */
+.highlight .language-console .nv,  /* Overwrite $var */
+.highlight .language-console .p,   /* Overwrite pipe */
 .highlight .language-console .m {  /* Overwrite number */
     color: orange
 }
