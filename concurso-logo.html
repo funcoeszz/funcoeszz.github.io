@@ -1,12 +1,9 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
-<HTML>
-<HEAD>
-<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
-<LINK REL="icon" TYPE="image/png" HREF="img/favicon.png">
-<TITLE>Concurso ícone Funções ZZ — 2008</TITLE>
+---
+title: Concurso ícone Funções ZZ — 2008
+---
 
 <style type="text/css">
-    img {
+    #canvas img {
         width: 96px;
         height: 96px;
         padding: 10px;
@@ -16,18 +13,13 @@
 
 <script type="text/javascript">
     function changeSize(n) {
-        var imgs = document.getElementsByTagName('img');
+        var imgs = document.getElementById('canvas').getElementsByTagName('img');
         for (var i = 0; i < imgs.length ; i++) {
-            imgs[i].style.width = n;
-            imgs[i].style.height = n;
+            imgs[i].style.width = n + 'px';
+            imgs[i].style.height = n + 'px';
         }
     }
 </script>
-
-</HEAD>
-<BODY>
-
-<DIV CLASS="body" ID="body">
 
 <a href="javascript:changeSize(16)">16</a>
 <a href="javascript:changeSize(32)">32</a>
@@ -37,49 +29,42 @@
 <a href="javascript:changeSize(96)">96</a>
 <a href="javascript:changeSize(128)">128</a>
 
-<P>
-<IMG
-SRC="img/logo/concurso/anselmo-zago.png" ALT="anselmo-zago" TITLE="anselmo-zago"><IMG
-SRC="img/logo/concurso/cristiano-villela.png" ALT="cristiano-villela" TITLE="cristiano-villela"><IMG
-SRC="img/logo/concurso/deadcow.png" ALT="deadcow" TITLE="deadcow"><IMG
-SRC="img/logo/concurso/dirceu-pauka.png" ALT="dirceu-pauka" TITLE="dirceu-pauka"><IMG
-SRC="img/logo/concurso/elias-junior-1.png" ALT="elias-junior-1" TITLE="elias-junior-1"><IMG
-SRC="img/logo/concurso/elias-junior-2.png" ALT="elias-junior-2" TITLE="elias-junior-2"><IMG
-SRC="img/logo/concurso/elias-junior-3.png" ALT="elias-junior-3" TITLE="elias-junior-3"><IMG
-SRC="img/logo/concurso/elias-junior-4.png" ALT="elias-junior-4" TITLE="elias-junior-4"><IMG
-SRC="img/logo/concurso/elias-junior-5.png" ALT="elias-junior-5" TITLE="elias-junior-5"><IMG
-SRC="img/logo/concurso/elias-junior-6.png" ALT="elias-junior-6" TITLE="elias-junior-6"><IMG
-SRC="img/logo/concurso/elias-junior-7.png" ALT="elias-junior-7" TITLE="elias-junior-7"><IMG
-SRC="img/logo/concurso/elias-junior-8.png" ALT="elias-junior-8" TITLE="elias-junior-8"><IMG
-SRC="img/logo/concurso/elias-junior-9.png" ALT="elias-junior-9" TITLE="elias-junior-9"><IMG
-SRC="img/logo/concurso/felipe-carvalho-1.png" ALT="felipe-carvalho-1" TITLE="felipe-carvalho-1"><IMG
-SRC="img/logo/concurso/felipe-carvalho-2.png" ALT="felipe-carvalho-2" TITLE="felipe-carvalho-2"><IMG
-SRC="img/logo/concurso/felipe-carvalho-3.png" ALT="felipe-carvalho-3" TITLE="felipe-carvalho-3"><IMG
-SRC="img/logo/concurso/henrique-araujo-1.png" ALT="henrique-araujo-1" TITLE="henrique-araujo-1"><IMG
-SRC="img/logo/concurso/henrique-araujo-2.png" ALT="henrique-araujo-2" TITLE="henrique-araujo-2"><IMG
-SRC="img/logo/concurso/henrique-araujo-3.png" ALT="henrique-araujo-3" TITLE="henrique-araujo-3"><IMG
-SRC="img/logo/concurso/henrique-araujo-4.png" ALT="henrique-araujo-4" TITLE="henrique-araujo-4"><IMG
-SRC="img/logo/concurso/henrique-araujo-5.png" ALT="henrique-araujo-5" TITLE="henrique-araujo-5"><IMG
-SRC="img/logo/concurso/leonardo-boiko.png" ALT="leonardo-boiko" TITLE="leonardo-boiko"><IMG
-SRC="img/logo/concurso/lincoln-brito.png" ALT="lincoln-brito" TITLE="lincoln-brito"><IMG
-SRC="img/logo/concurso/maicon-junches.png" ALT="maicon-junches" TITLE="maicon-junches"><IMG
-SRC="img/logo/concurso/marcos-bordon.png" ALT="marcos-bordon" TITLE="marcos-bordon"><IMG
-SRC="img/logo/concurso/mateus-lago.png" ALT="mateus-lago" TITLE="mateus-lago"><IMG
-SRC="img/logo/concurso/rafael-marin-1.png" ALT="rafael-marin-1" TITLE="rafael-marin-1"><IMG
-SRC="img/logo/concurso/rafael-marin-2.png" ALT="rafael-marin-2" TITLE="rafael-marin-2"><IMG
-SRC="img/logo/concurso/rafael-marin-3.png" ALT="rafael-marin-3" TITLE="rafael-marin-3"><IMG
-SRC="img/logo/concurso/sandro-valentim.png" ALT="sandro-valentim" TITLE="sandro-valentim"><IMG
-SRC="img/logo/concurso/vlademir-moraes-1.png" ALT="vlademir-moraes-1" TITLE="vlademir-moraes-1"><IMG
-SRC="img/logo/concurso/vlademir-moraes-2.png" ALT="vlademir-moraes-2" TITLE="vlademir-moraes-2"><IMG
-SRC="img/logo/concurso/vlademir-moraes-3.png" ALT="vlademir-moraes-3" TITLE="vlademir-moraes-3"><IMG
-SRC="img/logo/concurso/vlademir-moraes-4.png" ALT="vlademir-moraes-4" TITLE="vlademir-moraes-4">
-</P>
-</DIV>
+<div id="canvas">
+<img
+src="img/logo/concurso/anselmo-zago.png" alt="anselmo-zago" title="anselmo-zago"><img
+src="img/logo/concurso/cristiano-villela.png" alt="cristiano-villela" title="cristiano-villela"><img
+src="img/logo/concurso/deadcow.png" alt="deadcow" title="deadcow"><img
+src="img/logo/concurso/dirceu-pauka.png" alt="dirceu-pauka" title="dirceu-pauka"><img
+src="img/logo/concurso/elias-junior-1.png" alt="elias-junior-1" title="elias-junior-1"><img
+src="img/logo/concurso/elias-junior-2.png" alt="elias-junior-2" title="elias-junior-2"><img
+src="img/logo/concurso/elias-junior-3.png" alt="elias-junior-3" title="elias-junior-3"><img
+src="img/logo/concurso/elias-junior-4.png" alt="elias-junior-4" title="elias-junior-4"><img
+src="img/logo/concurso/elias-junior-5.png" alt="elias-junior-5" title="elias-junior-5"><img
+src="img/logo/concurso/elias-junior-6.png" alt="elias-junior-6" title="elias-junior-6"><img
+src="img/logo/concurso/elias-junior-7.png" alt="elias-junior-7" title="elias-junior-7"><img
+src="img/logo/concurso/elias-junior-8.png" alt="elias-junior-8" title="elias-junior-8"><img
+src="img/logo/concurso/elias-junior-9.png" alt="elias-junior-9" title="elias-junior-9"><img
+src="img/logo/concurso/felipe-carvalho-1.png" alt="felipe-carvalho-1" title="felipe-carvalho-1"><img
+src="img/logo/concurso/felipe-carvalho-2.png" alt="felipe-carvalho-2" title="felipe-carvalho-2"><img
+src="img/logo/concurso/felipe-carvalho-3.png" alt="felipe-carvalho-3" title="felipe-carvalho-3"><img
+src="img/logo/concurso/henrique-araujo-1.png" alt="henrique-araujo-1" title="henrique-araujo-1"><img
+src="img/logo/concurso/henrique-araujo-2.png" alt="henrique-araujo-2" title="henrique-araujo-2"><img
+src="img/logo/concurso/henrique-araujo-3.png" alt="henrique-araujo-3" title="henrique-araujo-3"><img
+src="img/logo/concurso/henrique-araujo-4.png" alt="henrique-araujo-4" title="henrique-araujo-4"><img
+src="img/logo/concurso/henrique-araujo-5.png" alt="henrique-araujo-5" title="henrique-araujo-5"><img
+src="img/logo/concurso/leonardo-boiko.png" alt="leonardo-boiko" title="leonardo-boiko"><img
+src="img/logo/concurso/lincoln-brito.png" alt="lincoln-brito" title="lincoln-brito"><img
+src="img/logo/concurso/maicon-junches.png" alt="maicon-junches" title="maicon-junches"><img
+src="img/logo/concurso/marcos-bordon.png" alt="marcos-bordon" title="marcos-bordon"><img
+src="img/logo/concurso/mateus-lago.png" alt="mateus-lago" title="mateus-lago"><img
+src="img/logo/concurso/rafael-marin-1.png" alt="rafael-marin-1" title="rafael-marin-1"><img
+src="img/logo/concurso/rafael-marin-2.png" alt="rafael-marin-2" title="rafael-marin-2"><img
+src="img/logo/concurso/rafael-marin-3.png" alt="rafael-marin-3" title="rafael-marin-3"><img
+src="img/logo/concurso/sandro-valentim.png" alt="sandro-valentim" title="sandro-valentim"><img
+src="img/logo/concurso/vlademir-moraes-1.png" alt="vlademir-moraes-1" title="vlademir-moraes-1"><img
+src="img/logo/concurso/vlademir-moraes-2.png" alt="vlademir-moraes-2" title="vlademir-moraes-2"><img
+src="img/logo/concurso/vlademir-moraes-3.png" alt="vlademir-moraes-3" title="vlademir-moraes-3"><img
+src="img/logo/concurso/vlademir-moraes-4.png" alt="vlademir-moraes-4" title="vlademir-moraes-4">
+</p>
 
-<br><br>
-<A style="float:right" HREF="http://blog.aurelio.net/2008/08/04/funcoes-zz-crie-um-icone-e-ganhe-um-livro-autografado/">Saiba mais sobre o concurso »</A>
-
-<A HREF="logo.html">« Voltar ao site das Funções ZZ</A>
-<br><br><br><br><br>
-
-</BODY></HTML>
+<p><a href="http://blog.aurelio.net/2008/08/04/funcoes-zz-crie-um-icone-e-ganhe-um-livro-autografado/">Saiba mais sobre o concurso</a></p>
