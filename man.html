@@ -1,0 +1,43 @@
+---
+title: Manual das Funções ZZ
+---
+
+<style>
+    h2 span {
+        float: right;
+        font-size: 50%;
+    }
+    h2 span a {
+        text-decoration: underline;
+    }
+    h2 span a:link {
+        color: blue;
+    }
+    h2 span a:visited {
+        color: purple;
+    }
+    pre {
+        background-color: #eee;
+        color: black;
+    }
+</style>
+
+
+<div class="toc">
+    <ul>
+    {% for item in site.data.help %}
+        <li><a href="#{{ item[0] }}">{{ item[0] }}</a></li>
+    {% endfor %}
+    </ul>
+</div>
+
+
+{% for item in site.data.help %}
+
+<h2 id="{{ item[0] }}">{{ item[0] }} <span><a href="https://github.com/funcoeszz/funcoeszz/blob/master/zz/{{ item[0] }}.sh">código no GitHub</a> →</span></h2>
+
+<pre>
+{{ item[1] | escape }}
+</pre>
+
+{% endfor %}

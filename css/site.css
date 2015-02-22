@@ -93,24 +93,6 @@ pre, code, .menu {
 
 /* -------------------------------- CUSTOM PAGES */
 
-#man h2 span {
-    float: right;
-    font-size: 50%;
-}
-#man h2 span a {
-    text-decoration: underline;
-}
-#man h2 span a:link {
-    color: blue;
-}
-#man h2 span a:visited {
-    color: purple;
-}
-#man pre {
-    background-color: #eee;
-    color: black;
-}
-
 #changelog h2 {
     font-weight: bold;
     border-top: 1px solid gray;
