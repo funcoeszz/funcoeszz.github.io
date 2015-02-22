@@ -104,17 +104,17 @@ zz</b>chaves ()
 
 Acompanhe o que foi feito:
 
- * As Funções ZZ originais foram incluídas no script, com o comando `source`. Assim simulamos o "ambiente ZZ" em nosso script.
+* As Funções ZZ originais foram incluídas no script, com o comando `source`. Assim simulamos o "ambiente ZZ" em nosso script.
 
- * Redefinimos a variável `ZZPATH` para o caminho completo de nosso script. Isso é necessário para o funcionamento do `--help`.
+* Redefinimos a variável `ZZPATH` para o caminho completo de nosso script. Isso é necessário para o funcionamento do `--help`.
 
- * O prefixo "zz" foi adicionado ao nome da função, ficando `zzchaves`.
+* O prefixo "zz" foi adicionado ao nome da função, ficando `zzchaves`.
 
- * A chamada à função que existia na última linha foi retirada. Agora chamaremos a função diretamente pela linha de comando.
+* A chamada à função que existia na última linha foi retirada. Agora chamaremos a função diretamente pela linha de comando.
 
- * Foi adicionada uma chamada à função `zzzz` na primeira linha da nossa função. Essa linha é sempre igual, mudando apenas o nome da função. Essa linha serve para que funcione o `--help` de sua função.
+* Foi adicionada uma chamada à função `zzzz` na primeira linha da nossa função. Essa linha é sempre igual, mudando apenas o nome da função. Essa linha serve para que funcione o `--help` de sua função.
 
- * Por falar em `--help`, notou que foram adicionados comentários antes da função? É desses comentários que o texto de ajuda é extraído. É um formato padrão que deve ser seguido à risca. Na dúvida copie e cole um já existente e somente altere o texto.
+* Por falar em `--help`, notou que foram adicionados comentários antes da função? É desses comentários que o texto de ajuda é extraído. É um formato padrão que deve ser seguido à risca. Na dúvida copie e cole um já existente e somente altere o texto.
 
 Descrição do formato:
 
