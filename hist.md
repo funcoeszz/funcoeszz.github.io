@@ -257,9 +257,9 @@ Com uma média vergonhosa de uma versão nova por ano, 2006 e 2007 passaram lent
 
 : v8.3
 http://aurelio.net/blog/2008/03/05/a-nova-geracao-das-funcoes-zz/
-	post show de bola vale a pena linkar
+    post show de bola vale a pena linkar
 http://www.Dicas-L.com.br/dicas-l/20080306.php
-	resumao na dicas-l
+    resumao na dicas-l
 testador (quando?) mega atualização 8.3
 UTF-8 mega atualizacao 8.3
  - O **código-fonte** das funções foi inteiramente rescrito - agora é legível, bem estruturado e mais seguro, com muitos comentários explicando seu funcionamento
@@ -291,11 +291,11 @@ zzansi2html
 itamar:
 r136 | itamarnet | 2009-10-04 23:02:50 -0300 (Dom, 04 Out 2009)
 Função nova zzbolsas - Consulta bolsas e ações
-	https://github.com/funcoeszz/funcoeszz/commit/5527cd1643a192e91245853e720d9da86165c5b7
+    https://github.com/funcoeszz/funcoeszz/commit/5527cd1643a192e91245853e720d9da86165c5b7
 email: 26 Set 2009, via form do blog, patch zzloteria
 Empossado como coautor em 2013-08-27
 Publicamente em 2013-08-30
-	http://aurelio.net/blog/2013/08/30/novo-coautor-das-funcoes-zz-itamar-santos-de-souza/
+    http://aurelio.net/blog/2013/08/30/novo-coautor-das-funcoes-zz-itamar-santos-de-souza/
 
 2008-10-02
 http://aurelio.net/blog/2008/10/02/recados-da-paroquia-zz/
@@ -306,7 +306,7 @@ SVN Google Code
 - Adicionado suporte a um diretório com funções extras ($ZZEXTRADIR, valor padrão ~/zzextra)
  - As funções extras foram colocadas no [SVN http://code.google.com/p/funcoeszz/source/browse/]
 http://aurelio.net/blog/2008/10/31/funcoes-zz-versao-810/
-	história legal sobre zzcarnaval, pascoa, diasdasemana e horariodeverao
+    história legal sobre zzcarnaval, pascoa, diasdasemana e horariodeverao
 
 : v10.12
  - Nova variável $ZZOFF para guardar a lista das funções que não devem ser carregadas. Use espaços ou vírgulas (ou ambos) como separador. Exemplo: ``export ZZOFF="zzbeep, zzramones"``
