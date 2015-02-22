@@ -1,16 +1,9 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="utf-8">
-    <title>Logomático - Crie seu próprio logotipo das Funções ZZ!</title>
-    <meta name="author" content="Aurelio Jargas">
-    <link rel="shortcut icon" href="/img/favicon.png">
-
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+---
+title: Logomático - Crie seu próprio logotipo das Funções ZZ!
+---
 
 <style type="text/css">
-    body { text-align:center; margin:auto;}
+    /*body { text-align:center; margin:auto;}*/
     #canvas { margin:50px auto; position: relative; }
 
     #canvas, #cores, #vazado { width:256px; height:256px; }
@@ -38,20 +31,21 @@
     table { border-spacing:0; border-collapse:collapse; margin:auto; }
     td    { width:32px; height:32px; border:1px solid black; }
     td a  { display:block; text-decoration:none; }
+    td a:hover { color:transparent; }
 
-    .white  { background-color: white  ; }
-    .black  { background-color: black  ; }
-    .yellow { background-color: yellow ; }
-    .red    { background-color: red    ; }
-    .green  { background-color: lime   ; }
-    .orange { background-color: #FF8000; }
-    .blue   { background-color: #0080FF; }
-    .pink   { background-color: #FF0080; }
-    .rose   { background-color: #CC66FF; }
-    .gray   { background-color: #666666; }
-    .silver { background-color: #E6E6E6; }
+    .white  { background-color: white   !important; }
+    .black  { background-color: black   !important; }
+    .yellow { background-color: yellow  !important; }
+    .red    { background-color: red     !important; }
+    .green  { background-color: lime    !important; }
+    .orange { background-color: #FF8000 !important; }
+    .blue   { background-color: #0080FF !important; }
+    .pink   { background-color: #FF0080 !important; }
+    .rose   { background-color: #CC66FF !important; }
+    .gray   { background-color: #666666 !important; }
+    .silver { background-color: #E6E6E6 !important; }
 
-    #footer { clear: both; margin: 4em; }
+    #fim { clear: both; margin: 4em; }
 </style>
 
 <script type="text/javascript">
@@ -67,10 +61,6 @@
         el.style.backgroundImage = "url(img/logo/zzlogo-vazado-" + cor + ".png)";
     }
 </script>
-</head>
-
-<body>
-<h1>Crie seu próprio logotipo das Funções ZZ!</h1>
 
 <div id="canvas">
     <div id="cores">
@@ -132,11 +122,4 @@
 </tr>
 </table>
 
-<div id="footer">
-    <p>Quando terminar, faça um PrintScreen para salvar o logo.</p>
-
-    <p><a href="logo.html">« Voltar ao site das Funções ZZ</a></p>
-</div>
-
-</body>
-</html>
+<p id="fim">Quando terminar, faça um PrintScreen para salvar o logo.</p>
