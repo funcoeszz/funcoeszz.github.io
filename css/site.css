@@ -29,6 +29,11 @@ pre {
     line-height:130%;
     clear: both;
 }
+pre.light {
+    padding: 0;
+    background: none;
+    color: black;
+}
 .prompt {
     color: lime;
 }
@@ -135,14 +140,6 @@ pre, code, .menu {
 #changelog .zzlink:hover {
     text-decoration: underline;
 }
-
-#premio pre,
-#recompensa pre {
-    padding: 0;
-    background: none;
-    color: black;
-}
-
 
 #aovivo .a { color:green; font-family:monospace; }
 #aovivo .t { color:blue;  font-family:monospace; }
