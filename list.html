@@ -1,0 +1,32 @@
+---
+title: Lista de todas as Funções ZZ
+---
+
+<style>
+    td {
+        font-size: 85%;
+    }
+    td:first-child {
+        text-align: center;
+    }
+</style>
+
+<!-- <p>Segue a lista completa e atualizada de todas as funções disponíveis. Para saber mais detalhes sobre as funções, exemplos de uso e quais as opções disponíveis, consulte a zzajuda.</p> -->
+
+<table>
+
+<tr>
+    <th>Nº</th>
+    <th>Nome</th>
+    <th>Descrição</th>
+</tr>
+
+{% for item in site.data.list %}
+<tr>
+    <td>{{ forloop.index }}</td>
+    <td><a href="man.html#{{ item[0] }}">{{ item[0] }}</a></td>
+    <td>{{ item[1] | escape }}</td>
+</tr>
+{% endfor %}
+
+</table>
