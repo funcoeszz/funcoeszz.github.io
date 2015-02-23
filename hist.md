@@ -95,6 +95,56 @@ Os funcionários da empresa gostaram, e nos meses seguintes foram sugerindo melh
 <!-- O pacote cresceu para pouco mais de 20 funções de uso geral, como trocar palavras, trocar extensão de arquivo e cálculos. -->
 <!-- Também criei o esquema de ajuda nos cabeçalhos (--help) e saída colorida. -->
 
+<!--
+Cópia do email, caso o Yahoo suma:
+
+olás.
+
+com o passar do tempo, fui criando uma coleção de pequenos
+programinhas pra fazer coisinhas simples e economizar tempo.
+acho que geralmente todo usuário de modo texto tem sua coleção
+particular de robozinhos...
+
+o que fiz foi transformar todos em funções do bash, enxugando ao
+máximo, e os deixando genéricos.
+
+toda função usa apenas variáveis locais, possui amostra de
+sintaxe em caso de chamada errada e possui no nome o prefixo zz,
+bem como descrição e exemplo de uso.
+
+as variáveis globais do arquivo também têm o prefixo ZZ
+
+assim, as funções ZZ não atrapalharão seu ambiente atual e não
+sobreescreverão eventuais funções ou variáveis de mesmo nome.
+
+incluído o arquivo na sua shell atual (com o comando source
+ou .), basta:
+
+prompt$ zz<TAB><TAB>
+
+para ver todas as funções disponíveis. são 22 ao todo.
+algumas fazem busca na internet então necessitam de conexão.
+
+
+
+o arquivo .bashzz com as funções segue em anexo e também tem uma
+cópia em:
+http://www.conectiva.com.br/~aurelio/programas/bash/funcoesZZ
+mais instruções estão no seu cabeçalho.
+
+este é um primeiro anúncio público, embora estas funções já
+estejam em uso interno aqui na conectiva a cerca de 6 meses.
+
+críticas e sugestões de melhoria ou de funções novas são
+EXTREMAMENTE bem-vindas.
+
+é isso.
+
+
+--
+s·:(·>(·×^a]×http://www.verde666.org×^[:wq
+-->
+
 > Curiosidade: Veja como era [o código das Funções ZZ em 15/09/2000](download/funcoeszz-0.0915.sh), esta é a versão mais antiga que tenho guardada.
 
 Se me lembro bem, no início o projeto não teve grande repercussão. Os usuários foram aparecendo aos poucos. De vez em quando aparecia um comentário de alguém que tinha achado um problema ou tinha uma ideia de função nova.
