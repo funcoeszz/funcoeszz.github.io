@@ -89,32 +89,3 @@ pre, code, .menu {
     padding-left: 0.5em;
     padding-left: 8px;
 }
-
-
-/* -------------------------------- CUSTOM PAGES */
-
-#changelog h2 {
-    font-weight: bold;
-    border-top: 1px solid gray;
-    padding-top: 1em;
-}
-#changelog h2 .info {
-    padding-left: 10px;
-    font-size: 50%;
-    font-weight: normal;
-    color: gray;
-    font-style: italic;
-}
-#changelog h2 .info a {
-    text-decoration: underline;
-}
-#changelog #content li {
-    font-size: 85%;
-}
-#changelog .zzlink {
-    text-decoration: none;
-    font-weight: bold;
-}
-#changelog .zzlink:hover {
-    text-decoration: underline;
-}

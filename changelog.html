@@ -1,0 +1,952 @@
+---
+title: Changelog das Funções ZZ
+---
+
+<style>
+    .add {
+        color: green;
+    }
+    .del {
+        color: red;
+    }
+    .contrib {
+        background: #ff8;
+        color: #000;
+        white-space: nowrap;
+    }
+    h2 {
+        font-weight: bold;
+        border-top: 1px solid gray;
+        padding-top: 1em;
+    }
+    h2 .info {
+        padding-left: 10px;
+        font-size: 50%;
+        font-weight: normal;
+        color: gray;
+        font-style: italic;
+    }
+    h2 .info a {
+        text-decoration: underline;
+    }
+    #content li {
+        font-size: 85%;
+    }
+    .zzlink {
+        text-decoration: none;
+        font-weight: bold;
+    }
+    .zzlink:hover {
+        text-decoration: underline;
+    }
+</style>
+
+
+<!-- Aqui estão registradas as mudanças efetuadas entre as versões do programa. Usuários que colaboraram são indicados por ★. -->
+
+<!-- O esquema de numeração de versões é baseado na data do lançamento, no formato **Ano.Mês**. É usado apenas o último dígito do ano, então a versão **4.12** significa que o lançamento foi em Dezembro de 2004. Anteriormente era usado Ano.MêsDia. -->
+
+<!--
+: v∞
+  - Agora as Funções ZZ estão em evolução contínua e não possuem mais versões formais.
+  - [Visite o GitHub https://github.com/funcoeszz/funcoeszz/tree/master/zz] para ver o Changelog de cada função.
+-->
+
+<h2 id="v13_2">Versão 13.2</a> <span class="info">28/02/2013, <a href="download/funcoeszz-13.2.sh">download</a>, <a href="anuncio-13.2.html">anúncio</a>, <a href="http://aurelio.net/blog/2013/02/28/13-anos-de-funcoes-zz/">13 anos</a></span></h2>
+
+<p>Foram adicionadas 33 funções novas:</p>
+
+<ul>
+<li><a class="zzlink" href="man.html#zzarrumacidade">zzarrumacidade</a> - Arruma o nome da cidade informada: maiúsculas, abreviações, acentos, etc.</li>
+<li><a class="zzlink" href="man.html#zzbicho">zzbicho</a> - Jogo do bicho.</li>
+<li><a class="zzlink" href="man.html#zzbissexto">zzbissexto</a> - Diz se o ano informado é bissexto ou não.</li>
+<li><a class="zzlink" href="man.html#zzbrasileirao">zzbrasileirao</a> - Mostra a tabela atualizada do Campeonato Brasileiro - Série A, B ou C.</li>
+<li><a class="zzlink" href="man.html#zzcapitalize">zzcapitalize</a> - Altera Um Texto Para Deixar Todas As Iniciais De Palavras Em Maiúsculas.</li>
+<li><a class="zzlink" href="man.html#zzcidade">zzcidade</a> - Lista completa com todas as 5.500+ cidades do Brasil, com busca.</li>
+<li><a class="zzlink" href="man.html#zzcinemark15h">zzcinemark15h</a> - Exibe os filmes com sessão às 15h (mais barata) no Cinemark da sua cidade.</li>
+<li><a class="zzlink" href="man.html#zzcineuci">zzcineuci</a> - Exibe a programação dos cinemas UCI de sua cidade.</li>
+<li><a class="zzlink" href="man.html#zzcontapalavras">zzcontapalavras</a> - Conta o número de vezes que cada palavra aparece em um texto.</li>
+<li><a class="zzlink" href="man.html#zzcorrida">zzcorrida</a> - Mostra a classificação dos pilotos em várias corridas (F1, Indy, GP, ...).</li>
+<li><a class="zzlink" href="man.html#zzdatafmt">zzdatafmt</a> - Muda o formato de uma data, com várias opções de personalização.</li>
+<li><a class="zzlink" href="man.html#zzdiasuteis">zzdiasuteis</a> - Calcula o número de dias úteis entre duas datas, inclusive ambas.</li>
+<li><a class="zzlink" href="man.html#zzdicportugues2">zzdicportugues2</a> - Dicionário de português.</li>
+<li><a class="zzlink" href="man.html#zzestado">zzestado</a> - Lista os estados do Brasil e suas capitais.</li>
+<li><a class="zzlink" href="man.html#zzfeed">zzfeed</a> - Leitor de Feeds RSS e Atom.</li>
+<li><a class="zzlink" href="man.html#zzgravatar">zzgravatar</a> - Monta a URL completa para o Gravatar do email informado.</li>
+<li><a class="zzlink" href="man.html#zzhexa2str">zzhexa2str</a> - Converte os bytes em hexadecimal para a string equivalente.</li>
+<li><a class="zzlink" href="man.html#zzjuntalinhas">zzjuntalinhas</a> - Junta várias linhas em uma só, podendo escolher o início, fim e separador.</li>
+<li><a class="zzlink" href="man.html#zzloteria2">zzloteria2</a> - Resultados da quina, megasena, duplasena, lotomania, lotofácil, federal e timemania.</li>
+<li><a class="zzlink" href="man.html#zzmat">zzmat</a> - Uma coletânea de funções matemáticas simples.</li>
+<li><a class="zzlink" href="man.html#zzmd5">zzmd5</a> - Calcula o código MD5 dos arquivos informados, ou de um texto via STDIN.</li>
+<li><a class="zzlink" href="man.html#zzmoneylog">zzmoneylog</a> - Consulta lançamentos do Moneylog, com pesquisa avançada e saldo total.</li>
+<li><a class="zzlink" href="man.html#zznarrativa">zznarrativa</a> - Narra frases em português usando o Google Tradutor.</li>
+<li><a class="zzlink" href="man.html#zznome">zznome</a> - Dicionário de nomes, com sua origem, numerologia e arcanos do tarot.</li>
+<li><a class="zzlink" href="man.html#zzpalpite">zzpalpite</a> - Palpites de jogos para várias loterias: quina, megasena, lotomania, etc.</li>
+<li><a class="zzlink" href="man.html#zzromanos">zzromanos</a> - Conversor de números romanos para indo-arábicos e vice-versa.</li>
+<li><a class="zzlink" href="man.html#zzstr2hexa">zzstr2hexa</a> - Converte string em bytes em hexadecimal equivalente.</li>
+<li><a class="zzlink" href="man.html#zztabuada">zztabuada</a> - Imprime a tabuada de um número de 1 a 10.</li>
+<li><a class="zzlink" href="man.html#zztac">zztac</a> - Inverte a ordem das linhas, mostrando da última até a primeira.</li>
+<li><a class="zzlink" href="man.html#zztv">zztv</a> - Mostra a programação da TV, diária ou semanal, com escolha de emissora.</li>
+<li><a class="zzlink" href="man.html#zzunescape">zzunescape</a> - Restaura caracteres codificados como entidades HTML e XML (&amp;lt; &amp;#62; ...).</li>
+<li><a class="zzlink" href="man.html#zzunicode2ascii">zzunicode2ascii</a> - Converte caracteres Unicode (UTF-8) para seus similares ASCII (128).</li>
+<li><a class="zzlink" href="man.html#zzxml">zzxml</a> - Parser simples (e limitado) para arquivos XML/HTML.</li>
+</ul>
+
+<p>Foram removidas 11 funções, que pararam de funcionar ou foram aposentadas:</p>
+
+<ul>
+<li><span class="del"><b>zzanatel</b></span> - removida</li>
+<li><span class="del"><b>zzcinemais</b></span> - removida</li>
+<li><span class="del"><b>zzdatabarras</b></span> - aposentada</li>
+<li><span class="del"><b>zzdefine</b></span> - removida</li>
+<li><span class="del"><b>zzdelicious</b></span> - removida</li>
+<li><span class="del"><b>zzdetransp</b></span> - removida</li>
+<li><span class="del"><b>zzdicbabelfish</b></span> - removida</li>
+<li><span class="del"><b>zzdicesperanto</b></span> - removida</li>
+<li><span class="del"><b>zzdictodos</b></span> - aposentada</li>
+<li><span class="del"><b>zzeuro</b></span> - removida</li>
+<li><span class="del"><b>zzwhoisbr</b></span> - aposentada</li>
+</ul>
+
+<h2 id="v10_12">Versão 10.12</a> <span class="info">23/12/2010, <a href="download/funcoeszz-10.12.sh">download</a>, <a href="http://aurelio.net/blog/2010/12/23/versao-nova-das-funcoes-zz-10-12/">anúncio</a></span></h2>
+
+<ul>
+<li><span class="add">[nova] <b>zzanatel</b> - Busca as tarifas das operadoras no plano básico para ligações DDD.</span></li>
+<li><span class="add">[nova] <b>zzblist</b> - Mostra se o IP passado está em alguma blacklist  (SBL, PBL e XBL).</span></li>
+<li><span class="add">[nova] <b>zzbolsas</b> - Pesquisa índices de bolsas e cotações de ações.</span></li>
+<li><span class="add">[nova] <b>zzcbn</b> - Busca e toca os últimos comentários dos comentaristas da radio CBN.</span></li>
+<li><span class="add">[nova] <b>zzchecamd5</b> - Checa o md5sum de arquivos baixados da net.</span></li>
+<li><span class="add">[nova] <b>zzcinemais</b> - Busca horários das sessões dos filmes no site do Cinemais.</span></li>
+<li><span class="add">[nova] <b>zzcorpuschristi</b> - Mostra a data de Corpus Christi para qualquer ano.</span></li>
+<li><span class="add">[nova] <b>zzdatabarras</b> - Transforma data do formato DDMMYYYY para DD/MM/YYYY.</span></li>
+<li><span class="add">[nova] <b>zzdefine</b> - Retorno da função "define:" do Google.</span></li>
+<li><span class="add">[nova] <b>zzdefinr</b> - Busca o significado de um termo, palavra ou expressão no site Definr.</span></li>
+<li><span class="add">[nova] <b>zzdelicious</b> - Lista as URLs de uma dada tag de um determinado usuário.</span></li>
+<li><span class="add">[nova] <b>zzdicesperanto</b> - Dicionário de Esperanto em inglês, português e alemão.</span></li>
+<li><span class="add">[nova] <b>zzenglish</b> - Busca definições em inglês de palavras da língua inglesa em DICT.org.</span></li>
+<li><span class="add">[nova] <b>zzenviaemail</b> - Envia email via ssmtp.</span></li>
+<li><span class="add">[nova] <b>zzeuro</b> - Busca a cotação atual do EURO com relação ao Dólar e ao Real.</span></li>
+<li><span class="add">[nova] <b>zzextensao</b> - Informa a extensão de um arquivo.</span></li>
+<li><span class="add">[nova] <b>zzferiado</b> - Verifica se a data passada por parâmetro é um feriado ou não.</span></li>
+<li><span class="add">[nova] <b>zzfrenteverso2pdf</b> - Combina 2 arquivos, frentes.pdf e versos.pdf, em um único frenteverso.pdf.</span></li>
+<li><span class="add">[nova] <b>zzglobo</b> - Mostra a programação Rede Globo do dia.</span></li>
+<li><span class="add">[nova] <b>zzhoramin</b> - Converte horas em minutos.</span></li>
+<li><span class="add">[nova] <b>zzjquery</b> - Exibe a descrição da função JQuery informada.</span></li>
+<li><span class="add">[nova] <b>zzlembrete</b> - Sistema simples de lembretes: cria, apaga e mostra.</span></li>
+<li><span class="add">[nova] <b>zzlinux</b> - Mostra as versões disponíveis do Kernel Linux.</span></li>
+<li><span class="add">[nova] <b>zzminiurl</b> - Encurta uma URL utilizando o site migre.me.</span></li>
+<li><span class="add">[nova] <b>zzmudaprefixo</b> - Move os arquivos que tem um prefixo comum para um novo prefixo.</span></li>
+<li><span class="add">[nova] <b>zzora</b> - Retorna a descrição do erro Oracle (ORA-NNNNN).</span></li>
+<li><span class="add">[nova] <b>zzpiada</b> - Mostra uma piada diferente cada vez que é chamada.</span></li>
+<li><span class="add">[nova] <b>zzporcento</b> - Calcula porcentagens.</span></li>
+<li><span class="add">[nova] <b>zzrandbackground</b> - Muda aleatoriamente o background do GNOME.</span></li>
+<li><span class="add">[nova] <b>zzrastreamento</b> - Acompanha uma encomenda nacional via rastreamento dos Correios.</span></li>
+<li><span class="add">[nova] <b>zzrelansi</b> - Coloca um relógio digital (hh:mm:ss) no canto superior direito do terminal.</span></li>
+<li><span class="add">[nova] <b>zzsemacento</b> - Tira os acentos de todas as letras (áéíóú vira aeiou).</span></li>
+<li><span class="add">[nova] <b>zzsextapaixao</b> - Mostra a data da sexta-feira da paixao para qualquer ano.</span></li>
+<li><span class="add">[nova] <b>zzsubway</b> - Mostra uma sugestão de sanduíche para pedir na lanchonete Subway.</span></li>
+<li><span class="add">[nova] <b>zztradutor</b> - Google Tradutor, para traduzir frases para vários idiomas.</span></li>
+<li><span class="add">[nova] <b>zztweets</b> - Busca os últimos 5 tweets de um usuário.</span></li>
+<li><span class="add">[nova] <b>zzvira</b> - Vira um texto, de trás pra frente (rev) ou de ponta-cabeça.</span>
+<p></p></li>
+<li><b>zzlinuxnews</b> <span class="del">Removido site Newsforge, não publicam notícias sobre Linux.</span></li>
+<li><b>zznoticiaslinux</b> <span class="del">Removido site Cipsga, está abandonado.</span></li>
+<li><b>zzseq</b> Opção nova -f para especificar o formato (printf) do número. <span class="contrib">★ Itamar</span></li>
+<li><b>zzseq</b> Argumento novo 'passo' para saltar a contagem de N em N números. <span class="contrib">★ Itamar</span></li>
+<li><b>zztool</b> Novas ferramentas: num_linhas, testa_numero_fracionario, testa_dinheiro, testa_hora, file_stdin, list2lines, lines2list.</li>
+<li><b>zzzz</b> Opção nova --zshrc, para instalar as funções no zsh. <span class="contrib">★ Kenzo Okamura</span>
+<p></p></li>
+<li>Todas as funções que estavam quebradas ou desatualizadas foram consertadas.</li>
+<li>Nova variável $ZZOFF para guardar a lista das funções que não devem ser carregadas. Use espaços ou vírgulas (ou ambos) como separador. Exemplo: <code>export ZZOFF="zzbeep, zzramones"</code></li>
+<li>Definidas como funções essenciais: zzajuda, zztool e zzzz. Elas não podem ser desligadas e as outras funções não funcionarão sem elas.</li>
+<li>Nova variável $ZZDIR para indicar a pasta que guarda as funções, no caso de uso de funções em arquivos isolados, como no repositório SVN. Valor padrão ~/zz.</li>
+<li>Novos dados no cabeçalho de cada função, como nome do autor, data de criação e licença.</li>
+<li>Todas as funções antes chamadas de "extras" agora fazem parte do pacote oficial. Por isso o grande número de funções novas nesta versão. Como não há mais extras, foi removido o suporte a $ZZEXTRA e $ZZEXTRADIR.</li>
+<li>A mensagem de --help do script funcoeszz foi reformatada para ficar mais legível.</li>
+</ul>
+
+<h2 id="v8_10">Versão 8.10</a> <span class="info">31/10/2008, <a href="download/funcoeszz-8.10.sh">download</a>, <a href="http://aurelio.net/blog/2008/10/31/funcoes-zz-versao-810/">anúncio</a></span></h2>
+
+<ul>
+<li><span class="add">[nova] <b>zzhorariodeverao</b> - Mostra as datas de início e fim do horário de verão</span></li>
+<li><span class="add">[nova] <b>zzdiadasemana</b> - Mostra qual o dia da semana de uma data qualquer</span></li>
+<li><span class="add">[nova] <b>zzcarnaval</b> - Mostra a data da terça-feira de Carnaval para qualquer ano</span></li>
+<li><span class="add">[nova] <b>zzpascoa</b> - Mostra a data do domingo de Páscoa para qualquer ano</span>
+<p></p></li>
+<li><b>zzajuda</b> Agora também mostra a ajuda das funções extras do diretório $ZZEXTRADIR</li>
+<li><b>zzajuda</b> Opção nova --lista para listar todas as funções (com descrição)</li>
+<li><b>zzajuda</b> Opção nova --uso para listar a sintaxe de uso de todas as funções</li>
+<li><b>zztool</b> teste novo testa_data para validar datas no formato dd/mm/aaaa</li>
+<li><b>zzzz</b> Agora a lista de funções disponíveis é unificada para funções oficiais e extras
+<p></p></li>
+<li>Adicionado suporte a um diretório com funções extras ($ZZEXTRADIR, valor padrão ~/zzextra)</li>
+<li>As funções extras foram colocadas no <a href="http://code.google.com/p/funcoeszz/source/browse/">SVN</a></li>
+</ul>
+
+<h2 id="v8_9">Versão 8.9</a> <span class="info">30/09/2008, <a href="download/funcoeszz-8.9.sh">download</a>, <a href="http://aurelio.net/blog/2008/09/30/funcoes-zz-versao-89/">anúncio</a></span></h2>
+
+<ul>
+<li><span class="add">[nova] <b>zzansi2html</b> - Converte para HTML o texto colorido do terminal (códigos ANSI)</span></li>
+<li><span class="add">[nova] <b>zzecho</b> - Mostra textos coloridos, sublinhados e piscantes no terminal, usando códigos ANSI <span class="contrib">★ Marcell S. Martini</span></span></li>
+<li><b>zzarrumanome</b> Várias correções para o tratamento de nomes de arquivo realmente estranhos, com aspas e asteriscos isolados, além de uma verificação para que o nome novo não seja vazio <span class="contrib">★ Douglas A. Augusto</span></li>
+<li><b>zzgoogle</b> Filtro atualizado, voltou a funcionar e agora o &amp; aparece corretamente na saída</li>
+<li><b>zzpronuncia</b> URL atualizada, removidos /cgi-bin e o parâmetro va <span class="contrib">★ Luciano ES</span></li>
+<li><b>zzwhoisbr</b> Filtro atualizado para apagar as linhas em branco
+<p></p></li>
+<li>Shebang #!/bin/bash mudado para #!/usr/bin/env bash nas funções e no testador, visando <a href="http://www.in-ulm.de/~mascheck/various/shebang/">maior portabilidade</a> <span class="contrib">★ Luciano ES</span></li>
+<li>O testador das funções (suíte de testes) foi colocado no <a href="http://code.google.com/p/funcoeszz/source/browse/">SVN</a></li>
+<li>Adicionada verificação para opção inválida na chamada do programa, como funcoeszz -X</li>
+<li>Adicionado endereço do site na mensagem de --help</li>
+</ul>
+
+<h2 id="v8_7">Versão 8.7</a> <span class="info">23/07/2008, <a href="download/funcoeszz-8.7.sh">download</a>, <a href="http://aurelio.net/blog/2008/07/23/funcoes-zz-versao-87/">anúncio</a></span></h2>
+
+<ul>
+<li><span class="add">[nova] <b>zzalfabeto</b> - Central de alfabetos (romano, militar, radiotelefônico, OTAN, RAF, etc)</span></li>
+<li><span class="add">[nova] <b>zzrot13</b> - Codifica/decodifica um texto utilizando a cifra ROT13</span></li>
+<li><span class="add">[nova] <b>zzrot47</b> - Codifica/decodifica um texto utilizando a cifra ROT47</span></li>
+<li><b>zzcnpj</b> Tornada mais clara a saída em caso de CNPJ inválido. Agora menciona "deveria terminar em NN" para indicar o verificador correto.</li>
+<li><b>zzdicasl</b> Agora usa zztool texto_em_iso para eliminar problemas de acentuação na saída <span class="contrib">★ Douglas José</span></li>
+<li><b>zzdicbabylon</b> Agora usa zztool texto_em_iso para eliminar problemas de acentuação na saída <span class="contrib">★ Tiago Madeira, Elias Junior</span></li>
+<li><b>zznoticiaslinux</b> Agora usa zztool texto_em_iso/utf8 para eliminar problemas de acentuação na saída <span class="contrib">★ Luciano ES</span></li>
+<li><b>zznoticiaslinux</b> BR-Linux: Agora as aspas codificadas como &amp;#8220; e &amp;#8221; são corretamente convertidas <span class="contrib">★ Luciano ES</span></li>
+<li><b>zznoticiaslinux</b> Yahoo: Filtro atualizado para não ignorar notícias com foto</li>
+<li><b>zznoticiassec</b> LinuxSecurity Brasil: Agora usa zztool texto_em_iso para eliminar problemas de acentuação na saída <span class="contrib">★ Luciano ES</span></li>
+<li><b>zzsecurity</b> Arrumado problema de só mostrar o Debian quando nenhum site era especificado, o correto é mostrar todos</li>
+<li><b>zztool</b> Adicionadas duas ferramentas novas para lidar com conversão de/para UTF-8: texto_em_iso e texto_em_utf8</li>
+</ul>
+
+<h2 id="v8_6">Versão 8.6</a> <span class="info">20/06/2008, <a href="download/funcoeszz-8.6.sh">download</a>, <a href="http://aurelio.net/blog/2008/06/20/funcoes-zz-versao-86/">anúncio</a></span></h2>
+
+<ul>
+<li><span class="add">[nova] <b>zzshuffle</b> - Desordena as linhas de um texto (ordem aleatória)</span></li>
+<li><b>zzbabelfish</b> URL e filtro atualizados (Babelfish agora é do Yahoo), resolvido problema com codificação (acentuação)</li>
+<li><b>zzcalcula</b> Chamada segura para "zztool multi_stdin", evitando erros de expansão do shell</li>
+<li><b>zzcpf</b> Tornada mais clara a saída em caso de CPF inválido. Agora menciona "deveria terminar em NN" para indicar o verificador correto.</li>
+<li><b>zzdicportugues</b> Filtro atualizado para remover "Duplo clique..." da saída</li>
+<li><b>zzfoneletra</b> Chamada segura para "zztool multi_stdin", evitando erros de expansão do shell</li>
+<li><b>zzlinha</b> Adicionado suporte a números negativos, para contar à partir do final do arquivo <span class="contrib">★ Eri Ramos Bastos</span></li>
+<li><b>zzsecurity</b> Slackware: agora sempre busca pelos anúncios do ano atual, pois antes estava fixo para 2005 <span class="contrib">★ Antônio Rogério Lins de A. Pessoa</span></li>
+<li><b>zzsigla</b> Filtro atualizado para remover textos indesejados da saída <span class="contrib">★ Douglas José</span></li>
+<li><b>zzss</b> Arrumado bug no tema alien <span class="contrib">★ Fernando Roxo</span></li>
+<li><b>zzwikipedia</b> Filtro atualizado para remover "#Editar Wikipedia..." da saída
+<p></p></li>
+<li>Compatibilidade: O grep do Solaris não possui as opções -q e -s, então todas as suas ocorrências foram trocadas por &gt;/dev/null 2&gt;&amp;1 <span class="contrib">★ André Martin</span></li>
+<li>Compatibilidade: O tr do Solaris só interpreta intervalos como 0-9 se estiverem entre colchetes [0-9]. Para evitar problemas foi usada a forma 0123456789. <span class="contrib">★ André Martin</span></li>
+<li>Licença especificada como versão 2 da GPL</li>
+</ul>
+
+<h2 id="v8_3">Versão 8.3</a> <span class="info">05/03/2008, <a href="download/funcoeszz-8.3.sh">download</a>, <a href="http://aurelio.net/blog/2008/03/05/a-nova-geracao-das-funcoes-zz/">anúncio</a></span></h2>
+
+<ul>
+<li>O <b>código-fonte</b> das funções foi inteiramente rescrito - agora é legível, bem estruturado e mais seguro, com muitos comentários explicando seu funcionamento</li>
+<li>As funções agora migraram para a codificação <b>UTF-8</b>, que é padrão na maioria dos sistemas modernos
+<p></p></li>
+<li><span class="add">[nova] <b>zzbyte</b> - Conversão entre grandezas de bytes (mega, giga, tera, etc)</span></li>
+<li><span class="add">[nova] <b>zztool</b> - Função interna com miniferramentas</span></li>
+<li><b>zzascii</b> Coluna nova para mostrar o código hexadecimal de cada caractere, em sistemas UTF-8 mostra apenas a tabela básica sem os caracteres ISO-8859-1</li>
+<li><b>zzbovespa</b> <span class="del">Função removida, agora os sites usam AJAX :(</span></li>
+<li><b>zzcalcula</b> Aceita dados da entrada padrão, como em echo 2 + 2 | zzcalcula</li>
+<li><b>zzcep</b> <span class="del">Função removida, agora o site dos Correios usa AJAX :(</span></li>
+<li><b>zzchavepgp</b> URL e filtro atualizados</li>
+<li><b>zzcinclude</b> Verifica se o arquivo informado existe</li>
+<li><b>zzcontapalavra</b> Aceita dados da entrada padrão, agora funciona no BSD, aceita múltiplos arquivos e faz um total geral de todos</li>
+<li><b>zzconverte</b> Conversão nova decimal/hexadecimal e vice-versa, conversão caractere/decimal agora funciona no BSD, suporte a conversão simultânea de vários valores, exemplo: zzconverte cf 5 10 15</li>
+<li><b>zzdetranpr</b> <span class="del">Função removida, agora a consulta é travada com CAPTCHA</span></li>
+<li><b>zzdetransp</b> URL e filtro atualizados</li>
+<li><b>zzdiffpalavra</b> Completamente rescrita, agrupa palavras de mesmo tipo (não mudou, antiga, nova), agora funciona no BSD, saída colorida em vermelho e azul, verifica se os dois arquivos informados realmente existem</li>
+<li><b>zzdolar</b> Saída melhor alinhada</li>
+<li><b>zzdominiopais</b> Usa somente cache local, que pode ser do sistema ou baixado da Internet, filtro atualizado, mesmo formato de saída para os dois caches <span class="contrib">★ Rodrigo Azevedo</span></li>
+<li><b>zzdos2unix</b> Agora grava o resultado no próprio arquivo (não grava mais arquivo.dos), verifica se o arquivo informado existe, verificação de segurança em caso de erro, tr sem usar o cat inutilmente (UUOC), agora funciona no BSD</li>
+<li><b>zzgoogle</b> Filtro atualizado</li>
+<li><b>zzhoracerta</b> Agora funciona no BSD, filtro atualizado, pesquisa por sigla parcial também <span class="contrib">★ Paulo Ricardo Paz Vital</span></li>
+<li><b>zzipinternet</b> URL atualizada, agora não precisa mais de filtro <span class="contrib">★ Luciano ES</span></li>
+<li><b>zzirpf</b> <span class="del">Função removida, pois consultar 2003 é inútil e os anos atuais são travados com CAPTCHA</span></li>
+<li><b>zzkill</b> Mostra a lista de processos se chamada sem argumentos, opção nova -n que apenas mostra o que será feito, agora funciona no BSD, mostra PID e nome do comando na saída</li>
+<li><b>zzletrademusica</b> <span class="del">Função removida, faz tempo que não funciona mais</span></li>
+<li><b>zzlimpalixo</b> Suporte a múltiplos arquivos</li>
+<li><b>zzlinha</b> Suporte a múltiplos arquivos</li>
+<li><b>zzlinuxnews</b> NewsForge: filtro atualizado</li>
+<li><b>zzlocale</b> Usa cache local</li>
+<li><b>zzloteria</b> Agora é possível informar qual loteria pesquisar, pode ser mais de uma, filtro atualizado</li>
+<li><b>zzmaiores</b> Opção nova -f para buscar apenas arquivos, opção nova -n para especificar o número de resultados</li>
+<li><b>zzmoeda</b> Agora funciona no BSD, resultado fácil de ler (tabulado)</li>
+<li><b>zznatal</b> URL e filtro atualizados</li>
+<li><b>zznextel</b> <span class="del">Função removida, agora a consulta é travada com CAPTCHA <span class="contrib">★ Luciano ES</span></span></li>
+<li><b>zznomefoto</b> Renomeia corretamente arquivos sem extensão (antes replicava o nome na extensão), preserva espaços em branco no nome do arquivo, verifica se o argumento para as opções -d e -i são números mesmo, verifica se o arquivo informado existe, mostra colisão de nomes na listagem do -n <span class="contrib">★ Luciano ES</span></li>
+<li><b>zznoticiaslinux</b> BR-Linux: URL e filtro atualizados, Yahoo: URL e filtro atualizados, UnderLinux: URL e filtro atualizados, Cipsga: filtro atualizado <span class="contrib">★ Rodrigo Azevedo</span></li>
+<li><b>zzpronuncia</b> Filtro atualizado para pegar nomes que iniciam por números <span class="contrib">★ nic</span></li>
+<li><b>zzsecurity</b> <span class="del">Removidos avisos do Conectiva Linux 9 e 10, que não são mais emitidos</span>, adicionados avisos para Ubuntu, aceita nomes em maiúsculas também, filtro atualizado para Gentoo <span class="contrib">★ Luciano ES, Rodrigo Azevedo</span></li>
+<li><b>zzsenha</b> Verifica se o argumento é um número mesmo</li>
+<li><b>zzseq</b> Verifica se os argumentos são números mesmo</li>
+<li><b>zzsigla</b> Filtro atualizado <span class="contrib">★ Douglas José</span></li>
+<li><b>zztempo</b> Agora funciona no BSD</li>
+<li><b>zztrocaarquivos</b> Verifica se os dois arquivos informados realmente existem e são distintos</li>
+<li><b>zztrocaextensao</b> Opção nova -n que apenas mostra o que será feito, verifica se o nome novo está vago, verifica se o arquivo informado existe</li>
+<li><b>zztrocapalavra</b> Recupera o conteúdo original do arquivo em caso de erro, verifica se o arquivo informado existe</li>
+<li><b>zztv</b> <span class="del">Função removida, faz tempo que não funciona mais</span></li>
+<li><b>zzuniq</b> Arrumado bug que poderia bagunçar a ordem original das linhas (sort -u) <span class="contrib">★ Paulo Ricardo Paz Vital</span></li>
+<li><b>zzunix2dos</b> Agora grava o resultado no próprio arquivo (não grava mais arquivo.linux), verifica se o arquivo informado existe, verificação de segurança em caso de erro na conversão do arquivo, múltiplas execuções no mesmo arquivo não mais acarreta em vários ^M no fim de cada linha, agora funciona no BSD</li>
+<li><b>zzwhoisbr</b> Agora funciona no BSD, filtro atualizado para funcionar no Ubuntu <span class="contrib">★ Rodrigo Azevedo</span></li>
+<li><b>zzwikipedia</b> O idioma padrão agora é o português (e não mais o inglês), os resultados agora aparecem melhor formatados e sem paginação</li>
+<li><b>zzzz</b> Mensagens informativas durante a execução, opção --tcshrc agora também inclui as funções extras, opção nova --teste para testar se os comandos básicos estão instalados e conferir a codificação do sistema e das funções <span class="contrib">★ Daniel Zilli, Rodrigo Azevedo</span>
+<p></p></li>
+<li>A função echozz agora é chamada por zztool eco</li>
+<li>A função seqzz agora chama-se zzseq</li>
+<li>A função zzdos2linux agora chama-se zzdos2unix</li>
+<li>A função zzlinux2dos agora chama-se zzunix2dos</li>
+<li>Variável nova ZZCODIGOCOR para configurar a cor dos textos em destaque (padrão: azul)</li>
+<li>Variável nova ZZVERSAO para guardar a versão atual das funções</li>
+<li>Variável nova ZZUTF para indicar se o código das funções está em UTF-8</li>
+<li> <span class="del">Removidas as variáveis ZZERDATA, ZZERHORA e ZZERIP, pois não são mais utilizadas</span></li>
+<li>Todos os redirecionamentos &gt;&amp;- foram trocados por &gt;/dev/null para ficar mais portável <span class="contrib">★ Rodrigo Bernardo Pimentel</span></li>
+<li>Histórico de mudanças (changelog) movido dos cabeçalhos para o site da ZZ</li>
+<li>Mensagem de uso de cada função agora é extraída diretamente do --help</li>
+<li>Retirada a mensagem "AGUARDE. Atualizando listagem..." de várias funções</li>
+<li>Adicionada a opção -display_charset nas variáveis ZZWWWDUMP, ZZWWWLIST e ZZWWWPOST para assegurar a codificação correta dos caracteres acentuados <span class="contrib">★ Carlos Laviola, Rafael Casali</span></li>
+<li>Retirada a opção -crawl das variáveis ZZWWWDUMP e ZZWWWPOST, pois não são mais utilizadas <span class="contrib">★ Paulo Ricardo Paz Vital</span></li>
+</ul>
+
+<h2 id="v7_7">Versão 7.7</a> <span class="info">17/07/2007, <a href="download/funcoeszz-7.7.sh">download</a>, <a href="http://aurelio.net/blog/2007/07/17/funcoes-zz-versao-77/">anúncio</a></span></h2>
+
+<ul>
+<li><b>zzarrumanome</b> Opção nova -n (não faz nada, igual zznomefoto)</li>
+<li><b>zzdicabl</b> <span class="del">Função removida, pois agora o site usa AJAX :(</span></li>
+<li><b>zzdictodos</b> <span class="del">Removido ABL</span></li>
+<li><b>zzdolar</b> URL e filtro atualizados</li>
+<li><b>zzgoogle</b> Filtro atualizado</li>
+<li><b>zzipinternet</b> Filtro atualizado</li>
+<li><b>zznoticiaslinux</b> <span class="del">Removido InfoExame, pois é não é de Linux</span></li>
+<li><b>zznoticiaslinux</b> Yahoo: URL e filtro atualizados</li>
+<li><b>zzpronuncia</b> URL atualizada <span class="contrib">★ Douglas José</span></li>
+<li><b>zzwhoisbr</b> URL atualizada</li>
+<li><b>zzzz</b> Adicionada URL do site das funções</li>
+<li>Adicionada variável ZZERIP para casar IPs</li>
+<li>Adicionada checagem de problemas relacionados ao UTF-8 <span class="contrib">★ Piero, Emilio Wuerges</span></li>
+</ul>
+
+<h2 id="v6_11">Versão 6.11</a> <span class="info">14/11/2006, <a href="download/funcoeszz-6.11.sh">download</a>, <a href="http://funcoeszz.net/aovivo.html">anúncio</a></span></h2>
+
+<ul>
+<li><span class="add">[nova] <b>zzfoneletra</b> - Converte telefones contendo palavras para apenas números <span class="contrib">★ Rodolfo de Faria</span></span></li>
+<li><b>zzdicabl</b> URL e filtro atualizados <span class="contrib">★ Humberto Sartini</span></li>
+<li><b>zzdicasl</b> URL e filtro atualizados</li>
+<li><b>zzdicportugues</b> Filtro atualizado para funcionar no BSD</li>
+<li><b>zzdolar</b> Filtro atualizado para funcionar no BSD</li>
+<li><b>zzdominiopais</b> URL e filtro atualizados</li>
+<li><b>zzgoogle</b> Filtro atualizado</li>
+<li><b>zzhowto</b> Filtro atualizado</li>
+<li><b>zzipinternet</b> Filtro atualizado</li>
+<li><b>zzlinuxnews</b> Slashdot: Filtro atualizado, OsNews: Filtro atualizado</li>
+<li><b>zzlocale</b> URL e filtros atualizados, o site antigo não existe mais, agora as ZZ possuem o seu próprio arquivo para consulta</li>
+<li><b>zzloteria</b> URL e filtro atualizados <span class="contrib">★ Rafael Casali</span></li>
+<li><b>zznomefoto</b> Chegagem para não sobrescrever arquivos já existentes <span class="contrib">★ Felipe Nogaroto</span></li>
+<li><b>zznoticiaslinux</b> InfoExame: URL atualizada <span class="contrib">★ Fernando Aires</span></li>
+<li><b>zznoticiaslinux</b> UnderLinux: URL e filtro atualizados</li>
+<li><b>zznoticiaslinux</b> Viva o Linux: Filtro atualizado</li>
+<li><b>zznoticiaslinux</b> Notícias Linux: Filtro atualizado</li>
+<li><b>zzpronuncia</b> Agora usa o comando 'say' no mac</li>
+<li><b>zzsecurity</b> Conectiva, Mandriva: URL e filtro atualizados</li>
+<li><b>zzsigla</b> Filtro atualizado</li>
+<li><b>zzpronuncia</b> Agora usa o comando 'say' no Mac</li>
+</ul>
+
+<h2 id="v5_9">Versão 5.9</h2>
+
+<ul>
+<li><span class="add">[nova] <b>zzcalculaip</b> - Calcula os endereços de rede e broadcast de um número IP/rede</span></li>
+<li><span class="add">[nova] <b>zzipinternet</b> - Mostra o seu número IP (externo) na Internet</span></li>
+<li><b>zzsecurity</b> URL e filtro atualizados para Mandriva (ex-Mandrake)</li>
+<li><b>zzwhoisbr</b> Agora mostra informações sobre o DNS do domínio</li>
+<li><b>zzdolar</b> Filtro atualizado</li>
+<li><b>zzlinuxnews</b> Slashdot: Filtro atualizado</li>
+<li><b>zzdicabl</b> URL atualizada <span class="contrib">★ Humberto Sartini</span></li>
+</ul>
+
+<h2 id="v5_0630">Versão 5.0630</h2>
+
+<ul>
+<li><span class="add">[nova] <b>zzlocale</b> - Busca o código do idioma (locale) - Por exemplo, português é pt_BR <span class="contrib">★ Alfredo Kojima</span></span></li>
+<li><b>zzchavepgp</b> Filtro atualizado <span class="contrib">★ Frederico</span></li>
+<li><b>zzdicbabylon</b> Melhorada a formatação da saída</li>
+<li><b>zzdicportugues</b> Melhorada a formatação da saída</li>
+<li><b>zzfreshmeat</b> Filtro simplificado</li>
+<li><b>zzloteria</b> Filtro atualizado <span class="contrib">★ Rafael Casali</span></li>
+<li><b>zznoticiaslinux</b> UnderLinux: Filtro atualizado, Br-Linux: URL atualizada</li>
+<li><b>zznoticiassec</b> Security Focus: Filtro atualizado</li>
+<li><b>zzsigla</b> Filtro atualizado <span class="contrib">★ Douglas José</span></li>
+</ul>
+
+<h2 id="2005-06-02">2005-06-02</h2>
+
+<ul>
+<li>Domínio funcoeszz.net e camiseta 5 anos</li>
+</ul>
+
+<h2 id="v5_0519">Versão 5.0519</h2>
+
+<ul>
+<li><b>zzajuda</b> Levando em conta funções extras também</li>
+<li><b>zzajuda</b> Retirado caractere de controle (agora rola copiar&amp;colar)</li>
+<li><b>zzconverte</b> Adicionadas conversões de/para temperaturas em Kelvin <span class="contrib">★ Fernando Aires</span></li>
+<li><b>zzdicbabylon</b> Checagem do idioma informado</li>
+<li><b>zzhoracerta</b> Filtro atualizado</li>
+<li><b>zzloteria</b> Agora informa quando ficou acumulado, mostrando a data do próximo sorteio e o valor estimado do prêmio <span class="contrib">★ Rafael Casali</span></li>
+<li><b>zznoticiaslinux</b> <span class="del">Removido site PontoBR</span>, Info Exame atualizado <span class="contrib">★ Rodrigo Nakabashi</span></li>
+<li><b>zzsecurity</b> Slackware: URL atualizada <span class="contrib">★ Duke</span></li>
+<li><b>zzzz</b> Arrumado bug que fazia zzhora -h mostrar a ajuda da zzhoracerta</li>
+<li><b>zzzz</b> Levando em conta funções extras também</li>
+<li>Adicionado suporte ao arquivo ~/.zzextra para armazenar funções de terceiros</li>
+<li>Funções ajustadas para funcionar em UNIX e sistemas antigos com SED limitado: ajuda, chavepgp, cinclude, converte, detransp, dicjargon, diffpalavra, google, kill, maiores, nomefoto, security, zzzz</li>
+</ul>
+
+<h2 id="v5_0318">Versão 5.0318</h2>
+
+<ul>
+<li><b>zzbovespa</b> Agora consulta o mercado fracionário também <span class="contrib">★ Rafael Casali</span></li>
+<li><b>zzchavepgp</b> URL e filtro atualizados <span class="contrib">★ Frederico</span></li>
+<li><b>zzdata</b> Arrumada possibilidade de loop infinito <span class="contrib">★ Rodrigo Pimentel</span></li>
+<li><b>zzdicbabelfish</b> Colocadas todas as línguas na opção --help</li>
+<li><b>zzdicbabylon</b> URL e filtro atualizados <span class="contrib">★ Rivanor Soares</span></li>
+<li><b>zzdictodos</b> <span class="del">Removida chamada a dicdict <span class="contrib">★ Rodrigo Pimentel</span></span></li>
+<li><b>zzhoracerta</b> Filtro atualizado <span class="contrib">★ Marcos Polidoro</span></li>
+<li><b>zzmoeda</b> URL atualizada</li>
+<li><b>zznoticiaslinux</b> Retirados Olinux e TcheLinux, adicionados UnderLinux e Viva o Linux</li>
+<li><b>zzramones</b> URL atualizada</li>
+<li><b>zzsecurity</b> Fedora: Filtro atualizado</li>
+<li><b>zzss</b> Arrumado bug com o Ctrl+C <span class="contrib">★ Humberto Sartini, Tiago Madeira</span></li>
+</ul>
+
+<h2 id="v4_1223">Versão 4.1223</h2>
+
+<ul>
+<li><span class="add">[nova] <b>zzcnpj</b> - Gera um CNPJ válido aleatório ou valida um CNPJ informado</span></li>
+<li><span class="add">[nova] <b>zzcpf</b> - Gera um CPF válido aleatório ou valida um CPF informado</span></li>
+<li><span class="add">[nova] <b>zzlinha</b> - Mostra uma linha de um texto, aleatória ou informada pelo número</span></li>
+<li><span class="add">[nova] <b>zznatal</b> - Mostra a mensagem "Feliz Natal" em vários idiomas</span></li>
+<li><span class="add">[nova] <b>zzsecurity</b> - Mostra os últimos avisos de segurança de várias distribuições e Sistemas Operacionais</span></li>
+<li><b>zzdata</b> Agora faz a checagem da data passada pelo usuário <span class="contrib">★ Rodrigo Pimentel</span></li>
+<li><b>zzdicabl</b> URL e filtro atualizados <span class="contrib">★ Humberto Sartini</span></li>
+<li><b>zzdicdict</b> <span class="del">Função removida, está quebrada e tem pouco uso</span></li>
+<li><b>zzhoracerta</b> Filtro atualizado</li>
+<li><b>zzramones</b> Não estava achando certas palavras <span class="contrib">★ Rodrigo Novo</span></li>
+</ul>
+
+<h2 id="v4_1111">Versão 4.1111</h2>
+
+<ul>
+<li>Arrumado de vez o erro no carregamento das funções no bashrc ou scripts <span class="contrib">★ Rodrigo Carvalhaes</span></li>
+<li>Se o script for chamado sem argumentos, não mostra nada</li>
+<li><span class="add">[nova] <b>zznomefoto</b> - Renomeia fotos (DSC2645.JPG) arrumando a seqüência numérica</span></li>
+<li><b>zzdiffpalavra</b> Opções cat/diff/rm, funciona no BSD <span class="contrib">★ Rodrigo Carvalhaes</span></li>
+<li><b>zzhoracerta</b> URL e filtro atualizados</li>
+<li><b>zzloteria</b> Adicionado resultado da lotofácil <span class="contrib">★ Rafael Casali</span></li>
+<li><b>zznoticiaslinux</b> Br-Linux: URL e filtro atualizados</li>
+<li><b>zznoticiassec</b> CERT: URL atualizada</li>
+<li><b>zztv</b> URL e filtro atualizados <span class="contrib">★ Broonu</span></li>
+</ul>
+
+<h2 id="v4_1029">Versão 4.1029</h2>
+
+<ul>
+<li><span class="add">[nova] <b>zzwikipedia</b> - Consulta termos na Wikipedia, em várias línguas</span></li>
+<li><b>zzdicasl</b> Extensão das páginas mudou de .shtml para .php</li>
+<li><b>zzlinuxnews</b> NewsForge: Filtro atualizado, Linux Daily News virou Linux Today</li>
+<li><b>zzloteria</b> Lotomania agora mostrando todas as dezenas <span class="contrib">★ Rodolfo Bianchi, Ricardo Hoffmann</span></li>
+<li><b>zznoticiaslinux</b> PontoBR agora é P), LinuxinBrazil agora é B)r Linux</li>
+<li><b>zznoticiaslinux</b> Retirado Revista do Linux, adicionado Yahoo! <span class="contrib">★ Bruno Russo, Rodrigo Nakabashi</span></li>
+<li>Arrumado erro ao carregar as funções no bashrc <span class="contrib">★ Hildebrando Rosa</span></li>
+</ul>
+
+<h2 id="v4_0518">Versão 4.0518</h2>
+
+<ul>
+<li><span class="add">[nova] <b>zzbovespa</b> - Busca a cotação de uma ação na Bovespa <span class="contrib">★ Denis Lima</span></span></li>
+<li><span class="add">[nova] <b>zzloteria</b> - Consulta os resultados da quina, megasena, duplasena e lotomania <span class="contrib">★ Marcos Polidoro</span></span></li>
+<li><b>zzdicbabelfish</b> Filtro atualizado <span class="contrib">★ Rodrigo Pimentel</span></li>
+<li><b>zzlinuxnews</b> NewsForge: Filtro atualizado</li>
+<li><b>zztv</b> URL atualizada <span class="contrib">★ Matheus Zeuch</span></li>
+</ul>
+
+<h2 id="v4_0329">Versão 4.0329</h2>
+
+<ul>
+<li><span class="add">[nova] <b>zzhoracerta</b> - Mostra a hora certa de um determinado local</span></li>
+<li><span class="add">[nova] <b>zzmoeda</b> - Busca a cotação de várias moedas (mais de 100!)</span></li>
+<li><b>zzdicbabelfish</b> Agora aceita vários idiomas além de português e inglês <span class="contrib">★ Rodrigo Pimentel</span></li>
+<li><b>zzdolar</b> Filtro atualizado</li>
+<li><b>zzhowto</b> Agora pode passar parâmetro após a opção --atualiza <span class="contrib">★ Rodrigo Pimentel</span></li>
+<li><b>zzlinuxnews</b> OS News: Filtro atualizado</li>
+<li><b>zzpronuncia</b> Filtro atualizado <span class="contrib">★ Roberto Alcântara</span></li>
+<li><b>zztrocapalavra</b> Agora aceita '(' como primeiro parâmetro</li>
+</ul>
+
+<h2 id="v4_0219">Versão 4.0219</h2>
+
+<ul>
+<li><span class="add">[nova] <b>zztempo</b> - Mostra as condições do tempo em um determinado local</span></li>
+<li>[echozz] Arrumado bug de imprimir duplicado <span class="contrib">★ Rodrigo Pimentel</span></li>
+<li><b>zzajuda</b> Arrumada, agora paginando com o $PAGER e respeitando $ZZCOR <span class="contrib">★ Rodrigo Pimentel</span></li>
+<li><b>zzbeep</b> Agora aceita parâmetros, servindo de alarme</li>
+<li><b>zzdicabl</b> URL atualizada <span class="contrib">★ Leonardo</span></li>
+<li><b>zzhowto</b> Saída melhorada, mais limpa</li>
+<li><b>zzzz</b> Opção --bashrc detecta 'source' ou '.' e inclui um export ZZPATH</li>
+<li>Arrumado bug do $ZZPATH nas configurações <span class="contrib">★ Nexsbr</span></li>
+</ul>
+
+<h2 id="v4_0128">Versão 4.0128</h2>
+
+<ul>
+<li><span class="add">[nova] <b>zzhora</b> - Faz cálculos com horas <span class="contrib">★ Fabio Victorelli</span></span></li>
+<li><b>zzarrumanome</b> Adicionadas opções -d (renomear diretórios) e -r (recursivo!)</li>
+<li><b>zzarrumanome</b> Arrumado bug DIR/ARQ de mesmo nome <span class="contrib">★ Helio Castro</span></li>
+<li><b>zzirpf</b> Arrumada mensagem de erro <span class="contrib">★ Rodrigo Pimentel</span></li>
+<li><b>zzsomahora</b> <span class="del">Função removida, obsoletada pela zzhora</span></li>
+<li><b>zzss</b> Arrumado bug no tratamento das opções e a frase não precisa mais das aspas <span class="contrib">★ Ulysses Almeida</span></li>
+<li>Esquema de configuração via variáveis de ambiente ZZCOR, ZZPATH e ZZTMPDIR <span class="contrib">★ Rodrigo Pimentel</span></li>
+</ul>
+
+<h2 id="v3_1124">Versão 3.1124</h2>
+
+<ul>
+<li>[echozz] Arrumado problema de expansão do asterisco</li>
+<li><b>zzcep</b> URL e filtro atualizados, pesquisa agora só por endereço</li>
+<li><b>zzdicjargon</b> URL atualizada</li>
+<li><b>zzdicportugues</b> URL e filtro atualizados <span class="contrib">★ Geraldo Amaral</span></li>
+<li><b>zzlinuxnews</b> NewsForge: Filtro atualizado</li>
+<li><b>zzpronuncia</b> URL atualizada <span class="contrib">★ Moyses</span></li>
+<li><b>zzramones</b> Mostra mensagem quando atualiza dados</li>
+<li>Arrumado problema de expansão do asterisco</li>
+<li>Arrumado problema de várias funções em arquivos com espaços</li>
+</ul>
+
+<h2 id="v3_1002">Versão 3.1002</h2>
+
+<ul>
+<li><span class="add">[nova] <b>zzcontapalavra</b> - Conta palavras em um texto (grep -c conta linhas!)</span></li>
+<li><span class="add">[nova] <b>zzconverte</b> - Faz várias conversões como: caracteres, temperatura e distância</span></li>
+<li><b>zzhowto</b> De volta para a URL antiga</li>
+<li><b>zznoticiaslinux</b> Linux in Brazil: Filtro atualizado</li>
+<li><b>zznoticiassec</b> Opção --help arrumada</li>
+<li><b>zztv</b> Filtro atualizado para o SBT <span class="contrib">★ Vinicius</span></li>
+<li><b>zzzz</b> Opção --bashrc com checagem melhorada e assegurando a quebra da linha <span class="contrib">★ Luciano ES</span></li>
+</ul>
+
+<h2 id="v3_0713">Versão 3.0713</h2>
+
+<ul>
+<li><span class="add">[nova] <b>zznoticiassec</b> - As notícias sobre segurança de sistemas</span></li>
+<li><b>zzarrumanome</b> Não apaga arquivo já existente, salvando como &lt;nome&gt;.1 <span class="contrib">★ Paulo Henrique</span></li>
+<li><b>zzbugzilla</b> <span class="del">Função removida</span></li>
+<li><b>zzdicbabelfish</b> Filtro atualizado</li>
+<li><b>zzdicjargon</b> URL nova, cache local, mais esperto</li>
+<li><b>zzdolar</b> Filtro atualizado</li>
+<li><b>zzhowto</b> URL nova e agora também pesquisa em mini-HOWTOs</li>
+<li><b>zzlinuxnews</b> Linux Weekly News: URL atualizada</li>
+<li><b>zznoticiaslinux</b> Adicionado o site Notícias Linux <span class="contrib">★ Bernardo Silveira</span></li>
+<li><b>zzrpmdisco</b> <span class="del">Função removida</span></li>
+<li><b>zzrpmdono</b> <span class="del">Função removida</span></li>
+</ul>
+
+<h2 id="v3_0612">Versão 3.0612</h2>
+
+<ul>
+<li><span class="add">[nova] <b>zzmaiusculas &amp; zzminusculas</b> - Para levantar/abaixar as letras de seu texto</span></li>
+<li><span class="add">[nova] <b>zzss</b> - O seu Screen Saver para o modo texto!</span></li>
+<li>[echozz] mensagens coloridas em azul</li>
+<li><b>zzarrumanome</b> Mais caracteres estranhos cadastrados</li>
+<li><b>zzcep</b> URL atualizada <span class="contrib">★ Fernando Braga</span></li>
+<li><b>zzirpf</b> Incluídas as restituições de 2003, confira a sua!</li>
+<li><b>zznoticiaslinux</b> Apagado lixo: "tee pbr.html" <span class="contrib">★ Bernardo Silveira</span></li>
+<li><b>zztrocapalavra</b> Trata arquivos com espaço e só regrava os arquivos modificados (agora sim) <span class="contrib">★ Rodrigo Pimentel</span></li>
+</ul>
+
+<h2 id="v3_0507">Versão 3.0507</h2>
+
+<ul>
+<li><b>zzdicbabelfish</b> Filtro atualizado</li>
+<li><b>zzirpf</b> Recebe o ano da restituição como parâmetro (2001 ou 2002)</li>
+<li><b>zznoticiaslinux</b> Linux in Brazil: URL e filtros atualizados <span class="contrib">★ Augusto Campos</span></li>
+<li><b>zztrocaextensao</b> Adicionada checagem se é a mesma extensão</li>
+<li><b>zztrocapalavra</b> Só regrava arquivos caso algo tenha sido modificado</li>
+<li><b>zztv</b> Filtro atualizado</li>
+<li><b>zzuniq</b> Arrumada, pois não estava funcionado como deveria</li>
+<li>Arrumado bug que mostrava "esta função não existe!"</li>
+</ul>
+
+<h2 id="2003-05-06">2003-05-06</h2>
+
+<ul>
+<li><b>Thobias empossado como co-autor das Funções ZZ</b></li>
+</ul>
+
+<h2 id="v3_0403">Versão 3.0403</h2>
+
+<ul>
+<li><span class="add">[nova] <b>zzgoogle</b> - O que era prático agora ficou MAIS prático!</span></li>
+<li><b>zzdicportugues</b> URL e filtro atualizados <span class="contrib">★ Thobias</span></li>
+<li><b>zzdolar</b> Agora mostra a hora da cotação</li>
+</ul>
+
+<h2 id="v3_0317">Versão 3.0317</h2>
+
+<ul>
+<li><b>zzlinuxnews</b> OS News: Filtro atualizado <span class="contrib">★ Thobias</span></li>
+<li><b>zzzz</b> Adicionada opção --tcshrc, que inclui aliases para todas as funções <span class="contrib">★ Frederico Spengler</span></li>
+<li>[echozz] Não estava imprimindo texto sem cores</li>
+</ul>
+
+<h2 id="v3_0226">Versão 3.0226</h2>
+
+<ul>
+<li><span class="add">[nova] <b>zzdicportugues</b> - Dicionário de português de Portugal <span class="contrib">★ Marcio Rosa</span></span></li>
+</ul>
+
+<h2 id="v3_0211">Versão 3.0211</h2>
+
+<ul>
+<li><b>zzdata</b> Arrumado bug "value too great for base" <span class="contrib">★ Sergio Blinox</span></li>
+<li><b>zzdicmichaelis</b> <span class="del">Função removida, a UOL fechou o acesso livre</span></li>
+<li><b>zzlinuxnews</b> FreshMeat: Filtro atualizado</li>
+<li><b>zznoticiaslinux</b> Ponto BR: Filtro atualizado (novamente)</li>
+<li><b>zzzz</b> A opção --atualiza não procura mais o pacote RPM (só o script mesmo)</li>
+</ul>
+
+<h2 id="v3_0207">Versão 3.0207</h2>
+
+<ul>
+<li><span class="add">[nova] <b>zzdata</b> - Faz cálculos com datas</span></li>
+<li><b>zzlinuxnews</b> Linux Daily News: Filtro atualizado <span class="contrib">★ Thobias</span></li>
+<li><b>zznoticiaslinux</b> Ponto BR: Filtro atualizado <span class="contrib">★ Thobias</span></li>
+<li><b>zzpronuncia</b> Filtro atualizado <span class="contrib">★ Thobias</span></li>
+</ul>
+
+<h2 id="v3_0124">Versão 3.0124</h2>
+
+<ul>
+<li><span class="add">[nova] <b>zzletrademusica</b> - Procuras letras de músicas na internet <span class="contrib">★ Thobias</span></span></li>
+<li><b>zzascii</b> Adicionado --help</li>
+<li><b>zzdicjargon</b> URL atualizada <span class="contrib">★ José Coelho</span></li>
+<li><b>zznoticiaslinux</b> Info Exame: URL atualizada <span class="contrib">★ Thobias</span></li>
+</ul>
+
+<h2 id="v2_1206">Versão 2.1206</h2>
+
+<ul>
+<li><span class="add">[nova] seqzz - Função auxiliar que emula o comando <code>seq</code></span></li>
+<li><span class="add">[nova] <b>zzascii</b> - Mostra a tabela ASCII, pode-se configurar o formato</span></li>
+<li><b>zzdicbabelfish</b> Filtro atualizado (estava quebrada DE NOVO)</li>
+<li><b>zzdolar</b> Filtro atualizado (a página mudou o leiaute)</li>
+<li><b>zzmaiores</b> Adicionada opção -r para descer nos subdiretórios (recursiva)</li>
+<li><b>zzuniq</b> Os malabarismos de cat/sort/uniq foram trocados por apenas um SED</li>
+</ul>
+
+<h2 id="v2_1107">Versão 2.1107</h2>
+
+<ul>
+<li><span class="add">[nova] <b>zzlinuxnews</b> - A versão em inglês do zznoticiaslinux <span class="contrib">★ Thobias</span></span></li>
+<li><span class="add">[nova] <b>zzsenha</b> - Gerador de senhas aleatórias, de qualquer tamanho <span class="contrib">★ Thobias</span></span></li>
+<li><b>zzpronuncia</b> Mais rápida para palavras repetidas (cache local), filtro atualizado <span class="contrib">★ Thobias</span></li>
+</ul>
+
+<h2 id="v2_1030">Versão 2.1030</h2>
+
+<ul>
+<li><b>zzcasadosartistas</b> <span class="del">Função removida, o programa acabou</span></li>
+<li><b>zzdicbabelfish</b> Filtro atualizado</li>
+<li><b>zznoticiaslinux</b> Atualizados sites .BR e Linux in Brazil <span class="contrib">★ Thobias</span></li>
+</ul>
+
+<h2 id="v2_0827">Versão 2.0827</h2>
+
+<ul>
+<li><span class="add">[nova] <b>zzhowto</b> - Para procurar documentos HOWTO técnicos <span class="contrib">★ Thobias</span></span></li>
+<li><b>zzarrumanome</b> Melhor! Mais esperta!</li>
+<li><b>zztv</b> Checagem inteligente em caso de falha de horário, URL atualizada <span class="contrib">★ João Tostes</span></li>
+</ul>
+
+<h2 id="v2_0622">Versão 2.0622</h2>
+
+<ul>
+<li><span class="add">[nova] <b>zzuniq</b> - Para apagar linhas repetidas (não-consecutivas)</span></li>
+<li><b>zzdicasl</b> URL e filtro atualizados <span class="contrib">★ Thobias</span></li>
+<li><b>zzlimpalixo</b> Agora reconhece comentários do vim, s/stdin/${1:--}/</li>
+<li><b>zzramones</b> Consulta local (milhões de vezes mais rápido)</li>
+</ul>
+
+<h2 id="v2_0611">Versão 2.0611</h2>
+
+<ul>
+<li><b>zzcasadosartistas</b> Adicionado index.php3 na URL <span class="contrib">★ Thobias</span></li>
+<li><b>zznextel</b> URL atualizada <span class="contrib">★ Marcos Samsoniuk</span></li>
+<li><b>zznoticiaslinux</b> Linux in Brazil: URL e filtro atualizados <span class="contrib">★ Thobias</span></li>
+</ul>
+
+<h2 id="v2_0605">Versão 2.0605</h2>
+
+<ul>
+<li><b>zzcasadosartistas</b> URL atualizada para casa 3! <span class="contrib">★ Ataliba Teixeira</span></li>
+<li><b>zztrocaextensao</b> /usr/bin/rename <span class="contrib">★ Leslie Watter</span></li>
+<li><b>zzzz</b> <span class="del">Removido pr, pois tem bug na versão nova</span></li>
+</ul>
+
+<h2 id="v2_0419">Versão 2.0419</h2>
+
+<ul>
+<li><span class="add">[nova] zzpronuncia <span class="contrib">★ Thobias</span></span></li>
+</ul>
+
+<h2 id="v2_0315">Versão 2.0315</h2>
+
+<ul>
+<li><span class="add">[nova] zznextel</span></li>
+<li><b>zznoticiaslinux</b> Adicionado site TcheLinux <span class="contrib">★ Frederico Bohne Espinosa</span></li>
+<li><b>zzzz</b> Mudanças no bashrc</li>
+</ul>
+
+<h2 id="v2_0313">Versão 2.0313</h2>
+
+<ul>
+<li><b>zzdolar</b> pequena mudança na saída</li>
+<li><b>zzzz</b> Listagem das funções, --atualiza, --bashrc</li>
+<li>Chamando pelo executável, pode omitir o zz do nome</li>
+<li>TODAS as funções agora possuem --help (ou -h)</li>
+</ul>
+
+<h2 id="v2_0228">Versão 2.0228</h2>
+
+<ul>
+<li><span class="add">[nova] zzrpmfind <span class="contrib">★ Thobias</span></span></li>
+<li><b>zzwhoisbr</b> s/registrobr/whoisbr/ na ajuda <span class="contrib">★ Lucas Graebin</span></li>
+<li>s/==/=/ nos testes para funcionar no bash1 <span class="contrib">★ Georges Kallás</span></li>
+</ul>
+
+<h2 id="v2_0222">Versão 2.0222</h2>
+
+<ul>
+<li><span class="add">[nova] zzsigla <span class="contrib">★ Thobias</span></span></li>
+<li><b>zzcep</b> Pesquisa pelo número do CEP</li>
+</ul>
+
+<h2 id="v2_0219">Versão 2.0219</h2>
+
+<ul>
+<li><span class="add">[nova] zztv</span></li>
+</ul>
+
+<h2>!!</h2>
+
+<ul>
+<li>Criada a página das funções na Internet</li>
+</ul>
+
+<h2 id="v2_0218">Versão 2.0218</h2>
+
+<ul>
+<li><span class="add">[nova] <b>zzcasadosartistas</b> - Função temporária :)</span></li>
+</ul>
+
+<h2 id="v2_0107">Versão 2.0107</h2>
+
+<ul>
+<li><span class="add">[nova] zzzz</span></li>
+<li>Adicionada opção --version</li>
+<li>Adicionada a variável ZZPATH</li>
+</ul>
+
+<h2 id="v1_1228">Versão 1.1228</h2>
+
+<ul>
+<li><span class="add">[nova] zznoticiaslinux</span></li>
+<li><span class="add">[nova] zzwhoisbr <span class="contrib">★ Marcelo Marçal</span></span></li>
+</ul>
+
+<h2 id="2001-12-11">2001-12-11</h2>
+
+<ul>
+<li><span class="add">[nova] zzcores</span></li>
+<li><span class="add">[nova] zzdetransp <span class="contrib">★ Elton Baptista</span></span></li>
+<li><b>zzarrumanome</b> s/^-/_/, mv -v --</li>
+<li><b>zzdolar</b> URL nova, formato novo <span class="contrib">★ Sérgio Bruder</span></li>
+<li><b>zzfreshmeat</b> mudança no formato (©)</li>
+<li><b>zzlimpalixo</b> aceita $1 também</li>
+<li>Adicionadas variáveis ZZERDATA, ZZERHORA</li>
+<li>Agora usando "$@" na chamada pelo executável</li>
+<li>Agora também procura o arquivo em /usr/bin/funcoeszz <span class="contrib">★ Guilherme Manika</span></li>
+</ul>
+
+<h2>!!</h2>
+
+<ul>
+<li>funcoeszz agora é um pacote do Conectiva Linux</li>
+</ul>
+
+<h2 id="2001-10-01">2001-10-01</h2>
+
+<ul>
+<li><span class="add">[nova] zzchavepgp <span class="contrib">★ Rodrigo Missiaggia</span></span></li>
+</ul>
+
+<h2 id="2001-08-28">2001-08-28</h2>
+
+<ul>
+<li><span class="add">[nova] zzmaiores</span></li>
+<li><b>zzdicmichaelis</b> simplificado</li>
+<li>Adicionada variável ZZTMP <span class="contrib">★ Andreas Hasenack</span></li>
+</ul>
+
+<h2 id="2001-08-20">2001-08-20</h2>
+
+<ul>
+<li><b>zzcep</b> URL nova</li>
+<li><b>zzdetranpr</b> mais dados</li>
+<li><b>zzdicdict</b> saída em 72 colunas</li>
+</ul>
+
+<h2 id="2001-08-09">2001-08-09</h2>
+
+<ul>
+<li><span class="add">[nova] zzdicasl</span></li>
+<li><span class="add">[nova] zzirpf <span class="contrib">★ Rodrigo Stulzer</span></span></li>
+<li><b>zzcalcula</b> entrada/saída com vírgulas</li>
+<li><b>zzdetran</b> Nome alterado para zzdetranpr</li>
+<li><b>zzdicjargon</b> agora local e www (tá BLOAT Kra!!!)</li>
+<li><b>zzramal</b> <span class="del">Função removida</span></li>
+</ul>
+
+<h2 id="2001-07-24">2001-07-24</h2>
+
+<ul>
+<li><span class="add">[nova] zzarrumanome</span></li>
+<li><span class="add">[nova] zzdiffpalavra</span></li>
+<li><span class="add">[nova] zzramones</span></li>
+<li><b>zzbabelfish</b> re-re-arrumado</li>
+<li><b>zzbugzilla</b> status entre (), UNCONFIRMED, product: Conectiva Linux</li>
+<li><b>zzdicdict</b> atualizado</li>
+<li><b>zzdominiopais</b> URL nova, pesquisa local, procura código ou nome</li>
+<li><b>zzfreshmeat</b> atualizada</li>
+<li><b>zzjargon</b> quebra 72 colunas</li>
+<li><b>zztrocaextensao</b> /usr/bin/rename, /tmp/zz&lt;arquivo&gt;.$$</li>
+</ul>
+
+<h2 id="2001-02-14">2001-02-14</h2>
+
+<ul>
+<li><span class="add">[nova] zzdetran</span></li>
+</ul>
+
+<h2 id="2000-12-30">2000-12-30</h2>
+
+<ul>
+<li><span class="add">[nova] zzcinclude</span></li>
+<li><b>zzcep</b> TipoPesquisa=</li>
+<li><b>zzdolar</b> mostra data e trata acima de R$ 2 (triste realidade)</li>
+<li>Cabeçalho do arquivo agora é #!/bin/bash em vez de #!/bin/sh</li>
+</ul>
+
+<h2 id="2000-11-08">2000-11-08</h2>
+
+<ul>
+<li><span class="add">[nova] zzcep</span></li>
+<li><span class="add">[nova] zzdicmichaelis</span></li>
+<li><b>zzdicbabel</b> Nome alterado para zzdicbabelfish</li>
+<li><b>zzdicbabi</b> Nome alterado para zzdicbabylon</li>
+<li><b>zzdicjarg</b> Nome alterado para zzdicjargon</li>
+</ul>
+
+<h2 id="2000-09-20">2000-09-20</h2>
+
+<ul>
+<li><span class="add">[nova] zzfreshmeat</span></li>
+<li><b>zzbugzilla</b> saída mais limpa</li>
+<li><b>zzkill</b> mostra número do processo</li>
+<li>Adicionada variável ZZWWWHTML</li>
+<li>Variável ZZDUMP renomeada para ZZWWWDUMP</li>
+<li>Variável ZZPOST renomeada para ZZWWWPOST</li>
+<li>Variáveis ZZWWW* agora com -crawl -width -aacookies</li>
+</ul>
+
+<h2>!!</h2>
+
+<ul>
+<li><a href="https://br.groups.yahoo.com/neo/groups/shell-script/conversations/topics/430">Primeiro anúncio público</a></li>
+</ul>
+
+<h2 id="2000-09-15">2000-09-15</h2>
+
+<ul>
+<li><span class="add">[nova] zzbugzilla</span></li>
+<li><span class="add">[nova] zzgetczz</span></li>
+<li>Adicionada variável ZZPOST</li>
+<li>Adicionado mini-manual no cabeçalho</li>
+</ul>
+
+<h2 id="2000-09-14">2000-09-14</h2>
+
+<ul>
+<li><span class="add">[nova] zzdicabl</span></li>
+<li><span class="add">[nova] zzdicbabel</span></li>
+<li><span class="add">[nova] zzdicdict</span></li>
+<li><b>zzdicdic</b> <span class="del">Função removida, página fora do ar</span></li>
+<li><b>zzdicjarg</b> aceita palavras com espaços <span class="contrib">★ Wanderlei Cavassin</span></li>
+<li><b>zzcelulartim</b> <span class="del">Função removida</span></li>
+<li>Nome oficial do arquivo agora é .bashzz</li>
+</ul>
+
+<h2 id="2000-06-12">2000-06-12</h2>
+
+<ul>
+<li><span class="add">[nova] zzcelulartim <span class="contrib">★ Rodrigo Missiaggia</span></span></li>
+<li><span class="add">[nova] zztrocaarquivo</span></li>
+<li><b>zzdicbabel</b> <span class="del">Função removida, agora usa session</span></li>
+<li><b>zztrocapalavra</b> basename no $T</li>
+</ul>
+
+<h2 id="2000-05-15">2000-05-15</h2>
+
+<ul>
+<li><span class="add">[nova] zzdominiopais <span class="contrib">★ Fernando Roxo</span></span></li>
+<li><span class="add">[nova] zzkill <span class="contrib">★ Ademar de Souza Reis Jr.</span></span></li>
+<li><span class="add">[nova] zztrocaextensao</span></li>
+<li><b>zzgifi</b> <span class="del">Função removida, o identify já faz</span></li>
+<li><b>zzjpgi</b> <span class="del">Função removida, o identify já faz</span></li>
+<li>Trocados $* por "$@" no tratamento dos argumentos</li>
+</ul>
+
+<h2 id="2000-05-04">2000-05-04</h2>
+
+<ul>
+<li><span class="add">[nova] echozz</span></li>
+<li><span class="add">[nova] forzz</span></li>
+<li><span class="add">[nova] zzajuda</span></li>
+<li><span class="add">[nova] zzcalcula</span></li>
+<li><span class="add">[nova] zzgifi</span></li>
+<li><span class="add">[nova] zzjpgi</span></li>
+<li><span class="add">[nova] zztrocapalavra</span></li>
+</ul>
+
+<h2 id="2000-04-24">2000-04-24</h2>
+
+<ul>
+<li><span class="add">[nova] zzbeep</span></li>
+<li><span class="add">[nova] zzlimpalixo</span></li>
+<li><span class="add">[nova] zzrpmverdono</span></li>
+</ul>
+
+<h2 id="2000-02-22">2000-02-22</h2>
+
+<p>Primeira versão, contando com as seguintes funções:</p>
+
+<ul>
+<li>zzdicbabel</li>
+<li>zzdicbabi</li>
+<li>zzdicdic</li>
+<li>zzdicjarg</li>
+<li>zzdictodos</li>
+<li>zzdolar</li>
+<li>zzdos2linux</li>
+<li>zzlinux2dos</li>
+<li>zzramal</li>
+<li>zzrpmdisco</li>
+<li>zzsomahora</li>
+</ul>
