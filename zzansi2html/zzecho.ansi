@@ -17,7 +17,7 @@ $ zzecho -s -N -l amarela -f vermelho CUIDADO
 [41;33;1;4mCUIDADO[m
 $ 
 $ 
-$ # A zzecho faz parte das Funções ZZ - http://funcoeszz.net
+$ # A zzecho faz parte das Funcoes ZZ - http://funcoeszz.net
 $ 
 $ 
 $ exit

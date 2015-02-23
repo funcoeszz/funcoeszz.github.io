@@ -13,7 +13,7 @@ zzecho --sublinhado --negrito --letra amarela --fundo vermelho CUIDADO
 zzecho -s -N -l amarela -f vermelho CUIDADO
 
 
-# A zzecho faz parte das Funções ZZ - http://funcoeszz.net
+# A zzecho faz parte das Funcoes ZZ - http://funcoeszz.net
 
 
 exit
