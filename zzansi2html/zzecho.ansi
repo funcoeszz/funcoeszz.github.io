@@ -1,0 +1,26 @@
+Script started on Tue Sep 30 20:53:53 2008
+[46;30m MacVerde /a/zz/web/zzansi2html [m
+$ PS1=$\ 
+$ 
+$ 
+$ zzecho CUIDADO
+CUIDADO
+$ zzecho --sublinhado CUIDADO
+[;4mCUIDADO[m
+$ zzecho --sublinhado --negrito CUIDADO
+[;1;4mCUIDADO[m
+$ zzecho --sublinhado --negrito --letra amarela CUIDADO
+[;33;1;4mCUIDADO[m
+$ zzecho --sublinhado --negrito --letra amarela --fundo vermelho CUIDADO
+[41;33;1;4mCUIDADO[m
+$ zzecho -s -N -l amarela -f vermelho CUIDADO
+[41;33;1;4mCUIDADO[m
+$ 
+$ 
+$ # A zzecho faz parte das Funções ZZ - http://funcoeszz.net
+$ 
+$ 
+$ exit
+exit
+
+Script done on Tue Sep 30 20:54:02 2008

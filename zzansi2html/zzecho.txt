@@ -1,0 +1,25 @@
+script zzecho.ansi
+
+------------------------------------------------
+
+PS1=$\ 
+
+
+zzecho CUIDADO
+zzecho --sublinhado CUIDADO
+zzecho --sublinhado --negrito CUIDADO
+zzecho --sublinhado --negrito --letra amarela CUIDADO
+zzecho --sublinhado --negrito --letra amarela --fundo vermelho CUIDADO
+zzecho -s -N -l amarela -f vermelho CUIDADO
+
+
+# A zzecho faz parte das Funções ZZ - http://funcoeszz.net
+
+
+exit
+
+---------------------------------------------------
+
+# .$ é ^M
+sed -n '/^\$ .$/,$ { /exit/q; p; }' zzecho.ansi | zzansi2html > zzecho.html
+open zzecho.html 

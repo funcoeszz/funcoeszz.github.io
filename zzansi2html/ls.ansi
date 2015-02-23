@@ -1,0 +1,40 @@
+Script started on Tue Sep 30 21:16:25 2008
+[46;30m MacVerde /a/zz/web/zzansi2html [m
+$ ls /etc
+6to4.conf                     kcpassword                    [1m[33mppp[39;49m[0m
+afpovertcp.cfg                kern_loader.conf              printcap
+[1m[36maliases[39;49m[0m                       krb5.keytab                   profile
+aliases.db                    [1m[36mlocaltime[39;49m[0m                     protocols
+amavisd.conf                  locate.rc                     [1m[33mracoon[39;49m[0m
+[1m[33mapache2[39;49m[0m                       [1m[33mmach_init.d[39;49m[0m                   rc.common
+appletalk.nvram.en0           [1m[33mmach_init_per_login_session.d[39;49m[0m rc.netboot
+asl.conf                      [1m[33mmach_init_per_user.d[39;49m[0m          [1m[36mresolv.conf[39;49m[0m
+authorization                 [1m[33mmail[39;49m[0m                          rmtab
+auto_home                     mail.rc                       rpc
+auto_master                   man.conf                      rtadvd.conf
+autofs.conf                   manpaths                      services
+bashrc                        [1m[33mmanpaths.d[39;49m[0m                    shells
+csh.cshrc                     master.passwd                 smb.conf
+csh.login                     [1m[32mmemberd.conf[39;49m[0m                  smb.conf.template
+csh.logout                    moduli                        [1m[33msnmp[39;49m[0m
+[1m[33mcups[39;49m[0m                          my.cnf                        ssh_config
+[1m[33mdefaults[39;49m[0m                      named.conf                    ssh_host_dsa_key
+dnsextd.conf                  nanorc                        ssh_host_dsa_key.pub
+dumpdates                     networks                      ssh_host_key
+efax.rc                       newsyslog.conf                ssh_host_key.pub
+find.codes                    notify.conf                   ssh_host_rsa_key
+fstab.hd                      ntp.conf                      ssh_host_rsa_key.pub
+ftpusers                      [1m[33mopenldap[39;49m[0m                      sshd_config
+gdb.conf.applesaved           [1m[33mpam.d[39;49m[0m                         sudoers
+gettytab                      passwd                        syslog.conf
+group                         paths                         ttys
+hostconfig                    [1m[33mpaths.d[39;49m[0m                       [1m[33mxgrid[39;49m[0m
+hostconfig~                   [1m[33mperiodic[39;49m[0m                      [1m[33mxinetd.d-migrated2launchd[39;49m[0m
+hosts                         php.ini.default               xtab
+hosts.equiv                   [1m[33mpodcastproducer[39;49m[0m               zprofile
+irbrc                         [1m[33mpostfix[39;49m[0m
+[46;30m MacVerde /a/zz/web/zzansi2html [m
+$ exit
+exit
+
+Script done on Tue Sep 30 21:16:29 2008
