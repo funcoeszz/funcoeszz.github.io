@@ -1,0 +1,75 @@
+---
+title: "zzansi2html, converte para HTML o texto colorido (ANSI) do terminal"
+---
+
+<style>
+    p code { white-space: nowrap; }
+</style>
+
+
+<p>A <a href="/man.html#zzansi2html">zzansi2html</a> serve para converter para HTML o texto colorido do terminal.</p>
+
+<p>No terminal, há vários comandos que mostram a saída em cores, como o <code>ls</code> e o <code>grep --color</code>. Dentro das <a href="http://funcoeszz.net">Funções ZZ</a>, há a <a href="/man.html#zzcores">zzcores</a> e a <a href="/man.html#zzecho">zzecho</a> que também mostram saída colorida. São usados os <a href="http://en.wikipedia.org/wiki/ANSI_escape_code#Colors">códigos ANSI</a> para indicar ao terminal quais cores ele deve usar.</p>
+
+<p>Para poder mostrar estes textos coloridos em sites e blogs, primeiro é preciso convertê-los para HTML. É isso que faz a <a href="/man.html#zzansi2html">zzansi2html</a>.</p>
+
+
+<h2>Gravando os códigos ANSI em um arquivo</h2>
+
+<p>Para poder converter, primeiro é preciso guardar o texto colorido em um arquivo. A maioria dos comandos com saída colorida sempre desligam as cores se você usar um pipe ou redirecionar a saída, como em:</p>
+
+<pre>
+$ grep --color foo *.txt > saida-sem-cores.txt         # não rola :(
+</pre>
+
+<p>Em geral, se usar <code>--color=always</code>, você força com que ele mantenha as cores:</p>
+
+<pre>
+$ grep --color=always foo *.txt > saida-colorida.txt   # funciona :)
+</pre>
+
+<p>Mas isso é específico para a saída de cada comando. Se você utiliza cores em seu prompt (<code>$PS1</code>), precisará de algo mais genérico, que capture toda uma sessão shell, com prompt, comandos e saídas. É exatamente isso que faz o comando <a href="http://man7.org/linux/man-pages/man1/script.1.html">script</a>. Basta fornecer o nome do arquivo e ele vai guardar toda a sua sessão seguinte, até que se digite <code>exit</code>. Exemplo:</p>
+
+<pre>
+$ script saida-colorida.txt
+Script started, output file is saida-colorida.txt
+$ grep --color root /etc/passwd
+root:*:0:0:System Administrator:/var/root:/bin/sh
+daemon:*:1:1:System Services:/var/root:/usr/bin/false
+_cvmsroot:*:212:212:CVMS Root:/var/empty:/usr/bin/false
+$ exit
+exit
+
+Script done, output file is saida-colorida.txt
+$
+</pre>
+
+
+<h2>Convertendo de ANSI para HTML</h2>
+
+<p>Mais fácil, impossível:</p>
+
+<pre>
+$ zzansi2html saida-colorida.txt > saida-colorida.html
+</pre>
+
+<p>Agora você pode colar em seu site/blog o código HTML guardado dentro do arquivo <code>saida-colorida.html</code>. Veja como fica:</p>
+
+<!-- O bloco HTML seguinte é mal formado: tem span sem fechar. -->
+<!-- É assim mesmo, veja explicação no código da zzansi2html. -->
+<pre style="background:#000;color:#FFF">
+<div style="display:inline">$ grep --color root /etc/passwd
+<span style="font-weight:bold;color:#FF0;text-decoration:none">root</div><div style="display:inline">:*:0:0:System Administrator:/var/<span style="font-weight:bold;color:#FF0;text-decoration:none">root</div><div style="display:inline">:/bin/sh
+daemon:*:1:1:System Services:/var/<span style="font-weight:bold;color:#FF0;text-decoration:none">root</div><div style="display:inline">:/usr/bin/false
+_cvms<span style="font-weight:bold;color:#FF0;text-decoration:none">root</div><div style="display:inline">:*:212:212:CVMS Root:/var/empty:/usr/bin/false
+$
+</pre>
+
+
+<h2>Exemplos</h2>
+
+<ul>
+<li><a href="ls.html">ls.html</a> – Prompt colorido de duas linhas e saída do comando <code>ls</code></li>
+<li><a href="zzcores.html">zzcores.html</a> – Saída multicolorida da <a href="/man.html#zzcores">zzcores</a></li>
+<li><a href="zzecho.html">zzecho.html</a> – Várias linhas de comando mostrando como usar a <a href="/man.html#zzecho">zzecho</a> para mostrar mensagens coloridas no terminal.</li>
+</ul>
