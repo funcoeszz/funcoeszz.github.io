@@ -20,5 +20,6 @@ ZZCOR=0 ZZOFF= ZZDIR=$gitroot/zz $gitroot/funcoeszz zzajuda --lista |
 
 		# zzfoo   Foo bar. ===> zzfoo: "Foo bar."
 		s/  */:& "/
-		s/$/"/' >> $out
+		s/$/"/
+	' >> $out
 echo "$PWD/$out done."
