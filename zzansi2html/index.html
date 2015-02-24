@@ -3,7 +3,12 @@ title: "zzansi2html, converte para HTML o texto colorido (ANSI) do terminal"
 ---
 
 <style>
-    p code { white-space: nowrap; }
+    p code {
+        white-space: nowrap;
+    }
+    pre {
+        line-height: 100%;  /* exemplos */
+    }
 </style>
 
 
@@ -68,8 +73,14 @@ $
 
 <h2>Exemplos</h2>
 
-<ul>
-<li><a href="ls.html">ls.html</a> – Prompt colorido de duas linhas e saída do comando <code>ls</code></li>
-<li><a href="zzcores.html">zzcores.html</a> – Saída multicolorida da <a href="/man.html#zzcores">zzcores</a></li>
-<li><a href="zzecho.html">zzecho.html</a> – Várias linhas de comando mostrando como usar a <a href="/man.html#zzecho">zzecho</a> para mostrar mensagens coloridas no terminal.</li>
-</ul>
+<p>Prompt colorido de duas linhas e saída do comando <code>ls</code></p>
+
+{% include_relative ls.html %}
+
+<p>Saída multicolorida da <a href="/man.html#zzcores">zzcores</a></p>
+
+{% include_relative zzcores.html %}
+
+<p>Várias linhas de comando mostrando como usar a <a href="/man.html#zzecho">zzecho</a> para mostrar mensagens coloridas no terminal.</p>
+
+{% include_relative zzecho.html %}
