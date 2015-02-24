@@ -8,7 +8,7 @@ No final de cada página do site há um link direto para o seu arquivo-fonte no 
 
 > Recomendo editar estes arquivos diretamente pelo site do GitHub em vez de baixá-los para sua máquina. É mais rápido e mais fácil.
 
-# Nerdices
+## Nerdices
 
 * O site é hospedado diretamente no GitHub, usando o esquema de [GitHub Pages](https://pages.github.com/).
 
@@ -33,7 +33,7 @@ No final de cada página do site há um link direto para o seu arquivo-fonte no 
 * O que precisa ser PHP, como a versão online das funções e o ZZ a la carte, ficam em subdomínios, hospedados no DreamHost.
 
 
-# Estrutura do site
+## Estrutura do site
 
 * [css/site.css](https://github.com/funcoeszz/funcoeszz.github.io/blob/master/css/site.css) – Arquivo CSS com os estilos do site.
 
@@ -48,3 +48,14 @@ No final de cada página do site há um link direto para o seu arquivo-fonte no 
 * [Gemfile](https://github.com/funcoeszz/funcoeszz.github.io/blob/master/Gemfile), [Gemfile.lock](https://github.com/funcoeszz/funcoeszz.github.io/blob/master/Gemfile.lock) – Esquema da linguagem Ruby para especificar os plugins usados pelo site. É necessário para poder rodar o site localmente, usando o mesmo ambiente do servidor. Mas você não precisa se preocupar com isso, pode ignorar estes arquivos.
 
 * O resto são os arquivos normais de conteúdo do site, alguns em Markdown, alguns já em HTML.
+
+
+## Desenvolvimento local
+
+É melhor editar os arquivos direto pelo site do GitHub, mas se fizer questão de rodar localmente:
+
+```console
+$ bundle install                # Instalar plugins
+$ bundle update github-pages    # Atualizar plugins
+$ bundle exec jekyll serve      # Rodar o site localmente
+```
