@@ -271,25 +271,6 @@ pre.light {
     background: none;
     color: black;
 }
-.prompt {
-    color: lime;
-}
-.command {
-    color: white;
-}
-.comment {
-    color: orange;
-    color: #ccc;
-    font-style: italic;
-}
-.command-zz,
-.command-zz a {
-    color: orange;
-    text-decoration: none;
-}
-.command-zz a:hover {
-    text-decoration: underline;
-}
 /* monospaced */
 pre, code, .menu {
     font-family: Courier, monospace;
