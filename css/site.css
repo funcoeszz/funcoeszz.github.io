@@ -101,40 +101,6 @@ table {
 	margin: 24px auto;  /* 16px is not enough */
 }
 
-/* ------------------------- footer */
-
-#footer {
-	margin-top: 2em;
-	margin-bottom: 3em;
-}
-.footer-col {
-	float: left;
-	margin-right: 60px;
-/*	width:33%;*/
-}
-.footer-col.last {
-	margin-right: 0;
-}
-#footer h4 {
-	color: gray;
-}
-#footer ul {
-	list-style: none;
-	margin-left: 0;
-}
-#footer a {
-	text-decoration: none;
-}
-#footer a:hover {
-	text-decoration: underline;
-}
-#footer-home {
-	float: left;
-}
-#footer-twitter {
-	float: right;
-}
-
 /* ------------------------- special */
 
 pre {
@@ -159,14 +125,6 @@ p img {
 	margin-bottom: 10px;
 	vertical-align: top;
 }
-.inline {
-	text-align: center;
-}
-.multicol-3 {
-	-moz-column-count: 3;
-	-webkit-column-count: 3;
-	column-count: 3;
-}
 
 /* ------------------------- iPhone = 320x480 */
 
@@ -178,18 +136,9 @@ p img {
 	.toc, #footer {
 		line-height: 200%;
 	}
-	.mobile-multicol-2 {
-		-moz-column-count: 2 !important;
-		-webkit-column-count: 2 !important;
-		column-count: 2 !important;
-	}
 	p img {
 		padding: 0;
 		border-width: 0;
-	}
-	.inline p img {
-		display: block;
-		margin: 0 auto 16px auto;
 	}
 }
 
@@ -204,7 +153,6 @@ body {
 	max-width: 33em;
 }
 .toc {
-/*	line-height: 175%;*/
 	line-height: 150%;
 	border: 1px solid black;
 	border-width: 1px 0;
@@ -225,26 +173,11 @@ body {
 	text-decoration: underline;
 }
 
-h1, h2, h3 {
-/*	margin: 0.5em 0;*/
-}
 #header {
 	margin-bottom: 32px;  /* 2em */
 }
 #header h1 {
 	margin: 0;
-}
-#header h2 {
-	margin-top: 16px;
-	font-size: 1.5em;
-	font-weight: normal;
-}
-#header h3 {
-	margin-top: 16px;
-	font-size: 1em;
-	font-weight: normal;
-	font-style: italic;
-	color: #888;
 }
 h1 {
 	font-size: 2em;
@@ -275,67 +208,24 @@ table {
 /* ------------------------- my head */
 
 .cabecao {
-	position:fixed;
-	right:0;
-	bottom:0;
+	position: fixed;
+	right: 0;
+	bottom: 0;
 }
 .cabecao img {
-	padding:2px;
+	padding: 2px;
 	width: 38px;
 	height: 45px;
 	/* orig: 57x68 */
 }
 
-/* UI colors in main headers and i */
-body.portable #header h1,
-body.portable h2,
-body.portable i {
-	color: #4D8A68;
-}
-body.browser #header h1,
-body.browser h2,
-body.browser i {
-	color: #E89E00;
-}
-body.cloud #header h1,
-body.cloud h2,
-body.cloud i {
-	color: #2B97E9;
-}
-body.beta #header h1,
-body.beta h2,
-body.beta i {
-	color: black;
-}
-body.portable #header h1,
-body.browser  #header h1,
-body.cloud    #header h1,
-body.beta     #header h1 {
-	font-weight: bold;
-}
-
-/* about */
-.heart-list ul {
-	list-style-image: url(heart.png);
-}
-
-
-
 /* ------------------------- iPhone = 320x480 */
 
 @media screen and (max-width: 480px) {
-	body {
-		padding: 10px;
-		margin: 0;
-	}
-	.toc, #footer {
-		line-height: 200%;
-	}
 	.cabecao {
 		display: none;
 	}
 }
-
 
 
 
@@ -358,12 +248,13 @@ p img {  /* no border */
 .note     { margin: 1em 0; padding:6px 9px; background:#EEEEEE; border:1px solid #CCC; }
 .download { margin: 1em 0; padding:6px 9px; background:#E7F7D3; border:1px solid #6C3; }
 .alert    { margin: 1em 0; padding:6px 9px; background:#FFFBBC; border:1px solid #E6DB55; }
-.note p, .download p, .warning p, .alert p { margin: 0; }
+.note p, .download p, .alert p { margin: 0; }
 
 #footer {
+    margin-top: 4em;
+	margin-bottom: 3em;
     text-align: right;
     font-size: 80%;
-    margin-top: 4em;
 }
 
 /* ------------------------------- COMMAND LINE */
@@ -404,7 +295,6 @@ pre, code, .menu {
     font-family: Courier, monospace;
     font-size: 13px;
 }
-
 
 /* --------------------------------------- MENU */
 
