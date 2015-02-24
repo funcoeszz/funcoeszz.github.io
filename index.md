@@ -1,5 +1,6 @@
 ---
 title: Funções ZZ
+redirect_from: /exemplos.html
 ---
 
 <style>

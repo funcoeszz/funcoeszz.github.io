@@ -1,5 +1,6 @@
 ---
 title: História das Funções ZZ
+redirect_from: /historia.html
 ---
 
 > <img src="img/aurelio-64.png" class="inline">

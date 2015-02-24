@@ -25,3 +25,43 @@ defaults:
       path: "" # an empty string here means all files in the project
     values:
       layout: "default"
+
+
+### Redirecionamentos antigos do .htaccess
+#
+# Como o GitHub pages não suporta .htaccess, os redirecionamentos são
+# feitos dentros dos próprios arquivos de destino, usando a chave
+# redirect_from no Front Matter e o plugin jekyll-redirect-from.
+#
+## Redirecionamentos migrados:
+#
+# Redirect permanent /ajude.html          /my.html
+# Redirect permanent /doacao.html         /donate.html
+# Redirect permanent /equipe.html         /thanks.html
+# Redirect permanent /exemplos.html       /index.html
+# Redirect permanent /historia.html       /hist.html
+# Redirect permanent /instalacao.html     /download.html
+# Redirect permanent /minhazz.html        /my.html
+# Redirect permanent /passado/index.html  /download/index.html
+# Redirect permanent /recompensa.html     /acessivel.html
+# Redirect permanent /teste.html          /faq.html
+# Redirect permanent /todas.html          /list.html
+# Redirect permanent /zzajuda.html        /man.html
+# Redirect permanent /zzaovivo.html       /aovivo.html
+#
+## Redirecionamentos perdidos:
+#
+# Redirect gone /blog.html
+# Redirect gone /camiseta.html
+# Redirect gone /extra.html
+# Redirect gone /forum.html
+# Redirect gone /img/camiseta/
+# Redirect gone /img/equipe/
+# Redirect gone /messenger.html
+# RedirectMatch permanent "/passado/(funcoeszz-.*)" /download/$1.sh
+# Redirect permanent /locales.txt https://raw.githubusercontent.com/funcoeszz/funcoeszz/master/local/zzlocale.txt
+# Redirect temp /funcoeszz /download/funcoeszz-13.2.sh
+# Redirect temp /funcoeszz-iso /download/funcoeszz-13.2-iso.sh
+#
+gems:
+  - jekyll-redirect-from

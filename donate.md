@@ -1,5 +1,6 @@
 ---
 title: Doações para as Funções ZZ
+redirect_from: /doacao.html
 ---
 
 Funções ZZ é um **software livre** (GPL) desde o seu nascimento, e assim queremos que permaneça. Incentivamos a difusão do conhecimento pelo livre acesso ao código-fonte, que pode ser estudado e alterado pelos usuários.

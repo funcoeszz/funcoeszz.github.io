@@ -1,5 +1,6 @@
 ---
 title: FAQ das Funções ZZ
+redirect_from: /teste.html
 ---
 
 <div class="toc">
