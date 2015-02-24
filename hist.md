@@ -286,7 +286,9 @@ Também em 2005 fizemos uma edição limitada de 50 camisetas das Funções ZZ p
 
 Precisei parar de contar a história pra fazer o lançamento da versão nova 13.2. Depois eu continuo, ok?
 
-> **Atualização:** Fiz um texto no blog, ponderando estes 13 anos de ZZ: http://aurelio.net/blog/2013/02/28/13-anos-de-funcoes-zz/
+> **Atualização em 28/02/2013:** Fiz um texto no blog, ponderando os 13 anos de ZZ: http://aurelio.net/blog/2013/02/28/13-anos-de-funcoes-zz/
+
+> **Atualização em 27/08/2013:** Itamar Santos de Souza, contribuidor desde 2009, tornou-se coautor das funções: http://aurelio.net/blog/2013/08/30/novo-coautor-das-funcoes-zz-itamar-santos-de-souza/
 
 <!--
 v8.3: reescrita do código, UTF-8, testador
