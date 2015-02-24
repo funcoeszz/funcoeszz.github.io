@@ -119,8 +119,8 @@ p img {
 	padding: 5px;
 	border: 1px solid #ddd;
 }
-.inline p img {
-	display: inline;
+p img.inline {
+	float: left;
 	margin-right: 10px;
 	margin-bottom: 10px;
 	vertical-align: top;

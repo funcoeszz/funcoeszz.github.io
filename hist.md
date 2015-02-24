@@ -2,7 +2,7 @@
 title: História das Funções ZZ
 ---
 
-> <img src="img/aurelio-64.png" style="padding:0 5px 5px 0; float:left;">
+> <img src="img/aurelio-64.png" class="inline">
 > Oi, eu sou o [Aurelio](http://aurelio.net) e criei as Funções ZZ em 22 de fevereiro de 2000. Parece que foi ontem, mas já passou tanto tempo, mais de uma década… Quer ouvir a história toda? Então senta aí que eu vou te contar.
 
 Bem, eu trabalhava com Linux na Conectiva, e na época fazíamos vários pequenos [shell scripts](http://aurelio.net/shell/) para automatizar tarefas repetitivas. Em geral eram scripts simples, de poucas linhas: [consultar a lista de ramais](http://aurelio.net/doc/rdl/areas-compartilhadas.html), obter informações de [pacotes RPM](http://en.wikipedia.org/wiki/RPM_Package_Manager), coisas assim.
