@@ -49,8 +49,8 @@ Agora sim, você pode usar as Funções ZZ em toda a sua glória. Abra um novo t
 ```console
 $ zzcalcula 10+5
 15
-$ zzbissexto
-2012 é bissexto
+$ zzconverte mk 100
+100 milhas = 160.900 km
 $ zzmaiusculas tá funcionando
 TÁ FUNCIONANDO
 $
