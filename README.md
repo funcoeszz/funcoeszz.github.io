@@ -41,7 +41,7 @@ No final de cada página do site há um link direto para o seu arquivo-fonte no 
 
 * [_layouts/default.html](https://github.com/funcoeszz/funcoeszz.github.io/blob/master/_layouts/default.html) – Template usado em todas as páginas. Aqui se edita o formato geral e o menu.
 
-* [_data/*](https://github.com/funcoeszz/funcoeszz.github.io/tree/master/_data) – [Arquivos de dados](http://jekyllrb.com/docs/datafiles/) no formato [YAML](http://pt.wikipedia.org/wiki/YAML), com a lista completa de todas as funções disponíveis e sua descrição e texto de ajuda. Estes dados são usados para construir algumas páginas, como a que lista as funções ([fontes](https://github.com/funcoeszz/funcoeszz.github.io/blob/master/list.html), [resultado](http://funcoeszz.net/list.html)) e a man page ([fontes](https://github.com/funcoeszz/funcoeszz.github.io/blob/master/man.html), [resultado](http://funcoeszz.net/man.html)). Estes arquivos YAML são gerados automaticamente pelos scripts `.sh` na mesma pasta, execute-os sempre que novas funções forem criadas.
+* [_data/*](https://github.com/funcoeszz/funcoeszz.github.io/tree/master/_data) – Arquivos de dados no formato YAML, usados para construir algumas páginas. Veja detalhes no [_data/README.md](https://github.com/funcoeszz/funcoeszz.github.io/blob/master/_data/README.md).
 
 * [_config.yml](https://github.com/funcoeszz/funcoeszz.github.io/blob/master/_config.yml) – Arquivo de configuração do site, usado pelo Jekyll.
 
