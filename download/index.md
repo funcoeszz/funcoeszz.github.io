@@ -1,6 +1,9 @@
 ---
 title: Download e instalação das Funções ZZ
-redirect_from: /instalacao.html
+redirect_from:
+  - /download.html
+  - /instalacao.html
+  - /passado/
 ---
 
 <!-- > Dica: Sabia que você também também pode usar as Funções ZZ [direto no navegador](http://funcoeszz.net/online/), ou [em seu iPhone](http://itunes.apple.com/br/app/funcoes-zz/id492258680?mt=8)? -->

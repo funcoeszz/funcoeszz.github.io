@@ -17,7 +17,7 @@ redirect_from: /exemplos.html
 <div class="alert">
     LANÇAMENTO: Funções ZZ versão 13.2 →
     <a href="anuncio-13.2.html">anúncio</a>,
-    <a href="download.html">download</a>
+    <a href="/download/">download</a>
 </div>
 -->
 
@@ -1087,6 +1087,6 @@ $ zzascii 5 70
    51 33 063 3   71 47 107 G   91 5B 133 [  111 6F 157 o
 ```
 
-Curtiu? [Instale](download.html) em sua máquina e aproveite!
+Curtiu? [Instale](/download/) em sua máquina e aproveite!
 
 Manja de shell? Então ajuda nóis → [GitHub](https://github.com/funcoeszz/funcoeszz)

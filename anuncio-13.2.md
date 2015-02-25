@@ -19,5 +19,5 @@ São ao todo 134 funções diferentes, todas estão concentradas em um único ar
 
 Funções ZZ versão 13.2:
 [download direto](http://funcoeszz.net/download/funcoeszz-13.2.sh),
-[instruções](http://funcoeszz.net/download.html),
+[instruções](http://funcoeszz.net/download/),
 [changelog](http://funcoeszz.net/changelog.html).
