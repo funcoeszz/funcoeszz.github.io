@@ -1,0 +1,11 @@
+---
+# http://funcoeszz.net/funcoeszz
+# Este arquivo é usado pela zzzz --atualiza.
+# É uma cópia do código da versão mais recente das Funções ZZ.
+#
+# Nota: A versão iso-8859-1 não funciona nesse esquema, dá erro no Jekyll.
+#       Liquid Exception: invalid byte sequence in UTF-8
+#
+layout: null
+---
+{% include_relative download/funcoeszz-{{ site.data.versions | last }}.sh %}
