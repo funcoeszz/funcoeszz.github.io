@@ -79,3 +79,16 @@ source ~/.bashrc
 ## Versão GitHub
 
 Se você manja de Git, pode clonar [o repositório completo](https://github.com/funcoeszz/funcoeszz) para usar a versão mais recente das funções, que conta com todas as correções.
+
+
+## Versões antigas
+
+Para fins históricos somente, não são mais utilizáveis.
+
+<p>
+{% for version in site.data.versions %}
+    {% unless forloop.last %}
+        <a href="/download/funcoeszz-{{ version }}.sh">{{ version }}</a>{% unless forloop.rindex == 2 %},{% endunless %}
+    {% endunless %}
+{% endfor %}
+</p>
