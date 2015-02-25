@@ -7,9 +7,9 @@ redirect_from: /instalacao.html
 
 <!-- > Dica: Manja de git? Então [baixe o repositório completo](https://github.com/funcoeszz/funcoeszz) e seja feliz! -->
 
-<!-- > Vá no [Funções ZZ à la carte](a-la-carte/?zz=*), escolha as funções desejadas e aperte o botão *Baixar arquivo*. Um arquivo chamado `funcoeszz.sh` será baixado para o seu computador. -->
+<!-- > Vá no [Funções ZZ à la carte](/a-la-carte/?zz=*), escolha as funções desejadas e aperte o botão *Baixar arquivo*. Um arquivo chamado `funcoeszz.sh` será baixado para o seu computador. -->
 
-Baixe o arquivão com todas as Funções ZZ: [funcoeszz-13.2.sh](download/funcoeszz-13.2.sh)
+Baixe o arquivão com todas as Funções ZZ: [funcoeszz-13.2.sh](/download/funcoeszz-13.2.sh)
 
 Vá na pasta onde o arquivo foi baixado e teste seu funcionamento:
 
@@ -64,7 +64,7 @@ Se você usa Windows, baixe e instale o [Cygwin](http://aurelio.net/cygwin/) ou 
 
 ## Acentuação
 
-Se der problema com a acentuação, baixe a [versão alternativa (iso-8859-1)](download/funcoeszz-13.2-iso.sh) das funções, especial para terminais que ainda não migraram para a codificação UTF-8.
+Se der problema com a acentuação, baixe a [versão alternativa (iso-8859-1)](/download/funcoeszz-13.2-iso.sh) das funções, especial para terminais que ainda não migraram para a codificação UTF-8.
 
 
 ## -bash: zzcalcula: command not found
