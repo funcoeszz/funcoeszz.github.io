@@ -8,4 +8,4 @@
 #
 layout: null
 ---
-{% include_relative download/funcoeszz-{{ site.data.versions | last }}.sh %}
+{% include_relative download/funcoeszz-{{ site.data.versions.last }}.sh %}

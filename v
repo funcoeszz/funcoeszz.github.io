@@ -4,4 +4,4 @@
 # Contém somente o número da versão atual das Funções ZZ.
 layout: null
 ---
-{{ site.data.versions | last }}
+{{ site.data.versions.last }}
