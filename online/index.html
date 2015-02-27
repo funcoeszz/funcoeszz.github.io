@@ -1,0 +1,270 @@
+<!--
+    Online interface for Funcoes ZZ (http://funcoeszz.net)
+    2011-05-09 PHP original implementation
+    2015-02-27 JavaScript (jQuery, AJAX) port
+
+    by Aurelio Jargas
+        http://aurelio.net
+        @oreio
+
+    License: MIT
+-->
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Funções ZZ online</title>
+    <link rel="icon" type="image/png" href="/img/favicon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0 1em;
+            background: black;
+            color: #ccc;
+        }
+        body, label, #stdin, #stdout, #arguments {
+            font-family: monospace;
+        }
+        #stdin, #stdout, #arguments {
+            font-size: 100%;
+            background: white;
+            color: black;
+        }
+        .stderr {
+            color: red;
+        }
+        select, input, #history {
+            font-size: 100%;
+        }
+        #inout {
+            width: 100%;
+            border-spacing: 1em;
+            border-collapse: collapse;
+            position: fixed;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            background: #555;
+        }
+        #inout td {
+            border-width: 2px 1em 1em 1em;
+            border-style: solid;
+            border-color: #555;
+        }
+        #inout label {
+            color: white;
+            cursor: help;
+        }
+        #stdin, #stdout {
+            width: 100%;
+        }
+        #arguments {
+            width: 40%;
+        }
+        #prompt {
+            padding-bottom: 10em;
+        }
+        #history {
+            margin-bottom: 0;
+            line-height: 1.5em;
+        }
+        h1 {
+            text-align: center;
+            color: lime;
+            line-height: 80px;
+            margin: 0;
+            font-family: Arial,sans-serif;
+            border-bottom: 1px solid lime;
+        }
+        h1 a {
+            color: lime;
+            text-decoration: none;
+        }
+        h1 a:hover {
+            text-decoration: underline;
+        }
+        .PS1 {
+            color: lime;
+        }
+        .cmdline {
+            color: white;
+        }
+        #help-zz {
+            float: right;
+        }
+        #footer {
+            position: fixed;
+            right: 1.5em;
+            bottom: 0.2em;
+            font-family: Arial,sans-serif;
+            font-size: 75%;
+            font-weight: normal;
+            color: silver;
+            font-style: italic;
+        }
+        #footer a {
+            color: silver;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script charset="utf-8">
+
+        function get_zz() {
+            return $('#zzfunc').val();
+        }
+        function get_arguments() {
+            return $('#arguments').val();
+        }
+        function get_stdin() {
+            return $('#stdin').val();
+        }
+        function set_stdout(text) {
+            $('#stdout').text(text);
+        }
+        function set_stderr(text) {
+            if (text) {
+                text = $.trim(text) + "\n";
+                $('<span>').addClass('stderr').text(text).appendTo('#history');
+            }
+        }
+        function log_output(text) {
+            $('#history').append(text);
+        }
+        function log_command_line(cmdline) {
+            $('#history').append(
+                '<span class="PS1">prompt$</span> ' +
+                '<span class="cmdline">' + cmdline + '</span>' +
+                "\n"
+            );
+        }
+        function results_handler(hash) {
+            var cmdline = hash.command || (get_zz() + ' ' + get_arguments());
+            log_command_line(cmdline.replace(/^funcoeszz /, ''));
+            log_output(hash.stdout);
+            set_stdout(hash.stdout);
+            set_stderr(hash.stderr);  // zz execution error
+            set_stderr(hash.error);   // API error
+        }
+        function help_handler(hash) {
+            $.each(hash, function(zz, help_text) {
+                log_command_line(zz + ' -h');
+                log_output("\n" + help_text + "\n");  //spaced
+                set_stdout(help_text);
+            });
+        }
+        function init_handler(array) {
+            // Populate SELECT
+            $.each(array, function (i, zz) {
+                $('<option>').val(zz).text(zz).appendTo('#zzfunc');
+            });
+            // Set initial values
+            $('#zzfunc').val("zzsenha");
+            $('#arguments').val("16");
+        }
+
+        // init
+        $(document).ready(function() {
+
+            $.getJSON(
+                'http://api.funcoeszz.net/0/list.json',
+                { apikey: 'o0a7a294' },
+                init_handler
+            );
+
+            // DEBUG
+            // init_handler($.parseJSON('["zzbyte","zzcarnaval","zzcpf","zzsenha"]'))
+
+            // Button Enter
+            $('#submit').click(function (event) {
+
+                var url = 'http://api.funcoeszz.net/0/run/';
+                var ajax_data = {
+                    zz:        get_zz(),
+                    arguments: get_arguments(),
+                    stdin:     get_stdin(),
+                    format:    'json',
+                    apikey:    'o0a7a294'
+                };
+                $.getJSON(url, ajax_data, results_handler);
+
+                // DEBUG
+                // results_json = '{"zz":"zzcarnaval","arguments":"1999","command":"funcoeszz zzcarnaval 1999","stdin":null,"stdout":"16\/02\/1999\\n","stderr":"","exitcode":0}';
+                // results_json = '{"zz":"zzmaiusculas","arguments":null,"command":"funcoeszz zzmaiusculas ","stdin":"a\u00e1e\u00e9c\u00e7\\n","stdout":"A\u00c1E\u00c9C\u00c7\\n","stderr":"ERRO: O universo parou.","exitcode":0}';
+                // results_json = '{"error":"Not found: zz404","stderr":"STDERR"}';
+                // results_handler($.parseJSON(results_json));
+
+                event.preventDefault();
+            });
+
+            // Button Ajuda
+            $('#help-zz').click(function (event) {
+
+                var url = 'http://api.funcoeszz.net/0/help/';
+                var ajax_data = {
+                    zz:        get_zz(),
+                    format:    'json',
+                    apikey:    'o0a7a294'
+                };
+                $.getJSON(url, ajax_data, help_handler);
+
+                // DEBUG
+                // var help_json = '{"zzbyte":"Convers\u00e3o entre grandezas de bytes (mega, giga, tera, etc).\\nUso: zzbyte N [unidade-entrada] [unidade-saida]  # BKMGTPEZY\\nEx.: zzbyte 2048                    # Quanto \u00e9 2048 bytes?  -- 2K\\n     zzbyte 2048 K                  # Quanto \u00e9 2048KB?      -- 2M\\n     zzbyte 7 K M                   # Quantos megas em 7KB? -- 0.006M\\n     zzbyte 7 G B                   # Quantos bytes em 7GB? -- 7516192768B\\n     for u in b k m g t p e z y; do zzbyte 2 t $u; done\\n"}';
+                // help_handler($.parseJSON(help_json));
+
+                event.preventDefault();
+            });
+
+        });  // document.ready()
+    </script>
+</head>
+<body>
+
+<h1><a href="http://funcoeszz.net">Funções ZZ</a> online</h1>
+
+<form method="post">
+
+    <pre id="history"></pre> <!-- Leave as one line, do not indent. -->
+
+    <div id="prompt">
+        <span class="PS1">prompt$</span>
+        <select name="zzfunc" id="zzfunc" size="1"></select>
+        <input type="text" id="arguments" name="arguments" value="">
+        <input type="submit" id="submit" value="Enter">
+        <input type="button" id="help-zz" value="Ajuda">
+    </div>
+
+    <table id="inout">
+    <tr>
+        <td>
+            <label for="stdin" title="Cole aqui o texto a ser manipulado pela função.">STDIN:</label>
+            <textarea id="stdin" name="stdin" rows="5"></textarea>
+        </td>
+        <td>
+            <label for="stdout" title="Aqui aparece o resultado do último comando.">STDOUT:</label>
+            <textarea id="stdout" name="stdout" rows="5"></textarea>
+        </td>
+    </tr>
+    </table>
+
+</form>
+
+<div id="footer">
+    <a
+        title="Veja o código-fonte deste webapp e me ajude a melhorá-lo!"
+        href="https://github.com/funcoeszz/funcoeszz.github.io/blob/master/online/index.html">HTML-CSS-JavaScript</a>
+    por
+    <a
+        title="Quer ajuda? Tem uma sugestão? Fale comigo no twitter."
+        href="http://twitter.com/oreio">@oreio</a>
+
+</body>
+</html>
+
+<!--
+iphone: #inout not really fixed
+copy stdout to stdin?
+chain commands?
+history clicable? (reload command)
+timestamp pra cada cmd (tooltip)
+JS: mostrar Uso: no onchange do select
+-->
