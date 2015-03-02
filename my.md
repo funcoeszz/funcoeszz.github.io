@@ -1,5 +1,5 @@
 ---
-title: Crie sua própria Função ZZ
+title: Crie sua própria função
 redirect_from:
   - /minhazz.html
   - /ajude.html

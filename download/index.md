@@ -1,5 +1,5 @@
 ---
-title: Download e instalação das Funções ZZ
+title: Download e instalação
 redirect_from:
   - /download.html
   - /instalacao.html

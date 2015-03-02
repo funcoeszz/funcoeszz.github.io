@@ -1,5 +1,5 @@
 ---
-title: História das Funções ZZ
+title: Nossa história
 redirect_from: /historia.html
 ---
 

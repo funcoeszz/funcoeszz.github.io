@@ -1,5 +1,5 @@
 ---
-title: FAQ das Funções ZZ
+title: FAQ
 redirect_from: /teste.html
 ---
 

@@ -22,9 +22,10 @@ redcarpet:
 defaults:
   -
     scope:
-      path: "" # an empty string here means all files in the project
+      path: ""  # all files in the project
     values:
       layout: "default"
+      title_suffix: true  # <head><title>Foo | Funções ZZ</title>
 
 
 ### Redirecionamentos antigos do .htaccess

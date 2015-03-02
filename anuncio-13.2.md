@@ -1,5 +1,6 @@
 ---
 title: "Anúncio: Funções ZZ versão 13.2"
+title_suffix: false
 ---
 
 Funções ZZ é uma biblioteca de funções para o shell, com 100+ miniaplicativos prontos para serem usados na linha de comando do UNIX/Linux/Mac. É um projeto de software livre 100% nacional, criado por Aurelio Jargas no ano de 2000.

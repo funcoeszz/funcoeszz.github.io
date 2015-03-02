@@ -1,5 +1,5 @@
 ---
-title: Doações para as Funções ZZ
+title: Doações
 redirect_from: /doacao.html
 ---
 
