@@ -10,8 +10,8 @@
     <meta name="author" content="Aurelio Jargas">
     <link rel="shortcut icon" href="/img/favicon.png">
 
-    <link rel="stylesheet" href="/css/site.css"/>
-    <link rel="stylesheet" href="/css/monokai.css"/>
+    <link rel="stylesheet" href="/css/site.css">
+    <link rel="stylesheet" href="/css/monokai.css">
 </head>
 
 <body>
@@ -38,22 +38,21 @@
     </table>
 </div>
 
-
 <div id="main" class="bar">
 
-<div id="header">
-    <h1>{{ page.title }}</h1>
-</div>
+    <div id="header">
+        <h1>{{ page.title }}</h1>
+    </div>
 
+    <div id="content">
+    {{ content}}
+    </div>
 
-<div id="content">
-{{ content}}
-</div>
+    <div id="footer">
+        <a href="https://github.com/funcoeszz/funcoeszz.github.io/blob/master/{{ page.path }}">Edite esta página no GitHub</a>
+    </div>
 
-
-<div id="footer">
-    <a href="https://github.com/funcoeszz/funcoeszz.github.io/blob/master/{{ page.path }}">Edite esta página no GitHub</a>
-</div>
+</div><!--main-->
 
 <a class="cabecao" href="http://aurelio.net" title="AURELIO.NET — Organizações Verde Inc.™"><img src="http://aurelio.net/include/10anos/aureliolga.jpg"></a>
 
@@ -68,6 +67,5 @@
   ga('send', 'pageview');
 
 </script>
-</div><!--main-->
 </body>
 </html>
