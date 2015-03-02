@@ -5,11 +5,11 @@ redirect_from: /exemplos.html
 ---
 
 <style>
-    li em {
+    #content li em {
         color: green;
         font-style: normal;
     }
-    pre {
+    #content pre {
         padding: 1.5em 5px;
     }
 </style>

@@ -6,7 +6,7 @@ redirect_from:
 ---
 
 <style>
-    pre b {
+    #content pre b {
         color: yellow;
         font-weight: normal;
     }
