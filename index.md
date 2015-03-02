@@ -38,7 +38,7 @@ redirect_from: /exemplos.html
 
 <!-- [![](img/icon/128.png)](logo.html) -->
 
-Funções ZZ é uma coletânea com [175 miniaplicativos](list.html) de utilidades diversas, [acessíveis](acessivel.html) e prontos para serem usados na linha de comando de sistemas tipo UNIX (Linux, BSD, Mac OS X, Cygwin, entre outros).
+Funções ZZ é uma coletânea com [{{ site.data.list.size }} miniaplicativos](list.html) de utilidades diversas, [acessíveis](acessivel.html) e prontos para serem usados na linha de comando de sistemas tipo UNIX (Linux, BSD, Mac OS X, Cygwin, entre outros).
 
 <!--
 Entre as funcionalidades, destacam-se:
