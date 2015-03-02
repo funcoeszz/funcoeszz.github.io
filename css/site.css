@@ -11,119 +11,119 @@ b, u, i, center,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
 }
 body {
-	line-height: 1;
+    line-height: 1;
 }
 blockquote, q {
-	quotes: none;
+    quotes: none;
 }
 blockquote:before, blockquote:after,
 q:before, q:after {
-	content: '';
-	content: none;
+    content: '';
+    content: none;
 }
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+    border-collapse: collapse;
+    border-spacing: 0;
 }
 
 /* ------------------------- basic */
 
 b, strong {
-	font-weight: bold;
+    font-weight: bold;
 }
 i, em {
-	font-style: italic;
+    font-style: italic;
 }
 ul {
-	list-style-type: square;
+    list-style-type: square;
 }
 ol {
-	list-style-type: decimal;
+    list-style-type: decimal;
 }
 hr {
-	border-style: solid;
-	border-width: 1px 0 0 0;
+    border-style: solid;
+    border-width: 1px 0 0 0;
 }
 
 /* ------------------------- fonts */
 
 body {
-	font-family: Helvetica, Arial, sans-serif;
-	color: #444;
-	font-size: 16px;
-	line-height: 1.5em;
+    font-family: Helvetica, Arial, sans-serif;
+    color: #444;
+    font-size: 16px;
+    line-height: 1.5em;
 }
 pre, code {
-	font-family: Courier New, monospace;
-	font-size: 14px;
+    font-family: Courier New, monospace;
+    font-size: 14px;
 }
 
 /* ------------------------- links */
 
 a:hover {
-	text-decoration: underline;
-	color: red;
+    text-decoration: underline;
+    color: red;
 }
 h2 a, h3 a {
-	color: inherit;
-	text-decoration: none;
+    color: inherit;
+    text-decoration: none;
 }
 
 /* ------------------------- headers */
 
 h1, h2, h3 {
-	line-height: 1.1em;
+    line-height: 1.1em;
 }
 h1, h2 {
-	color: #333;  /* darker */
+    color: #333;  /* darker */
 }
 
 /* ------------------------- spacing */
 
 h1, h2, h3, p, blockquote, ul, ol, dt, dd, pre, table, hr {
-	margin-bottom: 16px;
+    margin-bottom: 16px;
 }
 ul ul, ol ol, ul pre, ol pre {  /* nested */
-	margin-bottom: 0;
+    margin-bottom: 0;
 }
 blockquote, ol, ul, dd {
-	margin-left: 1em;
+    margin-left: 1em;
 }
 table {
-	margin: 24px auto;  /* 16px is not enough */
+    margin: 24px auto;  /* 16px is not enough */
 }
 
 /* ------------------------- special */
 
 pre {
-	overflow: auto;
+    overflow: auto;
 }
 tr:hover td {
-	background: #eee;
+    background: #eee;
 }
 img {
-	max-width: 100%;
+    max-width: 100%;
 }
 p img {
-	display: block;
-	margin: 0 auto;
-	background-color: #eee;
-	padding: 5px;
-	border: 1px solid #ddd;
+    display: block;
+    margin: 0 auto;
+    background-color: #eee;
+    padding: 5px;
+    border: 1px solid #ddd;
 }
 p img.inline {
-	float: left;
-	margin-right: 10px;
-	margin-bottom: 10px;
-	vertical-align: top;
+    float: left;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    vertical-align: top;
 }
 
 
@@ -133,75 +133,75 @@ p img.inline {
 /* ------ Copy/paste from http://aurelio.net/include/clean-2012/article.css */
 
 body {
-	padding: 4em 10%;
-	margin: 0 auto;
-	max-width: 33em;
+    padding: 4em 10%;
+    margin: 0 auto;
+    max-width: 33em;
 }
 .toc {
-	line-height: 150%;
-	border: 1px solid black;
-	border-width: 1px 0;
-	margin-top: 32px;
-	padding-top: 16px;
-	margin-bottom: 16px;
+    line-height: 150%;
+    border: 1px solid black;
+    border-width: 1px 0;
+    margin-top: 32px;
+    padding-top: 16px;
+    margin-bottom: 16px;
 }
 .toc ul {
-	list-style-type: none;
+    list-style-type: none;
 }
 .toc > ul {
-	margin-left: 0;
+    margin-left: 0;
 }
 .toc a {
-	text-decoration: none;
+    text-decoration: none;
 }
 .toc a:hover {
-	text-decoration: underline;
+    text-decoration: underline;
 }
 
 #header {
-	margin-bottom: 32px;  /* 2em */
+    margin-bottom: 32px;  /* 2em */
 }
 #header h1 {
-	margin: 0;
+    margin: 0;
 }
 h1 {
-	font-size: 2em;
+    font-size: 2em;
 }
 h2 {
-	font-size: 1.7em;
-	margin-top: 1.5em;
+    font-size: 1.7em;
+    margin-top: 1.5em;
 }
 h3 {
-	font-weight: bold;
+    font-weight: bold;
 }
 
 blockquote {
-	font-style: italic;
+    font-style: italic;
 }
 td, th {
-	border-bottom: 1px solid #ccc;
-	padding: 0 4px;
+    border-bottom: 1px solid #ccc;
+    padding: 0 4px;
 }
 th {
-	font-style: italic;
-	background-color: #eee;
+    font-style: italic;
+    background-color: #eee;
 }
 table {
-	font-size: 15px;
+    font-size: 15px;
 }
 
 /* ------------------------- my head */
 
 .cabecao {
-	position: fixed;
-	right: 0;
-	bottom: 0;
+    position: fixed;
+    right: 0;
+    bottom: 0;
 }
 .cabecao img {
-	padding: 2px;
-	width: 38px;
-	height: 45px;
-	/* orig: 57x68 */
+    padding: 2px;
+    width: 38px;
+    height: 45px;
+    /* orig: 57x68 */
 }
 
 
@@ -252,7 +252,7 @@ p img {  /* no border */
 
 #footer {
     margin-top: 4em;
-	margin-bottom: 3em;
+    margin-bottom: 3em;
     text-align: right;
     font-size: 80%;
 }
