@@ -126,21 +126,6 @@ p img.inline {
 	vertical-align: top;
 }
 
-/* ------------------------- iPhone = 320x480 */
-
-@media screen and (max-width: 480px) {
-	body {
-		padding: 10px;
-		margin: 0;
-	}
-	.toc, #footer {
-		line-height: 200%;
-	}
-	p img {
-		padding: 0;
-		border-width: 0;
-	}
-}
 
 
 
@@ -219,26 +204,41 @@ table {
 	/* orig: 57x68 */
 }
 
-/* ------------------------- iPhone = 320x480 */
 
-@media screen and (max-width: 480px) {
-	.cabecao {
-		display: none;
-	}
+
+
+/****************************************************************************/
+/* ------ Copy/paste from http://aurelio.net/assets/bars2.css */
+/* Generic horizontal bars layout */
+/* by Aurelio Jargas, 2014-09-21, MIT licensed */
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    max-width: 100%;
 }
-
-
-
+.bar {
+    margin: 0;
+    padding: 2em 0;
+}
+.bar > * {
+    max-width: 40em;  /* content width */
+    margin: 0 auto;
+    padding: 0 10px;
+}
+.bar-compact {
+    padding: 0;
+}
+.bar-spaced {
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
 
 
 /****************************************************************************/
 /* -------------------------------- http://funcoezss.net styles */
 
-body {
-    max-width: 40em;  /* wider for cmdlines */
-    padding-left: 20%;  /* +space for menu */
-    padding-top: 2em;
-}
 p img {  /* no border */
     padding: 0;
     border-width: 0;
@@ -277,32 +277,54 @@ pre, code, .menu {
     font-size: 13px;
 }
 
-/* --------------------------------------- MENU */
+/* --------------------------------------- Top */
 
-.menu {
-    line-height: 130%;
-    position: fixed;
-    top: 5px;
-    left: 5px;
+#top {
+    background: black;
+    color: silver;
+    padding: 20px 0;
 }
-.menu a {
-    color: blue;
+#top tr:hover td {
+    background: transparent;
+}
+#top td {
+    vertical-align: middle;
+    border: none;
+}
+#site-logo {
+    padding-right: 15px;
+}
+#site-logo img {
+    display: block;  /* to avoid bottom spacing */
+    width: 96px;
+    height: 96px;
+}
+#site-name a {
+    font-size: 150%;
     text-decoration: none;
+    color: inherit;
 }
-.menu a:hover {
-    color: red;
+#site-name a:hover {
     text-decoration: underline;
 }
-.menu p {
-    margin: 0 0 0.5em 0;
+#site-menu {
+    word-spacing: 0.5em;
 }
-.menu ol,
-.menu ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
+#site-menu a {
+    color: lime;
 }
-.menu ul {
-    padding-left: 0.5em;
-    padding-left: 8px;
+
+/* ------------------------- iPhone = 320x480 */
+
+@media screen and (max-width: 480px) {
+    .toc, #footer {
+        line-height: 200%;
+    }
+    p img {
+        padding: 0;
+        border-width: 0;
+    }
+    .cabecao {
+        display: none;
+    }
 }

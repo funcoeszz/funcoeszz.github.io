@@ -16,49 +16,33 @@
 
 <body>
 
-<div id="header">
-    <h1>{{ page.title }}</h1>
+<div id="top" class="bar bar-compact">
+    <table>
+        <tr>
+            <td id="site-logo">
+                <a href="/"><img src="/img/icon/128.png"></a>
+            </td>
+            <td>
+                <div id="site-name">
+                    <a href="/">Funções ZZ</a>
+                </div>
+                <div id="site-menu">
+                    <a href="/online/">demo</a>
+                    <a href="/download/">download</a>
+                    <a href="/docs.html">docs</a>
+                    <a href="/dev.html">dev</a>
+                    <a href="/contato.html">contato</a>
+                </div>
+            </td>
+        </tr>
+    </table>
 </div>
 
-<div id="main">
 
-<div class="menu">
-    <p><a href="/">$HOME</a></p>
+<div id="main" class="bar">
 
-    <ol>
-    <li>/run
-        <ul>
-        <li><a href="/online/">online</a></li>
-        <li><a href="/download/">download</a></li>
-        </ul>
-    </li>
-    <li>/doc
-        <ul>
-        <li><a href="/list.html">zz*</a></li>
-        <li><a href="/man.html">man</a></li>
-        <li><a href="/faq.html">FAQ</a></li>
-        <li><a href="/changelog.html">changelog</a></li>
-        <li><a href="/hist.html">15 anos!</a></li>
-        </ul>
-    </li>
-    <li>/dev
-        <ul>
-        <li><a href="https://github.com/funcoeszz/funcoeszz">GitHub</a></li>
-        <li><a href="/my.html">sua ZZ</a></li>
-        <li><a href="/logo.html">logo</a></li>
-        <li><a href="/donate.html">doações</a></li>
-        <li><a href="/thanks.html">valeu!</a></li>
-        </ul>
-    </li>
-    <li>/chat
-        <ul>
-        <li><a href="https://github.com/funcoeszz/funcoeszz/issues">bugs</a></li>
-        <li><a href="https://github.com/funcoeszz/funcoeszz/issues/new">ideias</a></li>
-        <li><a href="http://br.groups.yahoo.com/group/zztabtab/">fórum</a></li>
-        <li><a href="https://twitter.com/Funcoes_ZZ">@Funcoes_ZZ</a></li>
-        </ul>
-    </li>
-    </ol>
+<div id="header">
+    <h1>{{ page.title }}</h1>
 </div>
 
 
@@ -84,5 +68,6 @@
   ga('send', 'pageview');
 
 </script>
+</div><!--main-->
 </body>
 </html>
