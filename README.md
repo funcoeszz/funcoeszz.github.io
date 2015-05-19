@@ -30,7 +30,7 @@ No final de cada página do site há um link direto para o seu arquivo-fonte no 
 
 * No final, temos um site 100% estático usando somente arquivos HTML. Não há PHP nem qualquer processamento no servidor.
 
-* O que precisa ser PHP, como a versão online das funções e o ZZ a la carte, ficam em subdomínios, hospedados no DreamHost.
+* O que precisa ser PHP, como a API das funções e o ZZ a la carte, ficam em subdomínios, hospedados no DreamHost.
 
 
 ## Estrutura do site
