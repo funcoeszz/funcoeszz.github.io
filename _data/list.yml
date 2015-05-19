@@ -158,7 +158,7 @@ zztempo:            "Mostra as condições do tempo (clima) em um determinado lo
 zztool:             "Miniferramentas para auxiliar as funções."
 zztradutor:         "Google Tradutor, para traduzir frases para vários idiomas."
 zztranspor:         "Trocar linhas e colunas de um arquivo, fazendo uma simples transposição."
-zztrim:             "Apaga brancos (\" \" \t \n) ao redor do texto: direita, esquerda, cima, baixo."
+zztrim:             "Apaga brancos (\" \" \\t \\n) ao redor do texto: direita, esquerda, cima, baixo."
 zztrocaarquivos:    "Troca o conteúdo de dois arquivos, mantendo suas permissões originais."
 zztrocaextensao:    "Troca a extensão dos arquivos especificados."
 zztrocapalavra:     "Troca uma palavra por outra, nos arquivos especificados."

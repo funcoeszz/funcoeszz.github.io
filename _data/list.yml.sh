@@ -15,7 +15,8 @@ echo >> $out
 
 ZZCOR=0 ZZOFF= ZZDIR=$gitroot/zz $gitroot/funcoeszz zzajuda --lista |
 	sed '
-		# Escape "
+		# Escapes
+		s/\\/\\\\/g
 		s/"/\\"/g
 
 		# zzfoo   Foo bar. ===> zzfoo: "Foo bar."
