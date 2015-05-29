@@ -9,12 +9,12 @@ zzajuda: |
   Ex.: zzajuda
        zzajuda --lista
 zzaleatorio: |
-  Gera um número aleatório, conforme o $RANDOM no bash.
+  Gera um número aleatório.
   Sem argumentos, comporta-se igual a $RANDOM.
   Apenas um argumento, número entre 0 e o valor fornecido.
-  Com dois argumentos, número entre esses limites dados.
+  Com dois argumentos, número entre esses limites informados.
   
-  Uso: zzaleatorio [numero] [numero]
+  Uso: zzaleatorio [número] [número]
   Ex.: zzaleatorio 10
        zzaleatorio 5 15
        zzaleatorio
@@ -932,6 +932,28 @@ zzhowto: |
   Uso: zzhowto [--atualiza] palavra
   Ex.: zzhowto apache
        zzhowto --atualiza
+zziostat: |
+  Monitora a utilização dos discos no Linux.
+  
+  Opções:
+    -t [número]    Mostra apenas os discos mais utilizados
+    -i [segundos]  Intervalo em segundos entre as coletas
+    -d [discos]    Mostra apenas os discos que começam com a string passada
+                   O padrão é 'sd'
+    -o [trwT]      Ordena os discos por:
+                       t (tps)
+                       r (read/s)
+                       w (write/s)
+                       T (total/s = read/s+write/s)
+  
+  Obs.: Se não for usada a opção -t, é mostrada a soma da utilização
+        de todos os discos.
+  
+  Uso: zziostat [-t número] [-i segundos] [-d discos] [-o trwT]
+  Ex.: zziostat
+       zziostat -t 10
+       zziostat -i 5 -o T
+       zziostat -d emcpower
 zzipinternet: |
   http://www.getip.com
   Mostra o seu número IP (externo) na Internet.
