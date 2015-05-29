@@ -65,7 +65,7 @@ Entre as funcionalidades, destacam-se:
 
 [![](img/canivete-funcoeszz.png)](logo.html)
 
-Criado por [Aurelio Jargas](http://aurelio.net), este é um software livre 100% nacional e maduro, que já completou [14 anos de existência](hist.html). É o resultado do trabalho voluntário e não remunerado de [vários brasileiros](thanks.html) que colaboram em suas horas vagas, por prazer. Feito com muito carinho, bash, sed, awk, dedicação, expressões regulares, grep e ♥.
+Criado por [Aurelio Jargas](http://aurelio.net), este é um software livre 100% nacional e maduro, que já completou [15 anos de existência](hist.html). É o resultado do trabalho voluntário e não remunerado de [vários brasileiros](thanks.html) que colaboram em suas horas vagas, por prazer. Feito com muito carinho, bash, sed, awk, dedicação, expressões regulares, grep e ♥.
 
 <!--
 mostrar o -h
