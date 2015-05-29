@@ -44,7 +44,7 @@ zzalfabeto: |
 zzalinhar: |
   Alinha um texto a esquerda, direita, centro ou justificado.
   
-  As opções -l, --left, -e, --esqueda alinham as colunas a esquerda (padrão).
+  As opções -l, --left, -e, --esquerda alinham as colunas a esquerda (padrão).
   As opções -r, --right, -d, --direita alinham as colunas a direita.
   As opções -c, --center, --centro centralizam as colunas.
   A opção -j, --justify, --justificar faz o texto ocupar toda a linha.
@@ -132,11 +132,11 @@ zzbolsas: |
    -l ou --lista: apenas mostra as bolsas disponíveis e seus nomes.
    --limpa ou --limpar: exclui todos os arquivos de cache.
    commodities: produtos de origem primária nas bolsas.
-   taxas_fixas ou moedas: exibe tabela de comparação de câmbio (pricipais).
+   taxas_fixas ou moedas: exibe tabela de comparação de câmbio (principais).
    taxas_cruzadas: exibe a tabela cartesiana do câmbio.
    nome_moedas ou moedas_nome: lista códigos e nomes das moedas usadas.
    servicos, economia ou politica: mostra notícias relativas a esse assuntos.
-   noticias: junta as notícias de servicos e economia.
+   noticias: junta as notícias de serviços e economia.
    volume: lista ações líderes em volume de negócios na Bovespa.
    alta ou baixa: lista as ações nessa condição na BMFBovespa.
    "código de bolsa ou ação": mostra sua última cotação.
@@ -155,8 +155,8 @@ zzbolsas: |
    "código de bolsa ou ação" e 2 datas: pesquisa as cotações nos dias com
      comparações entre datas e variações da ação ou bolsa pesquisada.
    vs (ou comp) e 2 códigos de bolsas ou ações: faz a comparação entre as duas
-    ações ou bolsas. Se houver um quarto parametro como uma data faz essa
-    comparaçao na data especificada. Mas não compara ações com bolsas.
+    ações ou bolsas. Se houver um quarto parâmetro como uma data faz essa
+    comparação na data especificada. Mas não compara ações com bolsas.
   
   Uso: zzbolsas [-l|--lista] [bolsa|ação] [data1|pesquisa] [data2]
   Ex.: zzbolsas                  # Lista das bolsas (códigos)
@@ -172,7 +172,7 @@ zzbolsas: |
        zzbolsas volume           # Lista ações em alta em volume de negócios
        zzbolsas taxas_fixas
        zzbolsas taxas_cruzadas
-       zzbolsas noticias sbsp3.sa    # Noticias recentes no mercadp da Sabesp
+       zzbolsas noticias sbsp3.sa    # Noticias recentes no mercado da Sabesp
        zzbolsas vs petr3.sa vale3.sa # Compara ambas cotações
 zzbraille: |
   Grafia Braille.
@@ -188,7 +188,7 @@ zzbraille: |
   Com a opção --s2 muda o símbolo ○ (plano, sem destaque, vazio)
   
   Abaixo de cada célula Braille, aparece o caractere correspondente.
-  Incluindo especiais de maiúscula, numérico, espaço, muti-células.
+  Incluindo especiais de maiúscula, numérico, espaço, multi-células.
   +++++ : Maiúsculo
   +-    : Capitalize
   __    : Espaço
@@ -263,13 +263,14 @@ zzcapitalize: |
   Use a opção -w para adicionar caracteres de palavra (Padrão: A-Za-z0-9áéí…)
   
   Uso: zzcapitalize [texto]
-  Ex.: zzcapitalize root                                 # Root
-       zzcapitalize kung fu panda                        # Kung Fu Panda
-       zzcapitalize -1 kung fu panda                     # Kung fu panda
-       zzcapitalize quero-quero                          # Quero-Quero
-       echo eu_uso_camel_case | zzcapitalize             # Eu_Uso_Camel_Case
-       echo "i don't care" | zzcapitalize                # I Don'T Care
-       echo "i don't care" | zzcapitalize -w \'          # I Don't Care
+  Ex.: zzcapitalize root                             # Root
+       zzcapitalize kung fu panda                    # Kung Fu Panda
+       zzcapitalize -1 kung fu panda                 # Kung fu panda
+       zzcapitalize quero-quero                      # Quero-Quero
+       zzcapitalize água ênfase último               # Água Ênfase Último
+       echo eu_uso_camel_case | zzcapitalize         # Eu_Uso_Camel_Case
+       echo "i don't care" | zzcapitalize            # I Don'T Care
+       echo "i don't care" | zzcapitalize -w \'      # I Don't Care
        cat arquivo.txt | zzcapitalize
 zzcaracoroa: |
   Exibe 'cara' ou 'coroa' aleatoriamente.
@@ -341,8 +342,8 @@ zzcinemais: |
 zzcinemark: |
   http://cinemark.com.br/programacao
   Exibe a programação dos cinemas Cinemark de sua cidade.
-  Sem argumento lista todass as cidades e todas as salas mostrando os códigos.
-  Com cógido da cidade lista as salas dessa cidade.
+  Sem argumento lista todas as cidades e todas as salas mostrando os códigos.
+  Com o cógigo da cidade lista as salas dessa cidade.
   Com o código das salas mostra os filmes do dia.
   Um segundo argumento caso pode ser a data, para listar os filmes desse dia.
   As datas devem ser futuras e conforme a padrão zzdata
@@ -375,7 +376,7 @@ zzcnpj: |
 zzcoin: |
   Retorna a cotação de criptomoedas em Reais (bitcoin e litecoins).
   Opções: btc ou bitecoin / ltc ou litecoin.
-  Com as opções -a ou --all, várias criptomoedas cotadas em dolar.
+  Com as opções -a ou --all, várias criptomoedas cotadas em dólar.
   Uso: zzcoin [btc|bitcoin|ltc|litecoin|-a|--all]
   Ex.: zzcoin
        zzcoin btc
@@ -398,7 +399,7 @@ zzcolunar: |
     3  7
     4  8
   
-  As opções -l, --left, -e, --esqueda alinham as colunas a esquerda (padrão).
+  As opções -l, --left, -e, --esquerda alinham as colunas a esquerda (padrão).
   As opções -r, --right, -d, --direita alinham as colunas a direita.
   As opções -c, --center, --centro centralizam as colunas.
   A opção -j justifica as colunas.
@@ -657,7 +658,7 @@ zzdiffpalavra: |
   Uso: zzdiffpalavra arquivo1 arquivo2
   Ex.: zzdiffpalavra texto-orig.txt texto-novo.txt
 zzdistro: |
-  Lista o ranking das distribuições no distrowatch.
+  Lista o ranking das distribuições no DistroWatch.
   Sem argumentos lista dos últimos 6 meses
   Se o argumento for 1, 3, 6 ou 12 é a ranking nos meses correspondente.
   Se o argumento for 2002 até o ano passado, é a ranking final desse ano.
@@ -810,7 +811,7 @@ zzfrenteverso2pdf: |
   Opções:
     -rf, --frentesreversas  informa ordem reversa no arquivo frentes.pdf.
     -rv, --versosreversos   informa ordem reversa no arquivo versos.pdf.
-     -d, --diretorio        informa o diretório de entrada/saída. Padrao=".".
+     -d, --diretorio        informa o diretório de entrada/saída. Padrão=".".
      -v, --verbose          exibe informações de debug durante a execução.
   Uso: zzfrenteverso2pdf [-rf] [-rv] [-d diretorio]
   Ex.: zzfrenteverso2pdf
@@ -818,7 +819,7 @@ zzfrenteverso2pdf: |
        zzfrenteverso2pdf -rv -d "/tmp/dir_teste"
 zzfutebol: |
   http://esporte.uol.com.br/futebol/agenda-de-jogos
-  Mostra todos os jogos de futebol marcados para os proximos dias.
+  Mostra todos os jogos de futebol marcados para os próximos dias.
   Ou os resultados de jogos recentes.
   Além de mostrar os times que jogam, o script também mostra o dia,
   o horário e por qual campeonato será ou foi o jogo.
@@ -845,6 +846,10 @@ zzgeoip: |
   Uso: zzgeoip [ip]
   Ex.: zzgeoip
        zzgeoip 187.75.22.192
+zzglobo: |
+  Mostra a programação da Rede Globo do dia.
+  Uso: zzglobo
+  Ex.: zzglobo
 zzgoogle: |
   http://google.com
   Pesquisa no Google diretamente pela linha de comando.
@@ -935,7 +940,7 @@ zzipinternet: |
 zzjoin: |
   Junta as linhas de 2 ou mais arquivos, mantendo a sequência.
   Opções:
-   -o <arquivo> - Define o arquivo de saida.
+   -o <arquivo> - Define o arquivo de saída.
    -m - Toma como base o arquivo com menos linhas.
    -M - Toma como base o arquivo com mais linhas.
    -<numero> - Toma como base o arquivo na posição especificada.
@@ -958,7 +963,7 @@ zzjquery: |
   
   Caso não seja passado o nome, serão exibidas informações acerca do $().
   Se usado o argumento -s, será exibida somente a sintaxe.
-  Uso: zzjquery [-s] funcao
+  Uso: zzjquery [-s] função
   Ex.: zzjquery gt
        zzjquery -s gt
 zzjuntalinhas: |
@@ -982,7 +987,7 @@ zzjuntalinhas: |
        cat /etc/named.conf | zzjuntalinhas -d '' -i '^[a-z]' -f '^}'
 zzjuros: |
   Mostra a listagem de taxas de juros que o Banco Central acompanha.
-  São intituições financeiras, que estão sob a supervisão do Banco Central.
+  São instituições financeiras, que estão sob a supervisão do Banco Central.
   Com argumento numérico, detalha a listagem solicitada.
   A numeração fica entre 1 e 27
   
@@ -1023,12 +1028,12 @@ zzlibertadores: |
   Opções:
    <número> | <fase>: Mostra jogos da fase selecionada
      fases: pre ou primeira, grupos ou segunda, oitavas
-   -g <número>: Jogos da segunda fase do gupo selecionado
+   -g <número>: Jogos da segunda fase do grupo selecionado
    -c [número]: Mostra a classificação, nos grupos da segunda fase
    -cg <número> ou -gc <número>: Classificação e jogos do grupo selecionado.
   
   As fases podem ser:
-   pré, pre, primeira ou 1, para a fasé pré-libertadores
+   pré, pre, primeira ou 1, para a fase pré-libertadores
    grupos, segunda ou 2, para a fase de grupos da libertadores
    oitavas ou 3
    quartas ou 4
@@ -1051,14 +1056,14 @@ zzlibertadores: |
   Uso: zzlibertadores [ fase | -c [número] | -g <número> ]
   Ex.: zzlibertadores 2     # Jogos da Fase 2 (Grupos)
        zzlibertadores -g 5  # Jogos do grupo 5 da fase 2
-       zzlibertadores -c    # Calssificação de todos os grupos
+       zzlibertadores -c    # Classificação de todos os grupos
        zzlibertadores -c 3  # Classificação no grupo 3
        zzlibertadores -cg 7 # Classificação e jogos do grupo 7
 zzlimpalixo: |
   Retira linhas em branco e comentários.
   Para ver rapidamente quais opções estão ativas num arquivo de configuração.
   Além do tradicional #, reconhece comentários de vários tipos de arquivos.
-   vim, asp, asm, ada, sql, e, bat, tex, c, css, html, cc, d, js, php. scala.
+   vim, asp, asm, ada, sql, e, bat, tex, c, css, html, cc, d, js, php, scala.
   E inclui os comentários multilinhas (/* ... */), usando opção --multi.
   Obs.: Aceita dados vindos da entrada padrão (STDIN).
   Uso: zzlimpalixo [--multi] [arquivos]
@@ -1122,7 +1127,7 @@ zzlua: |
   
   Uso: zzlua <palavra|regex>
   Ex.: zzlua --atualiza        # Força atualização do cache
-       zzlua file              # mostra as funçoes com "file" no nome
+       zzlua file              # mostra as funções com "file" no nome
        zzlua -d debug.debug    # mostra descrição da função debug.debug
        zzlua ^d                # mostra as funções que começam com d
 zzmaiores: |
@@ -1176,7 +1181,7 @@ zzmat: |
   
   Mais detalhes: zzmat função
   
-  Uso: zzmat [-pnumero] funcoes [número] [número]
+  Uso: zzmat [-pnumero] funções [número] [número]
   Ex.: zzmat mmc 8 12
        zzmat media 5[2] 7 4[3]
        zzmat somatoria 3 9 2x+3
@@ -1203,7 +1208,7 @@ zzminusculas: |
 zzmix: |
   Mistura linha a linha 2 ou mais arquivos, mantendo a sequência.
   Opções:
-   -o <arquivo> - Define o arquivo de saida.
+   -o <arquivo> - Define o arquivo de saída.
    -m - Toma como base o arquivo com menos linhas.
    -M - Toma como base o arquivo com mais linhas.
    -<numero> - Toma como base o arquivo na posição especificada.
@@ -1317,20 +1322,20 @@ zznumero: |
   Nota: Por extenso suporta 81 dígitos inteiros e até 26 casas decimais.
   
   Opções:
-    -f <padrão|número>   Padrão de formatação do printf, incluindo %'d e %'.f
-                         ou precisão se apenas informado um número
-    -p <prefixo>         Um prefixo para o número, se for R$ igual a opção -m
-    -s <sufixo>          Um sufixo para o número
-    -m | --moeda         Trata valor monetário, sobrepondo as configurações de
-                         -p, -s e -f
-    -t                   Número parcialmente por extenso, ex: 2 mihões 350 mil
-    --texto              Número inteiramente por extenso, ex: quatro mil e cem
-    -l                   Uma classe numérica por linha, quando optar no número
-                         por extenso
-    --de <formato>       Formato de entrada
-    --para <formato>     Formato de saída
-    --int                Parte inteira do número, sem arredondamento
-    --frac               Parte fracionária do número
+    -f <padrão|número>  Padrão de formatação do printf, incluindo %'d e %'.f
+                        ou precisão se apenas informado um número
+    -p <prefixo>        Um prefixo para o número, se for R$ igual a opção -m
+    -s <sufixo>         Um sufixo para o número
+    -m | --moeda        Trata valor monetário, sobrepondo as configurações de
+                        -p, -s e -f
+    -t                  Número parcialmente por extenso, ex: 2 milhões 350 mil
+    --texto             Número inteiramente por extenso, ex: quatro mil e cem
+    -l                  Uma classe numérica por linha, quando optar no número
+                        por extenso
+    --de <formato>      Formato de entrada
+    --para <formato>    Formato de saída
+    --int               Parte inteira do número, sem arredondamento
+    --frac              Parte fracionária do número
   
   Formatos para as opções --de e --para:
     pt ou pt-br => português (brasil)
@@ -1416,7 +1421,7 @@ zzphp: |
   
   Uso: zzphp <palavra|regex>
   Ex.: zzphp --atualiza              # Força atualização do cache
-       zzphp array                   # mostra as funçoes com "array" no nome
+       zzphp array                   # mostra as funções com "array" no nome
        zzphp -d mysql_fetch_object   # mostra descrição do  mysql_fetch_object
        zzphp ^X                      # mostra as funções que começam com X
 zzpiada: |
@@ -1714,7 +1719,7 @@ zztrim: |
     -t, --top         Apaga as linhas em branco do início do texto
     -b, --bottom      Apaga as linhas em branco do final do texto
     -l, --left        Apaga os brancos do início de todas as linhas
-    -r, --right       Apaga os brancos do final de todas as lihas
+    -r, --right       Apaga os brancos do final de todas as linhas
     -V, --vertical    Apaga as linhas em branco do início e final (-t -b)
     -H, --horizontal  Apaga os brancos do início e final das linhas (-l -r)
   
@@ -1753,7 +1758,7 @@ zztv: |
    doc ou documentario, esportes ou futebol, filmes, infantil, variedades
    series ou seriados, aberta, todos ou agora (padrão).
   
-  Uso: zztv <codigo canal> [semana|s]  ou  zztv cod <numero>
+  Uso: zztv <código canal> [semana|s]  ou  zztv cod <número>
   Ex.: zztv CUL          # Programação da TV Cultura
        zztv cod 3235238
 zztweets: |
@@ -1850,7 +1855,7 @@ zzve: |
   
   Uso: zzve <opção>
   Ex.: zzve tr         # Tabela de Taxa Referencial, Poupança e TBF.
-       zzve moedas     # Cotações do Dolar, Euro e outras moedas.
+       zzve moedas     # Cotações do Dólar, Euro e outras moedas.
        zzve 3          # Mais detalhes de ajuda sobre "Mercado Externo".
 zzvira: |
   Vira um texto, de trás pra frente (rev) ou de ponta-cabeça.
