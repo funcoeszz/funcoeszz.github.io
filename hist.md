@@ -153,7 +153,7 @@ Se me lembro bem, no início o projeto não teve grande repercussão. Os usuári
 Eu continuei tocando o projeto, que já era ferramenta de trabalho na Conectiva. Segui adicionando mais funções, as mais interessantes sem dúvida eram as que consultavam a internet:
 
 * *zzcep* para consultar o CEP direto do site dos Correios
-* *zzdetran* para consultar os dados do veículo do Detran-PR
+* *zzdetran* para consultar os dados do veículo no Detran-PR
 * *zzirpf* para consultar sobre a restituição do Imposto de Renda
 
 <!-- Nesta época também criei a //zzarrumanome//, que se tornou uma das funções preferidas dos usuários, usada principalmente para faxinar arquivos MP3. -->
@@ -222,7 +222,7 @@ zzsigla, zzrpmfind, zzpronuncia, zzhowto, zzsenha, zzlinuxnews, zzletrademusica.
 
 Em um ano de contribuição voluntária ao projeto, ele já havia criado outras funções: *zzrpmfind*, *zzpronuncia*, *zzhowto*, *zzsenha*, *zzlinuxnews*, *zzletrademusica*. Como reconhecimento por seu trabalho e dedicação, e para oficializar o que já vinha ocorrendo na prática, em 06/05/2003 tornei o Thobias **coautor das Funções ZZ**.
 
-> Leia também: [Eu seu site](http://www.thobias.org/scr/), o Thobias contou seu lado desta história.
+> Leia também: [Em seu site](http://www.thobias.org/scr/), o Thobias contou seu lado desta história.
 
 > Curiosidade: Nesta data, o projeto contava com [52 funções](download/funcoeszz-3.0507.sh).
 
