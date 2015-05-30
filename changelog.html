@@ -52,6 +52,110 @@ title: Changelog
   - [Visite o GitHub https://github.com/funcoeszz/funcoeszz/tree/master/zz] para ver o Changelog de cada função.
 -->
 
+<!--
+    Para gerar a lista de funções novas:
+
+    ZZCOR=0 download/funcoeszz-15.5.sh zzajuda \-\-lista > descricao.txt
+    cat ../funcoeszz/release/15.5/novas.txt | while read zz; do printf '<li><a class="zzlink" href="man.html#%s">%s</a> - %s</li>\n' $zz $zz "$(grep "^$zz " descricao.txt | cut -c 19-)"; done
+-->
+
+<h2 id="v15_5">Versão 15.5</a> <span class="info">30/05/2015, <a href="download/funcoeszz-15.5.sh">download</a>, <a href="anuncio-15.5.html">anúncio</a>, <a href="http://aurelio.net/blog/2015/05/30/15-anos-de-funcoes-zz/">15 anos</a></span></h2>
+
+<p>Foram adicionadas 49 funções novas:</p>
+
+<ul>
+<li><a class="zzlink" href="man.html#zzaleatorio">zzaleatorio</a> - Gera um número aleatório.</li>
+<li><a class="zzlink" href="man.html#zzalinhar">zzalinhar</a> - Alinha um texto a esquerda, direita, centro ou justificado.</li>
+<li><a class="zzlink" href="man.html#zzbraille">zzbraille</a> - Grafia Braille.</li>
+<li><a class="zzlink" href="man.html#zzcaracoroa">zzcaracoroa</a> - Exibe 'cara' ou 'coroa' aleatoriamente.</li>
+<li><a class="zzlink" href="man.html#zzcep">zzcep</a> - Busca o CEP de qualquer rua de qualquer cidade do país ou vice-versa.</li>
+<li><a class="zzlink" href="man.html#zzcinemais">zzcinemais</a> - Busca horários das sessões dos filmes no site do Cinemais.</li>
+<!-- <li><a class="zzlink" href="man.html#zzcinemark">zzcinemark</a> - Exibe a programação dos cinemas Cinemark de sua cidade.</li> -->
+<li><a class="zzlink" href="man.html#zzcinepolis">zzcinepolis</a> - Exibe a programação dos cinemas Cinepólis de sua cidade.</li>
+<li><a class="zzlink" href="man.html#zzcoin">zzcoin</a> - Retorna a cotação de criptomoedas em Reais (bitcoin e litecoins).</li>
+<li><a class="zzlink" href="man.html#zzcolunar">zzcolunar</a> - Transforma uma lista simples, em uma lista de múltiplas colunas.</li>
+<li><a class="zzlink" href="man.html#zzcotacao">zzcotacao</a> - Busca cotações do dia de algumas moedas em relação ao Real (compra e venda).</li>
+<li><a class="zzlink" href="man.html#zzdado">zzdado</a> - Dado virtual.</li>
+<li><a class="zzlink" href="man.html#zzdataestelar">zzdataestelar</a> - Calcula a data estelar, a partir de uma data e horário.</li>
+<li><a class="zzlink" href="man.html#zzdicantonimos">zzdicantonimos</a> - Procura antônimos para uma palavra.</li>
+<li><a class="zzlink" href="man.html#zzdicesperanto">zzdicesperanto</a> - Dicionário de Esperanto em inglês, português e alemão.</li>
+<li><a class="zzlink" href="man.html#zzdicsinonimos">zzdicsinonimos</a> - Procura sinônimos para um termo.</li>
+<li><a class="zzlink" href="man.html#zzdistro">zzdistro</a> - Lista o ranking das distribuições no DistroWatch.</li>
+<li><a class="zzlink" href="man.html#zzdivisores">zzdivisores</a> - Lista todos os divisores de um número inteiro e positivo, maior que 2.</li>
+<li><a class="zzlink" href="man.html#zzencoding">zzencoding</a> - Informa qual a codificação de um arquivo (ou texto via STDIN).</li>
+<li><a class="zzlink" href="man.html#zzfatorar">zzfatorar</a> - Fatora um número em fatores primos.</li>
+<li><a class="zzlink" href="man.html#zzfutebol">zzfutebol</a> - Mostra todos os jogos de futebol marcados para os próximos dias.</li>
+<li><a class="zzlink" href="man.html#zzgeoip">zzgeoip</a> - Localiza geograficamente seu IP de Internet ou um que seja informado.</li>
+<li><a class="zzlink" href="man.html#zzhastebin">zzhastebin</a> - Gera link para arquivos de texto em geral.</li>
+<li><a class="zzlink" href="man.html#zziostat">zziostat</a> - Monitora a utilização dos discos no Linux.</li>
+<li><a class="zzlink" href="man.html#zzjoin">zzjoin</a> - Junta as linhas de 2 ou mais arquivos, mantendo a sequência.</li>
+<li><a class="zzlink" href="man.html#zzjuros">zzjuros</a> - Mostra a listagem de taxas de juros que o Banco Central acompanha.</li>
+<li><a class="zzlink" href="man.html#zzlblank">zzlblank</a> - Elimina espaços excedentes no início, mantendo alinhamento.</li>
+<li><a class="zzlink" href="man.html#zzlibertadores">zzlibertadores</a> - Mostra a classificação e jogos do torneio Libertadores da América.</li>
+<li><a class="zzlink" href="man.html#zzlorem">zzlorem</a> - Gerador de texto de teste, em latim (Lorem ipsum...).</li>
+<li><a class="zzlink" href="man.html#zzlua">zzlua</a> - Lista de funções da linguagem Lua.</li>
+<li><a class="zzlink" href="man.html#zzmariadb">zzmariadb</a> - Lista alguns dos comandos já traduzidos do banco MariaDB, numerando-os.</li>
+<li><a class="zzlink" href="man.html#zzmix">zzmix</a> - Mistura linha a linha 2 ou mais arquivos, mantendo a sequência.</li>
+<li><a class="zzlink" href="man.html#zznomealeatorio">zznomealeatorio</a> - Gera um nome aleatório de N caracteres, alternando consoantes e vogais.</li>
+<li><a class="zzlink" href="man.html#zznumero">zznumero</a> - Formata um número como: inteiro, moeda, por extenso, entre outros.</li>
+<li><a class="zzlink" href="man.html#zzoperadora">zzoperadora</a> - Consulta operadora de um número de telefone fixo/celular.</li>
+<li><a class="zzlink" href="man.html#zzpad">zzpad</a> - Preenche um texto para um certo tamanho com outra string.</li>
+<li><a class="zzlink" href="man.html#zzpais">zzpais</a> - Lista os países.</li>
+<li><a class="zzlink" href="man.html#zzpgsql">zzpgsql</a> - Lista os comandos SQL no PostgreSQL, numerando-os.</li>
+<li><a class="zzlink" href="man.html#zzphp">zzphp</a> - Lista completa com funções do PHP.</li>
+<li><a class="zzlink" href="man.html#zzplay">zzplay</a> - Toca o arquivo de áudio, escolhendo o player mais adequado instalado.</li>
+<li><a class="zzlink" href="man.html#zzporta">zzporta</a> - Mostra uma lista das portas de protocolos usados na internet.</li>
+<li><a class="zzlink" href="man.html#zzquimica">zzquimica</a> - Exibe a relação dos elementos químicos.</li>
+<li><a class="zzlink" href="man.html#zzsplit">zzsplit</a> - Separa um arquivo linha a linha alternadamente em 2 ou mais arquivos.</li>
+<li><a class="zzlink" href="man.html#zztranspor">zztranspor</a> - Trocar linhas e colunas de um arquivo, fazendo uma simples transposição.</li>
+<li><a class="zzlink" href="man.html#zztrim">zztrim</a> - Apaga brancos (" " \t \n) ao redor do texto: direita, esquerda, cima, baixo.</li>
+<li><a class="zzlink" href="man.html#zzurldecode">zzurldecode</a> - Decodifica textos no formato %HH, geralmente usados em URLs (%40 → @).</li>
+<li><a class="zzlink" href="man.html#zzurlencode">zzurlencode</a> - Codifica o texto como %HH, para ser usado numa URL (a/b → a%2Fb).</li>
+<li><a class="zzlink" href="man.html#zzutf8">zzutf8</a> - Converte o texto para UTF-8, se necessário.</li>
+<li><a class="zzlink" href="man.html#zzvdp">zzvdp</a> - Mostra o texto das últimas tirinhas de Vida de Programador.</li>
+<li><a class="zzlink" href="man.html#zzve">zzve</a> - Busca vários indicadores econômicos e financeiros, da Valor Econômico.</li>
+</ul>
+
+<p>Foram removidas/renomeadas 6 funções:</p>
+
+<ul>
+<li><span class="del"><b>zzcinemark15h</b></span> - renomeada para zzcinemark</li>
+<li><span class="del"><b>zzcorrida</b></span> - removida</li>
+<li><span class="del"><b>zzdicportugues2</b></span> - integrada em zzdicportugues</li>
+<li><span class="del"><b>zzfreshmeat</b></span> - aposentada</li>
+<li><span class="del"><b>zzloteria2</b></span> - integrada em zzloteria</li>
+<li><span class="del"><b>zzmoeda</b></span> - removida, use zzcotacao</li>
+</ul>
+
+<p>Melhorias:</p>
+
+<ul>
+<li><strong>zzansi2html</strong> Agora funciona no BSD.</li>
+<li><strong>zzascii</strong> Agora suporta caracteres UTF-8.</li>
+<li><strong>zzbrasileirao</strong> Adicionada a série D.</li>
+<li><strong>zzcpf</strong> Opção nova <code>-f</code>, para formatar o CPF.</li>
+<li><strong>zzcnpj</strong> Opção nova <code>-f</code>, para formatar o CNPJ.</li>
+<li><strong>zzdata</strong> Opções novas: <code>dias</code> e <code>dom/seg/ter/qua/…</code></li>
+<li><strong>zzdatafmt</strong> Formatos novos, idiomas novos (alemão, espanhol, francês, italiano).</li>
+<li><strong>zzlimpalixo</strong> Agora reconhece vários tipos de arquivos, opção nova <code>--multi</code>.</li>
+<li><strong>zzlinuxnews</strong> Adicionados Linux Insider, Linux News, Linux Journal e LXer Linux News.</li>
+<li><strong>zzmat</strong> Nova ferramenta: <code>r3</code>.</li>
+<li><strong>zznomefoto</strong> Nova opção <code>--dropbox</code>, para renomear seguindo o padrão do Dropbox.</li>
+<li><strong>zznoticiaslinux</strong> Removido Yahoo.</li>
+<li><strong>zzsecurity</strong> Adicionados NetBSD, Arch, Mageia, RedHat e Fedora.</li>
+<li><strong>zzsenha</strong> Opção nova <code>-u</code>, para gerar senhas sem letras repetidas.</li>
+<li><strong>zztabuada</strong> Agora vai até 99.</li>
+<li><strong>zztweets</strong> Opção nova <code>-r</code>, para ver as respostas do tuítes.</li>
+<li><strong>zzxml</strong> Opções novas: <code>--notag</code>, <code>--list</code> e <code>--indent</code>.</li>
+</ul>
+
+<ul>
+<li>Core: Vários ajustes de portabilidade para que as funções funcionem no Linux, BSD e outros Unixes.</li>
+<li>Core: Mensagens de erro agora são mandadas para <code>STDERR</code>.</li>
+<li>Core: Novas opções de linha de comando, para forçar configurações: <code>--path</code>, <code>--dir</code> e <code>--cor</code>.</li>
+<li>Core: Novas ferramentas em zztool: <code>nl_eof</code>, <code>mktemp</code>, <code>cache</code>.</li>
+</ul>
+
 <h2 id="v13_2">Versão 13.2</a> <span class="info">28/02/2013, <a href="download/funcoeszz-13.2.sh">download</a>, <a href="anuncio-13.2.html">anúncio</a>, <a href="http://aurelio.net/blog/2013/02/28/13-anos-de-funcoes-zz/">13 anos</a></span></h2>
 
 <p>Foram adicionadas 33 funções novas:</p>
@@ -107,6 +211,8 @@ title: Changelog
 <li><span class="del"><b>zzeuro</b></span> - removida</li>
 <li><span class="del"><b>zzwhoisbr</b></span> - aposentada</li>
 </ul>
+
+
 
 <h2 id="v10_12">Versão 10.12</a> <span class="info">23/12/2010, <a href="download/funcoeszz-10.12.sh">download</a>, <a href="http://aurelio.net/blog/2010/12/23/versao-nova-das-funcoes-zz-10-12/">anúncio</a></span></h2>
 
@@ -165,6 +271,8 @@ title: Changelog
 <li>A mensagem de --help do script funcoeszz foi reformatada para ficar mais legível.</li>
 </ul>
 
+
+
 <h2 id="v8_10">Versão 8.10</a> <span class="info">31/10/2008, <a href="download/funcoeszz-8.10.sh">download</a>, <a href="http://aurelio.net/blog/2008/10/31/funcoes-zz-versao-810/">anúncio</a></span></h2>
 
 <ul>
@@ -183,6 +291,8 @@ title: Changelog
 <li>As funções extras foram colocadas no <a href="http://code.google.com/p/funcoeszz/source/browse/">SVN</a></li>
 </ul>
 
+
+
 <h2 id="v8_9">Versão 8.9</a> <span class="info">30/09/2008, <a href="download/funcoeszz-8.9.sh">download</a>, <a href="http://aurelio.net/blog/2008/09/30/funcoes-zz-versao-89/">anúncio</a></span></h2>
 
 <ul>
@@ -198,6 +308,8 @@ title: Changelog
 <li>Adicionada verificação para opção inválida na chamada do programa, como funcoeszz -X</li>
 <li>Adicionado endereço do site na mensagem de --help</li>
 </ul>
+
+
 
 <h2 id="v8_7">Versão 8.7</a> <span class="info">23/07/2008, <a href="download/funcoeszz-8.7.sh">download</a>, <a href="http://aurelio.net/blog/2008/07/23/funcoes-zz-versao-87/">anúncio</a></span></h2>
 
@@ -215,6 +327,8 @@ title: Changelog
 <li><b>zzsecurity</b> Arrumado problema de só mostrar o Debian quando nenhum site era especificado, o correto é mostrar todos</li>
 <li><b>zztool</b> Adicionadas duas ferramentas novas para lidar com conversão de/para UTF-8: texto_em_iso e texto_em_utf8</li>
 </ul>
+
+
 
 <h2 id="v8_6">Versão 8.6</a> <span class="info">20/06/2008, <a href="download/funcoeszz-8.6.sh">download</a>, <a href="http://aurelio.net/blog/2008/06/20/funcoes-zz-versao-86/">anúncio</a></span></h2>
 
@@ -235,6 +349,8 @@ title: Changelog
 <li>Compatibilidade: O tr do Solaris só interpreta intervalos como 0-9 se estiverem entre colchetes [0-9]. Para evitar problemas foi usada a forma 0123456789. <span class="contrib">★ André Martin</span></li>
 <li>Licença especificada como versão 2 da GPL</li>
 </ul>
+
+
 
 <h2 id="v8_3">Versão 8.3</a> <span class="info">05/03/2008, <a href="download/funcoeszz-8.3.sh">download</a>, <a href="http://aurelio.net/blog/2008/03/05/a-nova-geracao-das-funcoes-zz/">anúncio</a></span></h2>
 
@@ -307,6 +423,8 @@ title: Changelog
 <li>Retirada a opção -crawl das variáveis ZZWWWDUMP e ZZWWWPOST, pois não são mais utilizadas <span class="contrib">★ Paulo Ricardo Paz Vital</span></li>
 </ul>
 
+
+
 <h2 id="v7_7">Versão 7.7</a> <span class="info">17/07/2007, <a href="download/funcoeszz-7.7.sh">download</a>, <a href="http://aurelio.net/blog/2007/07/17/funcoes-zz-versao-77/">anúncio</a></span></h2>
 
 <ul>
@@ -324,6 +442,8 @@ title: Changelog
 <li>Adicionada variável ZZERIP para casar IPs</li>
 <li>Adicionada checagem de problemas relacionados ao UTF-8 <span class="contrib">★ Piero, Emilio Wuerges</span></li>
 </ul>
+
+
 
 <h2 id="v6_11">Versão 6.11</a> <span class="info">14/11/2006, <a href="download/funcoeszz-6.11.sh">download</a>, <a href="http://funcoeszz.net/aovivo.html">anúncio</a></span></h2>
 
@@ -350,6 +470,8 @@ title: Changelog
 <li><b>zzsigla</b> Filtro atualizado</li>
 <li><b>zzpronuncia</b> Agora usa o comando 'say' no Mac</li>
 </ul>
+
+
 
 <h2 id="v5_9">Versão 5.9</h2>
 

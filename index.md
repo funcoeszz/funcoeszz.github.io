@@ -14,25 +14,18 @@ redirect_from: /exemplos.html
     }
 </style>
 
-<!--
+
 <div class="alert">
-    LANÇAMENTO: Funções ZZ versão 13.2 →
-    <a href="anuncio-13.2.html">anúncio</a>,
+    LANÇAMENTO: Funções ZZ versão 15.5 →
+    <a href="anuncio-15.5.html">anúncio</a>,
     <a href="/download/">download</a>
 </div>
--->
+
 
 <!--
 <div class="alert">
     Comemoração:
     <a href="http://aurelio.net/blog/2013/02/28/13-anos-de-funcoes-zz/">13 anos de Funções ZZ</a>
-</div>
--->
-
-<!--
-<div class="alert">
-    Anúncio:
-    <a href=" http://aurelio.net/blog/2013/08/30/novo-coautor-das-funcoes-zz-itamar-santos-de-souza/">Novo coautor das Funções ZZ: Itamar Santos de Souza</a>
 </div>
 -->
 
@@ -61,6 +54,7 @@ Entre as funcionalidades, destacam-se:
 * Precisa usar o Google Tradutor? *zztradutor*.
 * Cálculos complicados com porcentagens? *zzporcento*.
 * Que tal uma piada? *zzpiada*.
+* Precisa tomar uma decisão importante? *zzcaracoroa* ;)
 * E aquela sua encomenda do DX que não chega nunca? *zzrastreamento*.
 
 [![](img/canivete-funcoeszz.png)](logo.html)
