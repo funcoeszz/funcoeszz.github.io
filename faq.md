@@ -36,7 +36,7 @@ Veja a [lista completa](list.html) aqui no site.
 
 Em sua máquina, chame a função `zzzz`, que lista todas as funções. Ou ainda, digite zz e aperte o TAB duas vezes:
 
-```console
+```shell
 $ zz<tab><tab>
 ```
 
@@ -47,7 +47,7 @@ $ zz<tab><tab>
 
 Chame a função e use a opção `-h` (ou `--help`) para ver o texto de ajuda. Por exemplo:
 
-```console
+```shell
 $ zzsenha -h
 
 zzsenha
@@ -73,7 +73,7 @@ $
 
 Use a opção `--teste` da função zzzz para que seja feita uma verificação de todos os comandos necessários para o funcionamento das Funções ZZ.
 
-```console
+```shell
 $ zzzz --teste
 Procurando o comando awk...   OK
 Procurando o comando bc...    OK
@@ -113,7 +113,7 @@ Se você usa outro shell, ainda assim pode utilizar as Funções ZZ, desde que o
 
 Use o seguinte comando para instalar as funções em seu `~/.tcshrc`:
 
-```console
+```shell
 $ zzzz --tcshrc
 ```
 
@@ -121,7 +121,7 @@ $ zzzz --tcshrc
 
 Use o seguinte comando para instalar as funções em seu `~/.zshrc`:
 
-```console
+```shell
 $ zzzz --zshrc
 ```
 
@@ -137,7 +137,7 @@ alias zz="/home/FULANO/bin/funcoeszz"
 
 Feito o alias, agora você pode chamar as funções dessa maneira:
 
-```console
+```shell
 $ zz cores
 $ zz calcula 2 + 2
 $ zz ipinternet
@@ -156,7 +156,7 @@ Se apareceu uma mensagem na tela dizendo quem um comando não foi encontrado, se
 
 Para saber quais comandos estão faltando em seu sistema, faça:
 
-```console
+```shell
 $ zzzz --teste
 ```
 
@@ -211,7 +211,7 @@ Se as letras acentuadas áéíóú aparecem normalmente, você está com a vers�
 
 Para tirar a dúvida, execute o comando zzzz --teste e veja os resultados do teste de codificação:
 
-```console
+```shell
 $ zzzz --teste
 ...
 Verificando a codificação do sistema... UTF-8
@@ -223,7 +223,7 @@ Quando as codificações do sistema e das funções estão iguais, tudo vai func
 
 Quando há uma incompatibilidade, será mostrada uma mensagem informando se você deve baixar as funções na versão UTF-8 ou ISO-8859-1. Veja um exemplo:
 
-```console
+```shell
 $ zzzz --teste
 ...
 Verificando a codificaÃ§Ã£o do sistema... ISO-8859-1

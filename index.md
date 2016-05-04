@@ -74,7 +74,7 @@ $ zzdiasuteis
 Março de 2013 tem 21 dias úteis.
 -->
 
-```console
+```shell
 $ zzipinternet                         # qual meu endereço IP?
 201.15.253.210
 
@@ -133,7 +133,7 @@ Samsung nega interesse no Firefox OS
 
 <!-- zzmoneylog -->
 
-```console
+```shell
 $ zzdolar
             Compra    Venda    Variação    12/02/2015    17h00
 Comercial   2,8727    2,8742    +1,33%
@@ -148,7 +148,7 @@ GBP     1,5167     1,5169       0,00       0,00 %  05h49   Libra Esterlina Ingla
 
 ## Validação de CPF e CNPJ
 
-```console
+```shell
 $ zzcpf 123.456.789-00
 CPF inválido (deveria terminar em 09)
 
@@ -170,7 +170,7 @@ $ zzcpf -f 987654321                   # formata um CPF
 
 ## Manipulação de texto
 
-```console
+```shell
 $ zzsemacento ÁGUA bênção              # tira acentos
 AGUA bencao
 
@@ -237,7 +237,7 @@ $ echo a a a a b b b c c d | zzcontapalavras
 
 ## Unicode
 
-```console
+```shell
 $ echo μη¡¢øÐε | zzunicode2ascii
 unicoDe
 
@@ -280,7 +280,7 @@ zzdatafmt -f "D de MES de AAAA" 31/12/1999
 #zzferiado
 -->
 
-```console
+```shell
 $ zzbissexto
 2015 não é bissexto
 
@@ -339,7 +339,7 @@ $ zzdatafmt -f "D de MES de AAAA" 31/12/1999
 
 ## Horas
 
-```console
+```shell
 $ zzhora agora                         # que horas são?
 11:09 (0d 11h 09m)
 
@@ -367,7 +367,7 @@ $ zzhoracerta france                   # que horas são na França?
 
 ## Esportes
 
-```console
+```shell
 $ zzbrasileirao a
 Série A
  Time                    PG   J   V   E   D  GP  GC  SG  (%)
@@ -435,7 +435,7 @@ $ zzfutebol hoje
 
 ## Loterias
 
-```console
+```shell
 $ zzloteria                            # E aí, ficou milionário?
 quina:
    07 - 30 - 44 - 45 - 57
@@ -548,7 +548,7 @@ $ zzbicho 8 g                          # números do camelo
 
 ## Cálculos
 
-```console
+```shell
 $ zzporcento 1.749,00                  # tabela de porcentagens
 200%    3498,00
 150%    2623,50
@@ -660,7 +660,7 @@ $ zzmat -p2 asen 0.866026 g   # Valor do angulo em graus de um valor de seno dad
 60.00
 -->
 
-```console
+```shell
 $ zzmat mdc 36 30 48              # Maior divisor comum
 6
 
@@ -715,7 +715,7 @@ $ zzmat det 3 2 9 8 7 3 0 1 5     # Determinante de uma matriz 3x3
 
 ## Cidades e estados brasileiros
 
-```console
+```shell
 $ zzarrumacidade SAO PAULO
 São Paulo
 
@@ -806,7 +806,7 @@ zznoticiassec.sh
 zzsecurity
 -->
 
-```console
+```shell
 $ zzfeed aurelio.net                   # Descobre os feeds do site
 http://aurelio.net/feed/
 http://aurelio.net/comments/feed/
@@ -821,7 +821,7 @@ Piazinho no Facebook (e sorteio!)
 
 ## TV e cinema
 
-```console
+```shell
 $ zzglobo
    Quinta, 28 de fevereiro
    05h55 - Globo Rural
@@ -920,7 +920,7 @@ Bourbon Ipiranga - Porto Alegre:
 
 <!-- zztrocaarquivos -->
 
-```console
+```shell
 $ zzmaiores ~/a/*
 1292716 /Users/aurelio/a/video
 1281672 /Users/aurelio/a/wii
@@ -968,7 +968,7 @@ zzxml
 zztempo
 -->
 
-```console
+```shell
 $ zztradutor pt-en o livro está na mesa
 the book is on the table
 
