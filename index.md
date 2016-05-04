@@ -116,7 +116,7 @@ $ zzporcento 1.749,00 -20%             # iPad com 20% de desconto
 1399,20
 
 $ zzarrumanome *
-RAMONES - I Don't Care.mp3 -> ramones-i_dont_care.mp3
+RAMONES - I Dont Care.mp3 -> ramones-i_dont_care.mp3
 Toy Dolls - Wakey, Wakey!.mp3 -> toy_dolls-wakey_wakey.mp3
 
 $ zzfeed -n 7 http://br-linux.org/feed/
@@ -400,7 +400,6 @@ $ zzfutebol hoje
 24/08/14 15h30 Copa da Itália          Hellas Verona   X   Cremonese
 24/08/14 15h30 Português               Boavista-POR   X   Benfica
 24/08/14 15h45 Copa da Itália          Sampdoria   X   Como
-24/08/14 15h45 Copa da Itália          Empoli   X   L'Aquila
 24/08/14 15h45 Copa da Itália          Cesena   X   Casertana
 24/08/14 16h00 Brasileirão             Criciúma   X   Flamengo
 24/08/14 16h00 Brasileirão             São Paulo   X   Santos
@@ -725,10 +724,6 @@ Belo Horizonte
 $ zzarrumacidade floripa
 Florianópolis
 
-$ zzcidade mãe
-Mãe d'Água (PB)
-Mãe do Rio (PA)
-
 $ zzcidade senhora
 Livramento de Nossa Senhora (BA)
 Nossa Senhora Aparecida (SE)
@@ -942,7 +937,7 @@ download.HTM -> download.html
 index.HTM -> index.html
 
 $ zzarrumanome *
-RAMONES - I Don't Care.mp3 -> ramones-i_dont_care.mp3
+RAMONES - I Dont Care.mp3 -> ramones-i_dont_care.mp3
 Toy Dolls - Wakey, Wakey!.mp3 -> toy_dolls-wakey_wakey.mp3
 
 $ zznomefoto -p festa- -d 2 *.JPG
