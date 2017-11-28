@@ -190,21 +190,6 @@ table {
     font-size: 15px;
 }
 
-/* ------------------------- my head */
-
-.cabecao {
-    position: fixed;
-    right: 0;
-    bottom: 0;
-}
-.cabecao img {
-    padding: 2px;
-    width: 38px;
-    height: 45px;
-    /* orig: 57x68 */
-}
-
-
 
 
 /****************************************************************************/
