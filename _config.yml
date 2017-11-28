@@ -73,5 +73,5 @@ defaults:
 # Redirect temp /funcoeszz /download/funcoeszz-13.2.sh
 # Redirect temp /funcoeszz-iso /download/funcoeszz-13.2-iso.sh
 #
-gems:
+plugins:
   - jekyll-redirect-from
