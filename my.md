@@ -136,7 +136,7 @@ Descrição do formato:
 
 ## 4. Corra para o abraço!
 
-```shell
+```console
 $ source chaves.sh
 $ zzchaves
 Foi sem querer querendo...

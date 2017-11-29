@@ -16,7 +16,7 @@ Baixe o arquivão com todas as Funções ZZ: [funcoeszz-{{ site.data.versions.la
 
 Vá na pasta onde o arquivo foi baixado e teste seu funcionamento:
 
-```shell
+```console
 $ cd ~/Downloads
 $ bash funcoeszz-{{ site.data.versions.last }}.sh zzcalcula 10+5
 15
@@ -25,14 +25,14 @@ $
 
 Para facilitar o uso, renomeie o arquivo para somente `funcoeszz` e torne-o executável:
 
-```shell
+```console
 $ mv funcoeszz-{{ site.data.versions.last }}.sh funcoeszz
 $ chmod +x funcoeszz
 ```
 
 Agora você pode chamar o arquivo diretamente:
 
-```shell
+```console
 $ ./funcoeszz zzcalcula 10+5
 15
 $
@@ -40,7 +40,7 @@ $
 
 Mas bom mesmo é poder chamar cada função individualmente, sem burocracia. Basta rodar o seguinte comando para algumas linhas mágicas serem adicionadas no final de seu arquivo `~/.bashrc`
 
-```shell
+```console
 $ ./funcoeszz zzzz --bashrc
 Feito!
 As Funções ZZ foram instaladas no /Users/aurelio/.bashrc
@@ -49,7 +49,7 @@ $
 
 Agora sim, você pode usar as Funções ZZ em toda a sua glória. Abra um novo terminal e divirta-se!
 
-```shell
+```console
 $ zzcalcula 10+5
 15
 $ zzconverte mk 100
