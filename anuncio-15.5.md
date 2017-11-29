@@ -17,7 +17,7 @@ Em comemoração os 15 anos do projeto, foi lançada a versão 15.5, trazendo na
 * **Manipular texto:** zztrim, zzutf8, zzencoding, zzurldecode, zzurlencode, zzsplit, zzjoin, zzmix, zztranspor, zzalinhar, zzcolunar, zzpad
 * **E mais:** zzbraille, zzgeoip, zzquimica
 
-São ao todo 178 funções diferentes, todas estão concentradas em um único arquivo `funcoeszz.sh`. Baixe o arquivo, inclua em sua shell atual e usufrua. Todas as funções contam com tela de ajuda (`--help`). Veja exemplos de uso em http://funcoeszz.net.
+São ao todo 178 funções diferentes, todas estão concentradas em um único arquivo `funcoeszz.sh`. Baixe o arquivo, inclua em sua shell atual e usufrua. Todas as funções contam com tela de ajuda (`--help`). Veja exemplos de uso em <http://funcoeszz.net>.
 
 Funções ZZ versão 15.5:
 [download direto](http://funcoeszz.net/download/funcoeszz-15.5.sh),

@@ -200,7 +200,7 @@ Para ajudar os usuários novatos, criei uma página para as Funções ZZ dentro 
 % {
 % ACRON=`echo $1 | tr '[a-z]' '[A-Z]'`
 % lynx -dump "http://www.acronymfinder.com/af-query.asp?String=exact&Acronym=${1}&Find=Find" \
-%  | sed -n "/^[[:space:]]*$ACRON/p" | sed 's/\[.*$//'  
+%  | sed -n "/^[[:space:]]*$ACRON/p" | sed 's/\[.*$//'
 % }
 %
 % cep2(){
@@ -283,13 +283,13 @@ Também em 2005 fizemos uma edição limitada de 50 camisetas das Funções ZZ p
 
 > Fui obrigado a resolver de vez o problema. Parei a escrita do livro e fiquei vários dias trabalhando no código das funções, reformatando, alinhando, colocando comentários, melhorando os nomes de variáveis, trocando algoritmos enigmáticos por versões simplificadas. Enfim, aquela reforma geral bonita de ver, de desmontar o jipe até os chassis, não sobrando nenhum parafuso no lugar.
 
-> http://aurelio.net/blog/2008/03/05/a-nova-geracao-das-funcoes-zz/
+> <http://aurelio.net/blog/2008/03/05/a-nova-geracao-das-funcoes-zz/>
 
 Precisei parar de contar a história pra fazer o lançamento da versão nova 13.2. Depois eu continuo, ok?
 
-> **Atualização em 28/02/2013:** Fiz um texto no blog, ponderando os 13 anos de ZZ: http://aurelio.net/blog/2013/02/28/13-anos-de-funcoes-zz/
+> **Atualização em 28/02/2013:** Fiz um texto no blog, ponderando os 13 anos de ZZ: <http://aurelio.net/blog/2013/02/28/13-anos-de-funcoes-zz/>
 
-> **Atualização em 27/08/2013:** Itamar Santos de Souza, contribuidor desde 2009, tornou-se coautor das funções: http://aurelio.net/blog/2013/08/30/novo-coautor-das-funcoes-zz-itamar-santos-de-souza/
+> **Atualização em 27/08/2013:** Itamar Santos de Souza, contribuidor desde 2009, tornou-se coautor das funções: <http://aurelio.net/blog/2013/08/30/novo-coautor-das-funcoes-zz-itamar-santos-de-souza/>
 
 <!--
 v8.3: reescrita do código, UTF-8, testador

@@ -16,7 +16,7 @@ Em comemoração os 13 anos do projeto, foi lançada a versão 13.2, trazendo na
 * Trabalhar com arquivos XML: zzfeed, zzxml, zzunescape
 * Manipular texto: zzcapitalize, zzjuntalinhas, zzcontapalavras, zzunicode2ascii, zzhexa2str, zzstr2hexa
 
-São ao todo 134 funções diferentes, todas estão concentradas em um único arquivo `funcoeszz.sh`. Baixe o arquivo, inclua em sua shell atual e usufrua. Todas as funções contam com tela de ajuda (`--help`). Veja exemplos de uso em http://funcoeszz.net.
+São ao todo 134 funções diferentes, todas estão concentradas em um único arquivo `funcoeszz.sh`. Baixe o arquivo, inclua em sua shell atual e usufrua. Todas as funções contam com tela de ajuda (`--help`). Veja exemplos de uso em <http://funcoeszz.net>.
 
 Funções ZZ versão 13.2:
 [download direto](http://funcoeszz.net/download/funcoeszz-13.2.sh),
