@@ -16,8 +16,8 @@ redirect_from: /exemplos.html
 
 
 <div class="alert">
-    LANÇAMENTO: Funções ZZ versão 15.5 →
-    <a href="anuncio-15.5.html">anúncio</a>,
+    LANÇAMENTO: Funções ZZ versão 18.3 →
+    <a href="anuncio-18.3.html">anúncio</a>,
     <a href="/download/">download</a>
 </div>
 
@@ -45,21 +45,20 @@ Entre as funcionalidades, destacam-se:
 
 * Qual a cotação do dólar? *zzdolar*.
 * Qual o resultado da Mega Sena? *zzloteria*.
-* O que vai passar na TV nas próximas horas? *zzglobo*.
+* O que vai passar na TV nas próximas horas? *zztv*.
 * E o timão, vai bem? *zzbrasileirao*.
 * Não sabe o que pedir no Subway? *zzsubway*.
 * Quando começa o horário de verão? *zzhorariodeverao*.
-* Vai encurtar uma URL no migre.me? *zzminiurl*.
+* Vai encurtar uma URL? *zzminiurl*.
 * Precisa somar horas? *zzhora*.
 * Precisa usar o Google Tradutor? *zztradutor*.
 * Cálculos complicados com porcentagens? *zzporcento*.
-* Que tal uma piada? *zzpiada*.
 * Precisa tomar uma decisão importante? *zzcaracoroa* ;)
-* E aquela sua encomenda do DX que não chega nunca? *zzrastreamento*.
+* E aquela sua encomenda que não chega nunca? *zzrastreamento*.
 
 [![](img/canivete-funcoeszz.png)](logo.html)
 
-Criado por [Aurelio Jargas](http://aurelio.net), este é um software livre 100% nacional e maduro, que já completou [15 anos de existência](hist.html). É o resultado do trabalho voluntário e não remunerado de [vários brasileiros](thanks.html) que colaboram em suas horas vagas, por prazer. Feito com muito carinho, bash, sed, awk, dedicação, expressões regulares, grep e ♥.
+Criado por [Aurelio Jargas](http://aurelio.net), este é um software livre 100% nacional e maduro, que já completou [18 anos de existência](hist.html). É o resultado do trabalho voluntário e não remunerado de [vários brasileiros](thanks.html) que colaboram em suas horas vagas, por prazer. Feito com muito carinho, bash, sed, awk, dedicação, expressões regulares, grep e ♥.
 
 <!--
 mostrar o -h
@@ -93,9 +92,15 @@ sexta-feira
 
 $ zzloteria megasena
 megasena:
-   12 - 18 - 23 - 25 - 45 - 50
-   Concurso 1472 (27/02/2013)
-   Acumulado em R$ 10.000.000,00 para 02/03/2013
+Concurso: 2026	(28/03/2018)
+	10	23	31	33	51	52
+
+Sena	0	R$ 0,00
+Quina	105	R$ 24.755,26
+Quadra	6.365	R$ 583,39
+
+Valor acumulado: R$ 30.731.445,06
+Acumulado Mega da Virada: R$ 18.704.458,15
 
 $ zzrastreamento SA488387146BR
 Data             Local                           Situação
@@ -134,16 +139,11 @@ Samsung nega interesse no Firefox OS
 <!-- zzmoneylog -->
 
 ```console
-$ zzdolar
-            Compra    Venda    Variação    12/02/2015    17h00
-Comercial   2,8727    2,8742    +1,33%
-Turismo     2,8400    2,9500    0,0%
-
-$ zzmoeda euro GBP chile
-        Compra     Venda        Variação
-CLP     473,0000   473,5000    -0,35      -0,07 %  20h26   Peso Chile
-EUR     1,3151     1,3154       0,00       0,00 %  05h29   Euro
-GBP     1,5167     1,5169       0,00       0,00 %  05h49   Libra Esterlina Inglaterra
+$ zzdolar 
+29/03/2018	16h59 
+		Compra	Venda	Variação
+Comercial	3,2994	3,3001	-0,93%
+Turismo		3,1700	3,4400	-0,86%
 ```
 
 ## Validação de CPF e CNPJ
@@ -164,8 +164,8 @@ $ zzcnpj                               # cria um CNPJ aleatório
 $ zzcnpj 80.401.741/0001-99
 CNPJ inválido (deveria terminar em 13)
 
-$ zzcpf -f 987654321                   # formata um CPF
-009.876.543-21
+$ zzcpf -f 987654349
+009.876.543-49
 ```
 
 ## Manipulação de texto
@@ -358,11 +358,12 @@ $ zzhora 1000                          # minutos -> horário
 $ zzhoramin 16:40                      # horário -> minutos
 1000
 
-$ zzhoracerta france                   # que horas são na França?
-   The current time and date right now in France is
-   3:09 PM
-   Saturday, February 23, 2013
-   Central European Time (CET) +0100 UTC
+$ zzhoracerta france 
+France
+4:59:07 AM
+Saturday, March 31, 2018
+Central European Summer Time (CEST) +0200 UTC
+UTC/GMT is 02:59 on Saturday, March 31, 2018
 ```
 
 ## Esportes
@@ -435,34 +436,38 @@ $ zzfutebol hoje
 ## Loterias
 
 ```console
-$ zzloteria                            # E aí, ficou milionário?
+$ zzloteria quina megasena federal     # E aí, ficou milionário?
 quina:
-   07 - 30 - 44 - 45 - 57
-   Concurso 3130 (27/02/2013)
-   Acumulado em R$ 400.000,00 para 28/02/2013
+Concurso: 4642	(29/03/2018)
+	02	27	39	53	80
+
+Quina	1	R$ 3.600.441,78
+Quadra	73	R$ 6.241,27
+Terno	5.926	R$ 115,61
+Duque	154.312	R$ 2,44
+
+Valor acumulado: R$ 0,00
+Acumulado Especial de São João: R$ 82.215.261,04
 
 megasena:
-   12 - 18 - 23 - 25 - 45 - 50
-   Concurso 1472 (27/02/2013)
-   Acumulado em R$ 10.000.000,00 para 02/03/2013
+Concurso: 2026	(28/03/2018)
+	10	23	31	33	51	52
 
-duplasena:
-   10 - 11 - 28 - 31 - 41 - 47
-   01 - 09 - 22 - 24 - 37 - 49
-   Concurso 1154 (26/02/2013)
-   Acumulado em R$ 1.600.000,00 para 01/03/2013
+Sena	0	R$ 0,00
+Quina	105	R$ 24.755,26
+Quadra	6.365	R$ 583,39
 
-lotomania:
-   02 - 04 - 08 - 19 - 20 - 21 - 23 - 27 - 42 - 47
-   53 - 54 - 56 - 57 - 59 - 68 - 76 - 95 - 96 - 99
-   Concurso 1327 (27/02/2013)
-   Acumulado em R$ 02/03/2013
+Valor acumulado: R$ 30.731.445,06
+Acumulado Mega da Virada: R$ 18.704.458,15
 
-lotofacil:
-   02 - 03 - 06 - 07 - 08
-   09 - 11 - 12 - 13 - 14
-   15 - 17 - 18 - 22 - 25
-   Concurso 873 (07)
+federal:
+Concurso: 5270	(28/03/2018)
+
+	1º Prêmio	50084	R$ 350.000,00
+	2º Prêmio	24959	R$ 18.000,00
+	3º Prêmio	24391	R$ 15.000,00
+	4º Prêmio	75161	R$ 12.000,00
+	5º Prêmio	51564	R$ 10.023,00
 
 $ zzpalpite                            # Sugestões aleatórias de jogo
 quina:
@@ -817,98 +822,123 @@ Piazinho no Facebook (e sorteio!)
 ## TV e cinema
 
 ```console
-$ zzglobo
-   Quinta, 28 de fevereiro
-   05h55 - Globo Rural
-   06h30 - Bom Dia Praça
-   07h30 - Bom Dia Brasil
-   08h30 - Mais Você
-   09h55 - Bem Estar
-   10h40 - Encontro com Fátima Bernardes
-   12h00 - Praça TV - 1ª Edição
-   12h45 - Globo Esporte
-   13h20 - Jornal Hoje
-   13h50 - Vídeo Show
-   14h40 - Vale a Pena Ver de Novo – O Profeta
-   16h05 - Sessão da Tarde
-   17h46 - Globo Notícia
-   17h49 - Malhação
-   18h20 - Lado a Lado
-   19h10 - Praça TV - 2ª Edição
-   19h30 - Guerra dos Sexos
-   20h30 - Programa Político Partidário - PMDB
-   20h40 - Jornal Nacional
-   21h20 - Salve Jorge
-   22h35 - Big Brother Brasil 13
-   23h20 - Pé Na Cova
-   00h05 - Jornal da Globo
-   00h38 - Programete Fórmula 1
-   00h40 - Castle
-   01h30 - Corujão I
-   03h10 - Corujão II
+$ zzglobo 
+Sex, 30 de março
+
+05:00: Hora Um
+06:00: Bom Dia local
+07:30: Bom Dia Brasil
+08:50: Mais Você
+10:10: Bem Estar
+10:50: Encontro com Fátima Bernardes
+12:00: Praça TV - 1ª Edição
+12:47: Globo Esporte
+13:20: Jornal Hoje
+13:59: Vídeo Show
+15:07: Sessão da Tarde
+16:44: Vale a Pena Ver de Novo
+17:50: Malhação - Vidas Brasileiras
+18:24: Orgulho e Paixão
+19:11: Praça TV - 2ª Edição
+19:32: Deus Salve o Rei
+20:30: Jornal Nacional
+21:16: O Outro Lado do Paraíso
+22:19: Big Brother Brasil 18
+22:52: Globo Repórter
+23:42: Jornal da Globo
+00:19: Empire
+01:05: Corujão
+02:49: Corujão
+04:05: Corujão
 
 $ zztv cul
 TV Cultura
-Quinta, 28/02
- 12h30 Peixonauta                                        Cod: 33595998
- 13h00 Os Sete Monstrinhos                               Cod: 33595999
- 13h30 Cyberchase                                        Cod: 33596000
- 14h00 Doug                                              Cod: 33596001
- 14h30 Quintal da Cultura                                Cod: 33596002
- 17h30 Super K                                           Cod: 33596003
- 19h00 Cartãozinho Verde                                 Cod: 33596004
- 19h15 Pé na Rua                                         Cod: 33596005
- 19h30 Caçadores De Mitos                                Cod: 33596006
- 20h15 As Aventuras De Sarah Jane                        Cod: 33596007
- 21h00 Jornal da Cultura                                 Cod: 33596008
- 22h00 Janela Indiscreta                                 Cod: 33596009
+Sábado, 31/03
+00:30 Brasil Migrante                                    cod: 586782
+01:30 Ensaio                                             cod: 18256
+02:30 Jornal da Cultura                                  cod: 91182
+03:30 Panorama                                           cod: 601605
+04:00 Mosaicos                                           cod: 134592
+05:00 Nossa Língua                                       cod: 164564
+05:30 Índios no Brasil                                   cod: 83672
+06:00 Conhecendo Museus                                  cod: 267917
+06:30 Nova Amazônia                                      cod: 301035
+07:00 Vento Sul                                          cod: 578937
+08:00 Ordem do Dia                                       cod: 477190
+08:30 #partiu Brasil                                     cod: 641977
+08:40 Nino: Viagem ao Conhecimento                       cod: 605358
+08:45 Um Filme de Cinema                                 cod: 604043
+09:00 Robô TV                                            cod: 615295
+09:15 Astrobaldo                                         cod: 586779
+09:30 Thomas e Seus Amigos                               cod: 472145
+10:00 Dora e seus Amigos na Cidade                       cod: 422193
+10:30 O Pequeno Reino de Ben e Holly                     cod: 578472
+10:45 Contos De Tinga Tinga                              cod: 547378
+11:00 Campus Em Ação                                     cod: 576010
+11:30 Momento Papo de Mãe                                cod: 593518
+12:30 Jazz Sinfônica Brasil                              cod: 629301
+13:30 Sésamo                                             cod: 578481
+14:00 Moranguinho: Aventuras Em Tutti Frutti             cod: 550303
+14:30 Quintal da Cultura                                 cod: 237370
+16:00 Matinê Cultura                                     cod: 265174
+17:30 Turma da Mônica                                    cod: 324448
+17:45 Shaun, o Carneiro                                  cod: 172119
+18:00 D.P.A. - Detetives do Prédio Azul                  cod: 578446
+18:15 Carrapatos e Catapultas                            cod: 547377
+18:30 Oswaldo                                            cod: 614610
+18:45 Planetorama                                        cod: 615475
+19:00 As Aventuras De Fujiwara Manchester                cod: 577026
+19:15 Os Under-undergrounds                              cod: 595969
+19:30 Os Cupins                                          cod: 289472
+19:45 Tá Certo?                                          cod: 607901
+20:15 Manos e Minas                                      cod: 146090
+21:15 Jornal da Cultura                                  cod: 91182
+22:00 Inspira BB                                         cod: 551911
+22:15 Clássicos                                          cod: 323499
+23:45 Cine Brasil                                        cod: 8980
 
-$ zztv hbo
-HBO
-Quinta, 28/02
- 12h00 Desconhecido                                      Cod: 33609712
- 14h03 Homem-Aranha                                      Cod: 33609713
- 16h18 A Inveja Mata                                     Cod: 33609714
- 18h10 Happy Feet 2: O Pinguim                           Cod: 33609715
- 19h58 Caçador de Recompensas                            Cod: 33609716
- 22h00 Girls                                             Cod: 33609717
- 22h30 House of Lies                                     Cod: 33609718
- 23h10 Destino São Paulo - O Noivo do Filho              Cod: 33609719
- 23h50 Meia-Noite em Paris                               Cod: 33609720
-
-$ zzcineuci recife
-=================================================
+$ zzcineuci 4
 UCI Kinoplex Recife Shopping
-=================================================
+Filme                                  Duração(min)                           Gênero                                 Censura
+UMA DOBRA NO TEMPO                     100                                    Fantasia                               10 anos
+NADA A PERDER - CONTRA TUDO. POR TODOS 130                                    Drama                                  10 anos
+JOGADOR Nº1                            100                                    Ação                                   12 anos
+PANTERA NEGRA                          134                                    Ação                                   14 anos
+MARIA MADALENA                         119                                    Drama                                  12 anos
+OS FAROFEIROS                          104                                    Comédia                                12 anos
+CÍRCULO DE FOGO: A REVOLTA             111                                    Aventura                               12 anos
+PEDRO COELHO                           95                                     Aventura                               Livre
+OPERAÇÃO RED SPARROW                   140                                    Suspense                               16 anos
+TOMB RAIDER - A ORIGEM                 124                                    Aventura                               14 anos
+A MALDIÇÃO DA CASA WINCHESTER          99                                     Terror                                 14 anos
+UM LUGAR SILENCIOSO                    95                                     Terror                                 14 anos
+ATTACK ON TITAN                        99                                     Ação                                   16 anos
+ATTACK ON TITAN: FIM DO MUNDO          89                                     Ação                                   16 anos
+VINGADORES: GUERRA INFINITA            110                                    Ação                                   12 anos
+O HOMEM DAS CAVERNAS                   140                                    Animação                               Livre
+COM AMOR                               8259                                   Comédia Dramática                      12 anos
 
-A HORA MAIS ESCURA
-(Zero Dark Thirty, EUA, 2012)
-Drama - 14 anos - 0min
-Sala 1: 18h40m, 21h50m.
+$ zzcinemais 38
+Lorena - SP
+29/03 a 04/04/2018
 
-AS VANTAGENS DE SER INVISÍVEL
-(The Perks of Being a Wallflower, EUA, 2012)
-Drama - 14 anos - 103min
-Sala 9: 19h00m.
+Círculo de Fogo: A Revolta
+Dub. - 15h30, 19h20
 
-CIRQUE DU SOLEI - OUTROS MUNDOS 3D
-(Cirque du Solei: Words Away, EUA, 2012)
-Musical - 14 anos - 0min
-Sala 10: 13h00m, 15h05m.
+Círculo de Fogo: A Revolta
+Leg. - 21h40
 
-DE PERNAS PRO AR 2
-(De Pernas Pro Ar 2, Brasil, 2012)
-Comédia - 12 anos - 99min
-Sala 2: 13h00m, 15h10m, 17h20m, 19h30m, 21h40m.
-...
+Jogador Nº1
+Dub. - 15h20, 21h30 
 
-$ zzcinemark15h Porto Alegre
+Jogador Nº1
+Leg. - 18h50 
 
-Barra Shopping Sul - Porto Alegre:
-        João e Maria: Caçadores de Bruxas 
+Nada a Perder - Contra Tudo. Por Todos
+15h00, 17h30, 20h00
 
-Bourbon Ipiranga - Porto Alegre:
-        O Lado Bom da Vida 
+Pedro Coelho
+Dub. - 15h10, 19h00, 21h00
 ```
 
 ## Manipulação de arquivos
@@ -960,10 +990,49 @@ pop-3   stream  tcp     nowait  root    /usr/sbin/tcpd  ipop3d
 
 <!--
 zzxml
-zztempo
 -->
 
 ```console
+$ zztempo -s -m
+Previsão do tempo para: Brasilia, Brazil
+
+    \  /       Parcialmente nublado
+  _ /"".-.     18 °C          
+    \_(   ).   ↓ 0 km/h       
+    /(___(__)  10 km          
+               0.4 mm         
+                        ┌─────────────┐                        
+┌───────────────────────┤  Sáb 31 Mar ├───────────────────────┐
+│           Meio-dia    └──────┬──────┘      Noite            │
+├──────────────────────────────┼──────────────────────────────┤
+│  _`/"".-.     Possibilidade …│    \  /       Parcialmente n…│
+│   ,\_(   ).   26-27 °C       │  _ /"".-.     21 °C          │
+│    /(___(__)  ↙ 14-17 km/h   │    \_(   ).   ↙ 4-8 km/h     │
+│      ‘ ‘ ‘ ‘  17 km          │    /(___(__)  16 km          │
+│     ‘ ‘ ‘ ‘   0.3 mm | 77%   │               0.0 mm | 0%    │
+└──────────────────────────────┴──────────────────────────────┘
+                        ┌─────────────┐                        
+┌───────────────────────┤  Dom 01 Abr ├───────────────────────┐
+│           Meio-dia    └──────┬──────┘      Noite            │
+├──────────────────────────────┼──────────────────────────────┤
+│  _`/"".-.     Aguaceiros fra…│    \  /       Parcialmente n…│
+│   ,\_(   ).   25-27 °C       │  _ /"".-.     21 °C          │
+│    /(___(__)  ↙ 13-19 km/h   │    \_(   ).   ↓ 1-2 km/h     │
+│      ‘ ‘ ‘ ‘  16 km          │    /(___(__)  16 km          │
+│     ‘ ‘ ‘ ‘   1.7 mm | 84%   │               0.0 mm | 0%    │
+└──────────────────────────────┴──────────────────────────────┘
+                        ┌─────────────┐                        
+┌───────────────────────┤  Seg 02 Abr ├───────────────────────┐
+│           Meio-dia    └──────┬──────┘      Noite            │
+├──────────────────────────────┼──────────────────────────────┤
+│  _`/"".-.     Aguaceiros fra…│  _`/"".-.     Aguaceiros mod…│
+│   ,\_(   ).   25-26 °C       │   ,\_(   ).   21 °C          │
+│    /(___(__)  ↓ 11-17 km/h   │    /(___(__)  ↓ 3-5 km/h     │
+│      ‘ ‘ ‘ ‘  15 km          │    ‚‘‚‘‚‘‚‘   14 km          │
+│     ‘ ‘ ‘ ‘   2.4 mm | 76%   │    ‚’‚’‚’‚’   5.8 mm | 67%   │
+└──────────────────────────────┴──────────────────────────────┘
+
+
 $ zztradutor pt-en o livro está na mesa
 the book is on the table
 
@@ -996,7 +1065,7 @@ Origem do nome Aurelio: LATIM
 Significado do nome Aurelio: DOURADO.
 
 $ zzminiurl https://github.com/funcoeszz/funcoeszz/
-http://migre.me/docvO
+https://goo.gl/fRw4jz
 
 $ zzjquery -s get
 - get()
@@ -1019,10 +1088,6 @@ txt
 $ zzecho -f azul -l branco Texto branco, com fundo azul
 Texto branco, com fundo azul
 
-$ zzgoogle -n 1 funcoeszz github
-aureliojargas/funcoeszz · GitHub
-  https://github.com/funcoeszz/funcoeszz
-
 $ zzpronuncia shoot
 URL: http://www.m-w.com/sound/s/shoot001.wav
 Gravado o arquivo '/tmp/zz.shoot.wav'
@@ -1031,8 +1096,8 @@ playing /tmp/zz.shoot.wav
 $ zzdominiopais cx
 CX - Christmas Island
 
-$ zznatal tai
-"Feliz Natal" em Tailandês: Sawadee Pee Mai
+$ zznatal esl
+"Feliz Natal" em Eslovaco: Sretan Bozic or Vesele vianoce
 
 $ zzramones show
 Sent to spy on a Cuban talent show

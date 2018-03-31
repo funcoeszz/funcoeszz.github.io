@@ -58,6 +58,80 @@ title: Changelog
     ZZCOR=0 download/funcoeszz-15.5.sh zzajuda \-\-lista > descricao.txt
     cat ../funcoeszz/release/15.5/novas.txt | while read zz; do printf '<li><a class="zzlink" href="man.html#%s">%s</a> - %s</li>\n' $zz $zz "$(grep "^$zz " descricao.txt | cut -c 19-)"; done
 -->
+<h2 id="v18_3">Versão 18.3</a> <span class="info">31/03/2018, <a href="download/funcoeszz-18.3.sh">download</a>, <a href="anuncio-18.3.html">anúncio</a>, <!-- a href="http://aurelio.net/blog/2015/05/30/15-anos-de-funcoes-zz/">18 anos</a--></span></h2>
+
+<p>Foram adicionadas 19 funções novas:</p>
+
+<ul>
+<li><a class="zzlink" href="man.html#zzcodchar">zzcodchar</a> - Codifica caracteres como entidades HTML e XML (&lt; &#62; ...).</li>
+<li><a class="zzlink" href="man.html#zzconjugar">zzconjugar</a> - Conjuga verbo em todos os modos.</li>
+<li><a class="zzlink" href="man.html#zzcut">zzcut</a> - Exibe partes selecionadas de linhas de cada ARQUIVO/STDIN na saída padrão.</li>
+<li><a class="zzlink" href="man.html#zzdividirtexto">zzdividirtexto</a> - Divide um texto por uma quantidade máxima de palavras por linha.</li>
+<li><a class="zzlink" href="man.html#zzexcuse">zzexcuse</a> - Da uma desculpa comum de desenvolvedor ( em ingles ).</li>
+<li><a class="zzlink" href="man.html#zzhoroscopo">zzhoroscopo</a> - Consulta o horóscopo do dia.</li>
+<li><a class="zzlink" href="man.html#zzhsort">zzhsort</a> - Ordenar palavras ou números horizontalmente.</li>
+<li><a class="zzlink" href="man.html#zzimc">zzimc</a> - Calcula o valor do IMC correspodente a sua estrutura corporal.</li>
+<li><a class="zzlink" href="man.html#zzit">zzit</a> - Uma forma de ler o site Inovação Tecnológica.</li>
+<li><a class="zzlink" href="man.html#zzmacvendor">zzmacvendor</a> - Mostra o fabricante do equipamento utilizando o endereço MAC.</li>
+<li><a class="zzlink" href="man.html#zzmcd">zzmcd</a> - Cria diretórios e subdiretórios, e muda diretório de trabalho (primeiro).</li>
+<li><a class="zzlink" href="man.html#zznerdcast">zznerdcast</a> - Lista os episódios do podcast NerdCast.</li>
+<li><a class="zzlink" href="man.html#zzrepete">zzrepete</a> - Repete um dado texto na quantidade de vezes solicitada.</li>
+<li><a class="zzlink" href="man.html#zzsheldon">zzsheldon</a> - Exibe aleatoriamente uma frase do Sheldon, do seriado The Big Bang Theory.</li>
+<li><a class="zzlink" href="man.html#zzsqueeze">zzsqueeze</a> - Reduz vários espaços consecutivos vertical ou horizontalmente em apenas um.</li>
+<li><a class="zzlink" href="man.html#zztestar">zztestar</a> - Testa a validade do número no tipo de categoria selecionada.</li>
+<li><a class="zzlink" href="man.html#zztimer">zztimer</a> - Mostra um cronômetro regressivo.</li>
+<li><a class="zzlink" href="man.html#zztop">zztop</a> - Lista os 10 computadores mais rápidos do mundo.</li>
+<li><a class="zzlink" href="man.html#zzwc">zzwc</a> - Contabiliza total de bytes, caracteres, palavras ou linhas de um arquivo.</li>
+</ul>
+
+<p>Foram removidas/renomeadas 15 funções:</p>
+
+<ul>
+<li><span class="del"><b>zzbolsas</b></span> - removida</li>
+<li><span class="del"><b>zcbn</span> - removida</li>
+<li><span class="del"><b>zzcinemark</span> - removida</li>
+<li><span class="del"><b>zcinepolis</span> - removida</li>
+<li><span class="del"><b>zzenviaemail</span> - removida</li>
+<li><span class="del"><b>zzgoogle</span> - removida</li>
+<li><span class="del"><b>zzhastebin</span> - removida</li>
+<li><span class="del"><b>zjuros</span> - removida</li>
+<li><span class="del"><b>zzkill</span> - removida</li>
+<li><span class="del"><b>zznarrativa</span> - removida</li>
+<li><span class="del"><b>zzoperadora</span> - removida</li>
+<li><span class="del"><b>zzpiada</span> - removida</li>
+<li><span class="del"><b>zzrandbackground</span> - removida</li>
+<li><span class="del"><b>zzrelansi</span> - removida</li>
+<li><span class="del"><b>zzve</span> - removida</li>
+</ul>
+
+<p>Melhorias:</p>
+
+<ul>
+<li><strong>zzalfabeto</strong> Opções novas: <code>--german</code>, <code>--all</code>.</li>
+<li><strong>zzcnpj</strong> Formatam apenas códigos válidos e melhorias nas mensagens de erro.</li>
+<li><strong>zzcpf</strong> Formatam apenas códigos válidos, melhorias nas mensagens de erro, e identifica estado pertencente.</li>
+<li><strong>zzcoin</strong> Nova criptomoeda para consulta: <code>bch</code> ou <code>bcash</code>.</li>
+<li><strong>zzcolunar</strong> Opções novas: <code>--header</code> ou <code>-H</code> , para definir um cabeçalho e <code>-s</code>, para definir separador entre colunas.</li>
+<li><strong>zzconverte</strong> Opções novas para conversão de distância, ângulos, números e escalas.</li>
+<li><strong>zzdata</strong> Novos tratamentos para resultados dos dias 29, 30 ou 31 em fevereiro.</li>
+<li><strong>zzdicportugues</strong> Retirada conjugação verbal.</li>
+<li><strong>zziostat</strong> Opção nova: <code>-n</code>, definindo a quantidade de medições.</li>
+<li><strong>zzloteria</strong> Opção nova: <code>qtde</code>, para quantificar números sorteados.</li>
+<li><strong>zzmat</strong> Novas sub-funçoes: sequências de <code>mersenne</code>, <code>recaman</code>, <code>collatz</code>.</li>
+<li><strong>zzmat</strong> Opções retiradas: <code>testa_num</code>, <code>testa_num_exp</code>, <code>converte</code>.</li>
+<li><strong>zzminiurl</strong> Também restaura url encurtada.</li>
+<li><strong>zznoticiaslinux</strong> Novas fontes de informações.</li>
+<li><strong>zztempo</strong>Removida e reativada com novo design.</li>
+<li><strong>zzvira</strong> Opção nova: <code>-E</code>, para espelhamento na vertical.</li>
+</ul>
+
+<ul>
+<li>Core: Abandonado o uso das variáveis "ZZWWW*" e inclusa a variável "ZZBROWSER".</li>
+<li>Core: Definindo melhor a variável "ZZDIR".<li>
+<li>Core: Mensagens de erro para zztool como opcional em casos antes obrigatórios.</li>
+<li>Core: Exclusão de ferramentas da zztool em substituídas por funcões em <strong>zztestar</strong>.</li>
+<li>Core: Novas ferramentas em zztool: <code>post</code>, <code>dump</code>, <code>source</code>, <code>list</code>, <code>download</code>.</li>
+</ul>
 
 <h2 id="v15_5">Versão 15.5</a> <span class="info">30/05/2015, <a href="download/funcoeszz-15.5.sh">download</a>, <a href="anuncio-15.5.html">anúncio</a>, <a href="http://aurelio.net/blog/2015/05/30/15-anos-de-funcoes-zz/">15 anos</a></span></h2>
 
