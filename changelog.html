@@ -58,7 +58,7 @@ title: Changelog
     ZZCOR=0 download/funcoeszz-15.5.sh zzajuda \-\-lista > descricao.txt
     cat ../funcoeszz/release/15.5/novas.txt | while read zz; do printf '<li><a class="zzlink" href="man.html#%s">%s</a> - %s</li>\n' $zz $zz "$(grep "^$zz " descricao.txt | cut -c 19-)"; done
 -->
-<h2 id="v18_3">Versão 18.3</a> <span class="info">31/03/2018, <a href="download/funcoeszz-18.3.sh">download</a>, <a href="anuncio-18.3.html">anúncio</a>, <!-- a href="http://aurelio.net/blog/2015/05/30/15-anos-de-funcoes-zz/">18 anos</a--></span></h2>
+<h2 id="v18_3">Versão 18.3</a> <span class="info">31/03/2018, <a href="download/funcoeszz-18.3.sh">download</a>, <a href="anuncio-18.3.html">anúncio</a><!--, <a href="http://aurelio.net/blog/2015/05/30/15-anos-de-funcoes-zz/">18 anos</a--></span></h2>
 
 <p>Foram adicionadas 19 funções novas:</p>
 
@@ -88,20 +88,20 @@ title: Changelog
 
 <ul>
 <li><span class="del"><b>zzbolsas</b></span> - removida</li>
-<li><span class="del"><b>zcbn</span> - removida</li>
-<li><span class="del"><b>zzcinemark</span> - removida</li>
-<li><span class="del"><b>zcinepolis</span> - removida</li>
-<li><span class="del"><b>zzenviaemail</span> - removida</li>
-<li><span class="del"><b>zzgoogle</span> - removida</li>
-<li><span class="del"><b>zzhastebin</span> - removida</li>
-<li><span class="del"><b>zjuros</span> - removida</li>
-<li><span class="del"><b>zzkill</span> - removida</li>
-<li><span class="del"><b>zznarrativa</span> - removida</li>
-<li><span class="del"><b>zzoperadora</span> - removida</li>
-<li><span class="del"><b>zzpiada</span> - removida</li>
-<li><span class="del"><b>zzrandbackground</span> - removida</li>
-<li><span class="del"><b>zzrelansi</span> - removida</li>
-<li><span class="del"><b>zzve</span> - removida</li>
+<li><span class="del"><b>zcbn</b></span> - removida</li>
+<li><span class="del"><b>zzcinemark</b></span> - removida</li>
+<li><span class="del"><b>zcinepolis</b></span> - removida</li>
+<li><span class="del"><b>zzenviaemail</b></span> - removida</li>
+<li><span class="del"><b>zzgoogle</b></span> - removida</li>
+<li><span class="del"><b>zzhastebin</b></span> - removida</li>
+<li><span class="del"><b>zjuros</b></span> - removida</li>
+<li><span class="del"><b>zzkill</b></span> - removida</li>
+<li><span class="del"><b>zznarrativa</b></span> - removida</li>
+<li><span class="del"><b>zzoperadora</b></span> - removida</li>
+<li><span class="del"><b>zzpiada</b></span> - removida</li>
+<li><span class="del"><b>zzrandbackground</b></span> - removida</li>
+<li><span class="del"><b>zzrelansi</b></span> - removida</li>
+<li><span class="del"><b>zzve</b></span> - removida</li>
 </ul>
 
 <p>Melhorias:</p>
@@ -121,13 +121,13 @@ title: Changelog
 <li><strong>zzmat</strong> Opções retiradas: <code>testa_num</code>, <code>testa_num_exp</code>, <code>converte</code>.</li>
 <li><strong>zzminiurl</strong> Também restaura url encurtada.</li>
 <li><strong>zznoticiaslinux</strong> Novas fontes de informações.</li>
-<li><strong>zztempo</strong>Removida e reativada com novo design.</li>
+<li><strong>zztempo</strong> Removida e reativada com novo design.</li>
 <li><strong>zzvira</strong> Opção nova: <code>-E</code>, para espelhamento na vertical.</li>
 </ul>
 
 <ul>
 <li>Core: Abandonado o uso das variáveis "ZZWWW*" e inclusa a variável "ZZBROWSER".</li>
-<li>Core: Definindo melhor a variável "ZZDIR".<li>
+<li>Core: Definindo melhor a variável "ZZDIR".</li>
 <li>Core: Mensagens de erro para zztool como opcional em casos antes obrigatórios.</li>
 <li>Core: Exclusão de ferramentas da zztool em substituídas por funcões em <strong>zztestar</strong>.</li>
 <li>Core: Novas ferramentas em zztool: <code>post</code>, <code>dump</code>, <code>source</code>, <code>list</code>, <code>download</code>.</li>
