@@ -103,6 +103,7 @@ zzlocale:           "Busca o código do idioma (locale) - por exemplo, portuguê
 zzlorem:            "Gerador de texto de teste, em latim (Lorem ipsum...)."
 zzloteria:          "Resultados da quina, megasena, duplasena, lotomania, lotofácil, federal, timemania e loteca."
 zzlua:              "Lista de funções da linguagem Lua."
+zzmacaddress:       "Mostra os MAC address disponiveis."
 zzmacvendor:        "Mostra o fabricante do equipamento utilizando o endereço MAC."
 zzmaiores:          "Acha os maiores arquivos/diretórios do diretório atual (ou outros)."
 zzmaiusculas:       "Converte todas as letras para MAIÚSCULAS, inclusive acentuadas."
