@@ -25,6 +25,8 @@ Os arquivos de dados estão no formato [YAML](http://pt.wikipedia.org/wiki/YAML)
 
 > Saiba mais: <http://jekyllrb.com/docs/datafiles/>
 
+> Importante: Estes arquivos de dados só devem ser atualizados com dados de versões oficiais das Funções ZZ. Funções novas que ainda só existem no GitHub serão adicionadas no lançamento da próxima versão oficial.
+
 O YAML é similar ao JSON, e serve para definir Arrays (lista de valores) e Hashes (chave:valor). Na prática, estes arquivos servem como um banco de dados simples.
 
 Há uma sintaxe especial para inserir estes dados nas páginas do site, e ferramentas para manipulá-los. É o sistema de templates  [Liquid](https://github.com/Shopify/liquid/wiki/Liquid-for-Designers).
