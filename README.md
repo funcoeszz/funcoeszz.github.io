@@ -1,6 +1,6 @@
 # Fontes do site das Funções ZZ
 
-Aqui estão os fontes do site das Funções ZZ, no ar em <http://funcoeszz.net>.
+Aqui estão os fontes do site das Funções ZZ, no ar em <https://funcoeszz.net>.
 
 **Correções e sugestões são muito bem-vindas!**
 
