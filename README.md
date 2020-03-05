@@ -59,3 +59,9 @@ $ bundle install                # Instalar plugins
 $ bundle update github-pages    # Atualizar plugins
 $ bundle exec jekyll serve      # Rodar o site localmente
 ```
+
+Outra alternativa, para não precisar instalar nada em sua máquina, é usar um contêiner Docker. Veja detalhes no arquivo `docker-compose.yml`. Para rodar:
+
+```console
+$ docker-compose up
+```

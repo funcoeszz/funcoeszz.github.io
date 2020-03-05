@@ -1,0 +1,13 @@
+# https://github.com/Starefossen/docker-github-pages
+version: '3'
+services:
+  jekyll:
+    # Mantenha esta versão sincronizada com a versão da gem github-pages no
+    # Gemfile.lock. Se mudar aqui e apagar o Gemfile.lock, ao rodar o contêiner
+    # ele será regerado com a versão nova.
+    image: starefossen/github-pages:198
+    ports:
+      - "4000:4000"
+    volumes:
+      - ./:/usr/src/app
+    tty: true
