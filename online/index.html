@@ -1,10 +1,10 @@
 <!--
-    Online interface for Funcoes ZZ (http://funcoeszz.net)
+    Online interface for Funcoes ZZ (https://funcoeszz.net)
     2011-05-09 PHP original implementation
     2015-02-27 JavaScript (jQuery, AJAX) port
 
     by Aurelio Jargas
-        http://aurelio.net
+        https://aurelio.net
         @oreio
 
     License: MIT
@@ -166,7 +166,7 @@
         $(document).ready(function() {
 
             $.getJSON(
-                'http://api.funcoeszz.net/0/list.json',
+                'https://api.funcoeszz.net/0/list.json',
                 { apikey: 'o0a7a294' },
                 init_handler
             );
@@ -177,7 +177,7 @@
             // Button Enter
             $('#submit').click(function (event) {
 
-                var url = 'http://api.funcoeszz.net/0/run/';
+                var url = 'https://api.funcoeszz.net/0/run/';
                 var ajax_data = {
                     zz:        get_zz(),
                     arguments: get_arguments(),
@@ -199,7 +199,7 @@
             // Button Ajuda
             $('#help-zz').click(function (event) {
 
-                var url = 'http://api.funcoeszz.net/0/help/';
+                var url = 'https://api.funcoeszz.net/0/help/';
                 var ajax_data = {
                     zz:        get_zz(),
                     format:    'json',
@@ -219,7 +219,7 @@
 </head>
 <body>
 
-<h1><a href="http://funcoeszz.net">Funções ZZ</a> online</h1>
+<h1><a href="https://funcoeszz.net">Funções ZZ</a> online</h1>
 
 <form method="post">
 
@@ -255,7 +255,7 @@
     por
     <a
         title="Quer ajuda? Tem uma sugestão? Fale comigo no twitter."
-        href="http://twitter.com/oreio">@oreio</a>
+        href="https://twitter.com/oreio">@oreio</a>
 </div>
 
 <!-- Google Analytics -->
