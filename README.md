@@ -52,10 +52,10 @@ No final de cada página do site há um link direto para o seu arquivo-fonte no 
 
 ## Desenvolvimento local
 
-É melhor editar os arquivos direto pelo site do GitHub, mas se fizer questão de rodar localmente:
+É melhor editar os arquivos direto pelo site do GitHub, mas se fizer questão de rodar localmente para ver como fica, há algumas opções.
 
-```console
-$ bundle install                # Instalar plugins
-$ bundle update github-pages    # Atualizar plugins
-$ bundle exec jekyll serve      # Rodar o site localmente
-```
+- Use um contêiner Docker que tenha a gem `github-pages` instalada numa versão recente, para não precisar instalar nada em sua máquina. [Este por exemplo](https://github.com/Starefossen/docker-github-pages):
+
+        docker run -it --rm -v "$PWD":/usr/src/app -p 4000:4000 starefossen/github-pages
+
+- Use a gem `github-pages` para instalar em sua máquina todos os requisitos. Instruções em https://github.com/github/pages-gem.
