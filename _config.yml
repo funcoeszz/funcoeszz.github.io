@@ -26,8 +26,6 @@
 #   - jekyll-paginate
 
 
-exclude: [Gemfile, Gemfile.lock]
-
 defaults:
   -
     scope:
