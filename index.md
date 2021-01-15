@@ -36,7 +36,7 @@ Funções ZZ é uma coletânea com [{{ site.data.list.size }} miniaplicativos](l
 <!--
 Entre as funcionalidades, destacam-se:
 
-* Consulta automatizada a sites (rastreamento, notícias, cotações, resultados, dicionários, tradutores)
+* Consulta automatizada a sites (rastreamento, notícias, cotações, resultados, dicionários)
 * Cálculos e conversões (CPF, porcentagem, datas, horários, unidades de medida)
 * Manipulação de dados (estatísticas, filtros, geração de senhas)
 * Manipulação de arquivos (alterar nome, extensão, conteúdo)
@@ -51,14 +51,13 @@ Entre as funcionalidades, destacam-se:
 * Quando começa o horário de verão? *zzhorariodeverao*.
 * Vai encurtar uma URL? *zzminiurl*.
 * Precisa somar horas? *zzhora*.
-* Precisa usar o Google Tradutor? *zztradutor*.
 * Cálculos complicados com porcentagens? *zzporcento*.
 * Precisa tomar uma decisão importante? *zzcaracoroa* ;)
 * E aquela sua encomenda que não chega nunca? *zzrastreamento*.
 
 [![](img/canivete-funcoeszz.png)](logo.html)
 
-Criado por [Aurelio Jargas](http://aurelio.net), este é um software livre 100% nacional e maduro, que já completou [18 anos de existência](hist.html). É o resultado do trabalho voluntário e não remunerado de [vários brasileiros](thanks.html) que colaboram em suas horas vagas, por prazer. Feito com muito carinho, bash, sed, awk, dedicação, expressões regulares, grep e ♥.
+Criado por [Aurelio Jargas](http://aurelio.net), este é um software livre 100% nacional e maduro, que já completou [21 anos de existência](hist.html). É o resultado do trabalho voluntário e não remunerado de [vários brasileiros](thanks.html) que colaboram em suas horas vagas, por prazer. Feito com muito carinho, bash, sed, awk, dedicação, expressões regulares, grep e ♥.
 
 <!--
 mostrar o -h
@@ -90,18 +89,6 @@ $ zzhorariodeverao
 $ zzdiadasemana 07/10/1977             # eu nasci numa…
 sexta-feira
 
-$ zzloteria megasena
-megasena:
-Concurso: 2026	(28/03/2018)
-	10	23	31	33	51	52
-
-Sena	0	R$ 0,00
-Quina	105	R$ 24.755,26
-Quadra	6.365	R$ 583,39
-
-Valor acumulado: R$ 30.731.445,06
-Acumulado Mega da Virada: R$ 18.704.458,15
-
 $ zzrastreamento SA488387146BR
 Data             Local                           Situação
 15/02/2013 17:22 CEE BRASILIA SUL - BRASILIA/DF  Entrega Efetuada
@@ -115,7 +102,7 @@ Data             Local                           Situação
 13/02/2013 11:59 AGF SAGUACU - JOINVILLE/SC      Postado
 
 $ zzconverte mk 100
-100 milhas = 160.900 km
+160.900
 
 $ zzporcento 1.749,00 -20%             # iPad com 20% de desconto
 1399,20
@@ -124,14 +111,14 @@ $ zzarrumanome *
 RAMONES - I Dont Care.mp3 -> ramones-i_dont_care.mp3
 Toy Dolls - Wakey, Wakey!.mp3 -> toy_dolls-wakey_wakey.mp3
 
-$ zzfeed -n 7 http://br-linux.org/feed/
-O media center Android da Samsung
-Consulta pública sobre Sistemas de Gestão de Conteúdo
-Cursos Elastix Online noturno (04 a 08/03/13)
-Campinas: Formação Completa SysAdmin Linux aos sábados
-Funcionários do PTI conhecem as novidades do Expresso
-Evernote no Linux: Everpad 2.5
-Samsung nega interesse no Firefox OS
+$ zzfeed -n 7 aurelio.net/feed
+Minha experiência na ContaAzul
+Serei papai \o/
+Tela Preta episódio 9: Contar palavras com egrep|sort|uniq
+Palestra “Shell Script Moderno” no FISL17
+Raridade: teve ensaio da banda
+Palestra “O poder da linha de comando” no SC Dev Summit 2016
+Tenho três empregos
 ```
 
 ## Cotações
@@ -139,11 +126,10 @@ Samsung nega interesse no Firefox OS
 <!-- zzmoneylog -->
 
 ```console
-$ zzdolar 
-29/03/2018	16h59 
-		Compra	Venda	Variação
-Comercial	3,2994	3,3001	-0,93%
-Turismo		3,1700	3,4400	-0,86%
+$ zzdolar
+           	Compra	Venda 	Var(%)
+Comercial  	5,207	5,208	-1,920
+Turismo    	5,227	5,367	-2,000
 ```
 
 ## Validação de CPF e CNPJ
@@ -369,68 +355,40 @@ UTC/GMT is 02:59 on Saturday, March 31, 2018
 ## Esportes
 
 ```console
-$ zzbrasileirao a
+$ zzbrasileirao A
 Série A
- Time                    PG   J   V   E   D  GP  GC  SG  (%)
-  1 Fluminense           77  38  22  11   5  61  33  28   68
-  2 Atlético-MG 1        72  38  20  12   6  64  37  27   63
-  3 Grêmio -1            71  38  20  11   7  56  33  23   62
-  4 São Paulo            66  38  20   6  12  59  37  22   58
-  5 Vasco 1              58  38  16  10  12  45  44   1   51
-  6 Corinthians -1       57  38  15  12  11  51  39  12   50
-  7 Botafogo             55  38  15  10  13  60  50  10   48
-  8 Santos 2             53  38  13  14  11  50  44   6   46
-  9 Cruzeiro -1          52  38  15   7  16  47  51  -4   46
- 10 Internacional -1     52  38  13  13  12  44  40   4   46
- 11 Flamengo             50  38  12  14  12  39  46  -7   44
- 12 Náutico 1            49  38  14   7  17  44  51  -7   43
- 13 Coritiba 1           48  38  14   6  18  53  60  -7   42
- 14 Ponte Preta -2       48  38  12  12  14  37  44  -7   42
- 15 Bahia 1              47  38  11  14  13  37  41  -4   41
- 16 Portuguesa -1        45  38  10  15  13  39  41  -2   39
- 17 Sport                41  38  10  11  17  39  56 -17   36
- 18 Palmeiras            34  38   9   7  22  39  54 -15   30
- 19 Atlético-GO          30  38   7   9  22  37  67 -30   26
- 20 Figueirense          30  38   7   9  22  39  72 -33   26
+Classificação
+#   Time                 P    J    V    E    D    GP   GC   SG
+1   São Paulo            56   29   16   8    5    49   27   +22
+2   Internacional        53   29   15   8    6    44   26   +18
+3   Atlético Mineiro     50   28   15   5    8    48   36   +12
+4   Flamengo             49   28   14   7    7    47   39   +8
+5   Grêmio               49   28   12   13   3    37   23   +14
+6   Palmeiras            47   27   13   8    6    38   25   +13
+7   Fluminense           43   29   12   7    10   39   37   +2
+8   Corinthians          42   28   11   9    8    35   30   +5
+9   Santos               42   28   11   9    8    39   35   +4
+10  Ceará                39   29   10   9    10   40   39   +1
+11  Athletico Paranaense 38   29   11   5    13   26   28   -2
+12  Atlético Goianiense  36   29   8    12   9    26   33   -7
+13  Red Bull Bragantino  35   29   8    11   10   37   35   +2
+14  Sport                32   29   9    5    15   24   37   -13
+15  Vasco                32   28   8    8    12   29   39   -10
+16  Fortaleza            32   29   7    11   11   24   26   -2
+17  Bahia                29   29   8    5    16   35   51   -16
+18  Goiás                26   29   6    8    15   29   44   -15
+19  Botafogo             23   29   4    11   14   25   44   -19
+20  Coritiba             22   29   5    7    17   22   39   -17
 
-$ zzfutebol hoje
-24/08/14 14h00 Copa da Itália          Virtus Lanciano   X   Genoa
-24/08/14 14h00 Espanhol                Eibar   X   Real Sociedad
-24/08/14 15h30 Copa da Itália          Brescia   X   Latina
-24/08/14 15h30 Copa da Itália          Lazio   X   Bassano Virtus
-24/08/14 15h30 Copa da Itália          Hellas Verona   X   Cremonese
-24/08/14 15h30 Português               Boavista-POR   X   Benfica
-24/08/14 15h45 Copa da Itália          Sampdoria   X   Como
-24/08/14 15h45 Copa da Itália          Cesena   X   Casertana
-24/08/14 16h00 Brasileirão             Criciúma   X   Flamengo
-24/08/14 16h00 Brasileirão             São Paulo   X   Santos
-24/08/14 16h00 Brasileirão             Vitória   X   Figueirense
-24/08/14 16h00 Brasileirão             Fluminense   X   Sport
-24/08/14 16h00 Brasileirão             Grêmio   X   Corinthians
-24/08/14 16h00 Copa da Itália          Udinese   X   Ternana
-24/08/14 16h00 Espanhol                Barcelona   X   Elche
-24/08/14 16h00 Espanhol                Celta   X   Getafe
-24/08/14 16h00 Francês                 Nantes   X   Monaco
-24/08/14 16h00 Série C                 São Caetano   X   Caxias
-24/08/14 16h00 Série C                 CRAC-GO   X   CRB
-24/08/14 16h00 Série C                 Salgueiro   X   Botafogo-PB
-24/08/14 16h00 Série D                 Londrina-PR   X   Boavista-RJ
-24/08/14 16h00 Série D                 Baraúnas-RN   X   Campinense-PB
-24/08/14 16h00 Série D                 Coruripe-AL   X   Central
-24/08/14 16h00 Série D                 Confiança-SE   X   Globo-RN
-24/08/14 16h00 Série D                 Porto-PE   X   Betim-MG
-24/08/14 16h00 Série D                 Metropolitano   X   Penapolense
-24/08/14 16h00 Série D                 Villa Nova-MG   X   Estrela-ES
-24/08/14 16h00 Série D                 Itaporã   X   Brasiliense-DF
-24/08/14 17h00 Série C                 Treze-PB   X   Cuiabá-MT
-24/08/14 17h00 Série D                 River-PI   X   Interporto-TO
-24/08/14 17h00 Série D                 Guarany de Sobral   X   Remo
-24/08/14 18h00 Espanhol                Levante   X   Villarreal
-24/08/14 18h30 Brasileirão             Atlético-PR   X   Bahia
-24/08/14 18h30 Brasileirão             Goiás   X   Cruzeiro
-24/08/14 19h00 Série C                 ASA   X   Paysandu
-24/08/14 19h00 Série D                 Genus   X   Santos-AP
-24/08/14 19h00 Série D                 Atlético Acreano   X   Rio Branco-AC
+$ zzfutebol amanhã
+15/01/2021 16:30       1. FC Union Berlin       vs       Bayer Leverkusen         1. Bundesliga 20/21
+15/01/2021 16:45                    Lazio       vs       Roma                     Campeonato Italiano 2020/21
+15/01/2021 17:00              Montpellier       vs       Monaco                   Campeonato Francês 2020/21
+15/01/2021 17:30              Figueirense       vs       GE Brasil                Série B 2020
+15/01/2021 18:00                 FC Porto       vs       Benfica                  Liga Portuguesa 2020/21
+15/01/2021 19:15           Sampaio Corrêa       vs       Paraná                   Série B 2020
+15/01/2021 21:30                Palmeiras       vs       Grêmio                   Brasileirão 2020
+15/01/2021 21:30          América Mineiro       vs       Botafogo-SP              Série B 2020
 ```
 
 ## Loterias
@@ -438,85 +396,105 @@ $ zzfutebol hoje
 ```console
 $ zzloteria quina megasena federal     # E aí, ficou milionário?
 quina:
-Concurso: 4642	(29/03/2018)
-	02	27	39	53	80
+Concurso 5465 (13/01/2021)
+	26	29	47	68	80
 
-Quina	1	R$ 3.600.441,78
-Quadra	73	R$ 6.241,27
-Terno	5.926	R$ 115,61
-Duque	154.312	R$ 2,44
+	Quina	-	-	
+	Quadra	42	11.242,31	
+	Terno	3755	189,09	
+	Duque	99662	3,91	
 
-Valor acumulado: R$ 0,00
-Acumulado Especial de São João: R$ 82.215.261,04
+Acumulado próximo concurso
+ R$ 1.594.108,94
+
+ Acumulado para Sorteio Especial de São João
+ R$ 78.902.788,69
+
+Arrecadação total
+ R$ 8.189.630,00
 
 megasena:
-Concurso: 2026	(28/03/2018)
-	10	23	31	33	51	52
+Concurso 2334 (13/01/2021)
+	04	13	20	22	25	60
 
-Sena	0	R$ 0,00
-Quina	105	R$ 24.755,26
-Quadra	6.365	R$ 583,39
+	Sena	1	11.854.874,71	
+	Quina	66	34.602,68	
+	Quadra	4609	707,86	
 
-Valor acumulado: R$ 30.731.445,06
-Acumulado Mega da Virada: R$ 18.704.458,15
+Acumulado próximo concurso
+ R$ 7.451.635,52
+
+Acumulado próximo concurso final (2335)
+ R$ 7.451.635,52
+
+Acumulado Mega da Virada
+ R$ 1.693.553,58
+
+Arrecadação total
+ R$ 39.610.737,00
 
 federal:
-Concurso: 5270	(28/03/2018)
-
-	1º Prêmio	50084	R$ 350.000,00
-	2º Prêmio	24959	R$ 18.000,00
-	3º Prêmio	24391	R$ 15.000,00
-	4º Prêmio	75161	R$ 12.000,00
-	5º Prêmio	51564	R$ 10.023,00
+Concurso 5529 (13/01/2021)
+1º	96148	1	500.000,00
+2º	88596	1	27.000,00
+3º	57538	1	24.000,00
+4º	57810	1	19.000,00
+5º	02927	1	18.329,00
 
 $ zzpalpite                            # Sugestões aleatórias de jogo
 quina:
- 12 15 39 43 67
+ 20 35 58 69 73
 
 megasena:
- 08 11 29 31 49 52
+ 09 18 25 39 42 59
 
 duplasena:
- 01 03 17 19 35 37
+ 01 22 37 39 41 44
 
 lotomania:
- 02 03 06 07 10
- 11 12 14 15 18
- 19 23 24 27 28
- 29 33 34 37 38
- 41 42 45 46 47
- 49 51 53 55 58
- 59 63 64 67 68
- 71 72 75 76 77
- 79 81 83 85 88
- 89 92 93 97 98
+ 06 07 08 09 15
+ 17 18 21 22 24
+ 25 26 27 28 30
+ 32 33 40 41 42
+ 43 45 49 51 52
+ 53 55 56 57 58
+ 63 65 66 67 70
+ 71 72 77 78 81
+ 82 84 87 93 94
+ 95 96 97 98 99
 
 lotofacil:
- 01 02 05 06 07
- 09 10 13 14 15
- 17 18 21 23 24
+ 02 03 06 08 09
+ 10 11 13 14 16
+ 17 19 20 23 24
 
 federal:
- 53475
+ 35230
 
 timemania:
- 03 06 09 30 33
- 37 54 57 61 65
+ 02 09 20 26 31
+ 35 53 65 69 79
+
+sorte:
+ 05 06 09 14 19 20 22
+
+sete:
+ 2 6 2 3 8 2 6
 
 loteca:
- Jogo 01: Coluna do Meio
- Jogo 02: Coluna 2
+ Jogo 01: Coluna 1
+ Jogo 02: Coluna do Meio
  Jogo 03: Coluna 2
- Jogo 04: Coluna 1
- Jogo 05: Coluna 1
- Jogo 06: Coluna 1
- Jogo 07: Coluna 1
- Jogo 08: Coluna do Meio
- Jogo 09: Coluna do Meio
- Jogo 10: Coluna 2
- Jogo 11: Coluna 2
- Jogo 12: Coluna 2
- Jogo 13: Coluna 1
+ Jogo 04: Coluna 2
+ Jogo 05: Coluna do Meio
+ Jogo 06: Coluna do Meio
+ Jogo 07: Coluna do Meio
+ Jogo 08: Coluna 2
+ Jogo 09: Coluna 1
+ Jogo 10: Coluna 1
+ Jogo 11: Coluna 1
+ Jogo 12: Coluna do Meio
+ Jogo 13: Coluna do Meio
  Jogo 14: Coluna 1
 
 $ zzbicho
@@ -642,13 +620,13 @@ Rede     : 10.0.0.0 / 8
 Broadcast: 10.255.255.255
 
 $ zzconverte km 100                    # distância
-100 km = 62.1400 milhas
+62.1400
 
 $ zzconverte mk 100
-100 milhas = 160.900 km
+160.90
 
 $ zzconverte cf 37                     # temperatura
-37 C = 98.60 F
+98.60
 
 $ zzconverte db 77                     # decimal -> binário
 1001101
@@ -808,8 +786,7 @@ zzsecurity
 
 ```console
 $ zzfeed aurelio.net                   # Descobre os feeds do site
-http://aurelio.net/feed/
-http://aurelio.net/comments/feed/
+/feed/
 
 $ zzfeed -n 5 aurelio.net/feed/        # Últimas notícias do feed
 Os 5 melhores podcasts que escuto hoje
@@ -823,33 +800,12 @@ Piazinho no Facebook (e sorteio!)
 
 ```console
 $ zzglobo 
-Sex, 30 de março
-
-05:00: Hora Um
-06:00: Bom Dia local
-07:30: Bom Dia Brasil
-08:50: Mais Você
-10:10: Bem Estar
-10:50: Encontro com Fátima Bernardes
-12:00: Praça TV - 1ª Edição
-12:47: Globo Esporte
-13:20: Jornal Hoje
-13:59: Vídeo Show
-15:07: Sessão da Tarde
-16:44: Vale a Pena Ver de Novo
-17:50: Malhação - Vidas Brasileiras
-18:24: Orgulho e Paixão
-19:11: Praça TV - 2ª Edição
-19:32: Deus Salve o Rei
-20:30: Jornal Nacional
-21:16: O Outro Lado do Paraíso
-22:19: Big Brother Brasil 18
-22:52: Globo Repórter
-23:42: Jornal da Globo
-00:19: Empire
-01:05: Corujão
-02:49: Corujão
-04:05: Corujão
+TV Globo
+Quinta, 14/01
+20∶30 Jornal Nacional
+21∶40 A Força do Querer
+22∶45 A Cor do Poder
+23∶40 Shippados
 
 $ zztv cul
 TV Cultura
@@ -1033,21 +989,6 @@ Previsão do tempo para: Brasilia, Brazil
 └──────────────────────────────┴──────────────────────────────┘
 
 
-$ zztradutor pt-en o livro está na mesa
-the book is on the table
-
-$ zztradutor pt-es o livro está na mesa
-el libro está sobre la mesa
-
-$ zztradutor pt-fr o livro está na mesa
-le livre est sur la table
-
-$ zztradutor pt-it o livro está na mesa
-il libro è sul tavolo
-
-$ zztradutor pt-de o livro está na mesa
-Das Buch liegt auf dem Tisch
-
 $ zzsubway
 recheio : (12) Peito de Peru e Presunto
 pão     : integral
@@ -1061,11 +1002,10 @@ tempero : sal, vinagre, azeite de oliva, pimenta do reino
 
 $ zznome aurelio
 Origem do nome Aurelio: LATIM
-
 Significado do nome Aurelio: DOURADO.
 
 $ zzminiurl https://github.com/funcoeszz/funcoeszz/
-https://goo.gl/fRw4jz
+https://bit.ly/3igmQBq
 
 $ zzjquery -s get
 - get()

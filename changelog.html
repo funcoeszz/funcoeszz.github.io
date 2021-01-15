@@ -57,7 +57,54 @@ title: Changelog
 
     ZZCOR=0 download/funcoeszz-15.5.sh zzajuda \-\-lista > descricao.txt
     cat ../funcoeszz/release/15.5/novas.txt | while read zz; do printf '<li><a class="zzlink" href="man.html#%s">%s</a> - %s</li>\n' $zz $zz "$(grep "^$zz " descricao.txt | cut -c 19-)"; done
+
+    Para gerar a lista de funções removidas:
+    while read zz; do printf '<li><span class="del"><b>%s</b></span> - removida</li>\n' $zz ; done < ../funcoeszz/release/21.1/removidas.txt
 -->
+<h2 id="v21_1">Versão 21.1</a> <span class="info">14/01/2021, <a href="download/funcoeszz-21.1.sh">download</a>, <a href="anuncio-21.1.html">anúncio</a></span></h2>
+
+<p>Foram adicionadas 11 funções novas:</p>
+
+<ul>
+<li><a class="zzlink" href="man.html#zzclassnum">zzclassnum</a> - Classifica um número inteiro e positivo.</li>
+<li><a class="zzlink" href="man.html#zzcodq">zzcodq</a> - Exibe a lista do Código Internacional Q e suas descrições.</li>
+<li><a class="zzlink" href="man.html#zzconfere">zzconfere</a> - Confere os resultados de loterias.</li>
+<li><a class="zzlink" href="man.html#zzconstantes">zzconstantes</a> - Lista constantes matemáticas e físicas e unidades do SI.</li>
+<li><a class="zzlink" href="man.html#zzddd">zzddd</a> - Busca o DDD de qualquer cidade do país ou vice-versa.</li>
+<li><a class="zzlink" href="man.html#zzf1">zzf1</a> - Mostra a classificação de pilotos e construtores da F1.</li>
+<li><a class="zzlink" href="man.html#zzfilme">zzfilme</a> - Busca informações sobre o filme desejado.</li>
+<li><a class="zzlink" href="man.html#zzipv6">zzipv6</a> - Consulta os endereços de rede de IPv6 e do comprimento do prefixo (subnet).</li>
+<li><a class="zzlink" href="man.html#zzmacaddress">zzmacaddress</a> - Mostra os MAC address disponiveis.</li>
+<li><a class="zzlink" href="man.html#zzunicode">zzunicode</a> - Mostra a tabela Unicode com todos os caracteres imprimíveis.</li>
+<li><a class="zzlink" href="man.html#zzvds">zzvds</a> - Mostra o texto das últimas tirinhas de Vida de Suporte.</li>
+</ul>
+
+<p>Foram removidas 4 funções:</p>
+
+<ul>
+<li><span class="del"><b>zzdefinr</b></span> - removida</li>
+<li><span class="del"><b>zzdilbert</b></span> - removida</li>
+<li><span class="del"><b>zztradutor</b></span> - removida</li>
+<li><span class="del"><b>zztweets</b></span> - removida</li>
+</ul>
+
+<p>Melhorias:</p>
+
+<ul>
+<li><strong>zzbrasileirao</strong> Removida a série D e exibição da rodadas de jogos.</li>
+<li><strong>zzcnpj</strong> Opções novas: -F - Desfaz formatação, -c - Consulta o CNPJ, -q - só código de retorno.</li>
+<li><strong>zzcoin</strong> Ampliação da lista de criptomoedas disponíveis.</li>
+<li><strong>zzcotacao</strong> Retrirada consulta a UOL Economia.</li>
+<li><strong>zzsecurity</strong> Retirado Suse e Opensuse.</li>
+<li><strong>zztop</strong> Opções novas: -g - Eficiência Energética, -p - Alta Performance. Retirada opção de categorias -c.</li>
+</ul>
+
+<ul>
+<li><strong>Todas as funções</strong> Inclusão do campo Tags no cabeçalho de todas as funções.</li>
+<li><strong>Todas as funções</strong> Inversão da ordem do 'test' onde foi necessário.</li>
+<li>Nanny: Prevenção de dependências circulares no campo Requisitos.</li>
+</ul>
+
 <h2 id="v18_3">Versão 18.3</a> <span class="info">31/03/2018, <a href="download/funcoeszz-18.3.sh">download</a>, <a href="anuncio-18.3.html">anúncio</a><!--, <a href="http://aurelio.net/blog/2015/05/30/15-anos-de-funcoes-zz/">18 anos</a--></span></h2>
 
 <p>Foram adicionadas 19 funções novas:</p>
