@@ -16,8 +16,8 @@ redirect_from: /exemplos.html
 
 
 <div class="alert">
-    LANÇAMENTO: Funções ZZ versão 18.3 →
-    <a href="anuncio-18.3.html">anúncio</a>,
+    LANÇAMENTO: Funções ZZ versão 21.1 →
+    <a href="anuncio-21.1.html">anúncio</a>,
     <a href="/download/">download</a>
 </div>
 
