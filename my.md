@@ -84,8 +84,9 @@ ZZPATH=$PWD/chaves.sh       # o PATH desse script
 # Ex.: zzchaves
 #
 # Autor: Fulano da Silva, @fulano
+# Desde: 2000-02-22
 # Versão: 1
-# Licença: GPL
+# Tags: texto falas
 # ----------------------------------------------------------------------------
 zz</b>chaves ()
 {
@@ -129,8 +130,10 @@ Descrição do formato:
 1. A linha com o exemplo de uso "`# Ex.: zz...`"
 1. A linha vazia
 1. A linha com as informações do autor (nome completo e e-mail/site/twitter)
+1. A linha com a data da criação da função (formato ISO: AAAA-MM-DD)
 1. A linha com a versão da função (número inteiro e sequencial, inicia em 1)
-1. A linha com a licença da função
+1. Pode ter a linha com a lista de requisitos, outras funções zz usadas no código
+1. A linha com palavra(s) chave(s) sobre a função (tags)
 1. Uma linha separadora com "`# ----------------`"
 
 
@@ -145,8 +148,6 @@ Foi sem querer querendo...
 $ zzchaves -h
 
 Repete a fala do Chaves
-Autor: Fulano da Silva, @fulano
-Versão: 1
 Uso: zzchaves
 Ex.: zzchaves
 
