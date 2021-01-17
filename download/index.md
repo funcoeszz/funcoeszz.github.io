@@ -90,6 +90,8 @@ Para fins históricos somente, não são mais utilizáveis.
 
 <ul>
 {% for version in site.data.versions %}
-  <li><a href="/download/funcoeszz-{{ version }}.sh">{{ version }}</a></li>
+  {% unless forloop.last %}
+    <li><a href="/download/funcoeszz-{{ version }}.sh">{{ version }}</a></li>
+  {% endunless %}
 {% endfor %}
 </ul>
