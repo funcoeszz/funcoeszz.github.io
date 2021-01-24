@@ -86,6 +86,7 @@ ZZPATH=$PWD/chaves.sh       # o PATH desse script
 # Autor: Fulano da Silva, @fulano
 # Desde: 2000-02-22
 # Versão: 1
+# Requisitos: zzzz
 # Tags: texto falas
 # ----------------------------------------------------------------------------
 zz</b>chaves ()
@@ -132,7 +133,7 @@ Descrição do formato:
 1. A linha com as informações do autor (nome completo e e-mail/site/twitter)
 1. A linha com a data da criação da função (formato ISO: AAAA-MM-DD)
 1. A linha com a versão da função (número inteiro e sequencial, inicia em 1)
-1. Pode ter a linha com a lista de requisitos, outras funções zz usadas no código
+1. A linha com a lista de requisitos, que são outras funções zz usadas no código
 1. A linha com palavra(s) chave(s) sobre a função (tags)
 1. Uma linha separadora com "`# ----------------`"
 
