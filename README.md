@@ -45,8 +45,6 @@ No final de cada página do site há um link direto para o seu arquivo-fonte no 
 
 * [_config.yml](https://github.com/funcoeszz/funcoeszz.github.io/blob/master/_config.yml) – Arquivo de configuração do site, usado pelo Jekyll.
 
-* [Gemfile](https://github.com/funcoeszz/funcoeszz.github.io/blob/master/Gemfile), [Gemfile.lock](https://github.com/funcoeszz/funcoeszz.github.io/blob/master/Gemfile.lock) – Esquema da linguagem Ruby para especificar os plugins usados pelo site. É necessário para poder rodar o site localmente, usando o mesmo ambiente do servidor. Mas você não precisa se preocupar com isso, pode ignorar estes arquivos.
-
 * O resto são os arquivos normais de conteúdo do site, alguns em Markdown, alguns já em HTML.
 
 
