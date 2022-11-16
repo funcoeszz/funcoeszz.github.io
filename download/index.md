@@ -67,7 +67,7 @@ Se você usa Windows, baixe e instale o [Cygwin](http://aurelio.net/cygwin/) ou 
 
 ## Acentuação
 
-Se der problema com a acentuação nos resultados das funções, use o script [release/2iso.sh](https://github.com/funcoeszz/funcoeszz/blob/master/release/2iso.sh) para converter o arquivo das funções para o formato antigo (ISO-8859-1), especial para terminais que ainda não migraram para a codificação UTF-8.
+Se der problema com a acentuação nos resultados das funções, use o script [release/2iso.sh](https://github.com/funcoeszz/funcoeszz/blob/48ef6a33988cb44773919c9e6ac100a0f8d9823e/release/2iso.sh) para converter o arquivo das funções para o formato antigo (ISO-8859-1), especial para terminais que ainda não migraram para a codificação UTF-8.
 
 
 ## -bash: zzcalcula: command not found
